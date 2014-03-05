@@ -1,0 +1,163 @@
+\documentclass[a4paper , 12 pt]{article}
+\usepackage[fleqn]{amsmath}
+\usepackage{setspace}
+%\usepackage[margin =2.5 cm]{geometry }
+
+\onehalfspacing
+\pagestyle{empty}
+\allowdisplaybreaks
+
+\begin{document}
+\centering
+JAWABAN SOAL FISIKA  STATISTIK BAB 10 BUKU POINTON 
+
+\begin{enumerate}
+\item
+	Tunjukkan bahwa  simpangan kuadrat rata-rata dari jumlah 	sistem dalam asembli  memenuhi hubungan berikut
+	\begin{enumerate}
+	\item untuk statistik Bose-Einstein:
+	\[
+	\overline{(\delta N)^2} = \sum_i \overline{n_i} (1+ \overline{n_i}) = \sum_i \overline{(\delta n_i )^2}
+	\]
+	dan 
+	\[
+	\left \{ \frac{\overline{(\delta n_i)^2}}{\overline{n_i^2}} \right\}= \frac{1}{\overline{n_i}} +1
+	\]
+	\item Untuk statistik fermi-dirac
+	\[
+	\overline{(\delta N)^2} = \sum_i \overline{n_i} (1- \overline{n_i}) = \sum_i \overline{(\delta n_i )^2}
+	\]
+	dan 
+	\[
+	\left \{ \frac{\overline{(\delta n_i)^2}}{\overline{n_i^2}} \right\}=\frac{1}{\overline{n_i}} - 1
+	\]
+	\end{enumerate}
+	\begin{description}
+	\item [Jawab]
+	\begin{enumerate}
+	\item
+		Dari persamaan (10.58) diperoleh
+		\begin{align}
+		\overline{(\delta N)^2} &  = kT \left \{ \frac{\partial \overline{N}}{\partial \mu } \right \}_{V,T} \nonumber \\
+		& = k T \frac{\partial}{\partial \mu} \left \{ \sum_j \overline{n_j} \right  \} \nonumber \\
+		& = kT \frac{\partial }{\partial \mu } \left \{ 
+		\sum_j \frac{1}{e^{(\epsilon_j -\mu)/kT} - 1}\right  \} \nonumber \\
+		& = - kT \sum_j \frac{e^{(\epsilon_j - \mu)/ kT}(-1/kT)}{(e^{(\epsilon_j -\mu)/kT} - 1)^2} \nonumber \\
+		& = \sum_j \frac{1}{e^{(\epsilon_j - \mu)/kT} -1} \cdot \frac{e^{(\epsilon_j - \mu)/kT}}{e^{(\epsilon_j - \mu)/kT }-1} \nonumber \\
+		& =  \sum_j \frac{1}{e^{(\epsilon_j - \mu)/kT} -1} \cdot  \frac{(e^{(\epsilon_j - \mu)/kT} -1)+1}{e^{(\epsilon_j - \mu)/kT }-1} \nonumber \\
+		& =   \sum_j \frac{1}{e^{(\epsilon_j - \mu)/kT} -1} \cdot  \left[ \frac{e^{(\epsilon_j - \mu)/kT }-1}{e^{(\epsilon_j - \mu)/kT }-1} \right. + \nonumber \\  & \hspace{0.3 cm} \left. \frac{1}{e^{(\epsilon_j - \mu)/kT }-1} \right ] 
+		\nonumber \\
+		& = \sum_j \overline{n_j} (1+ \overline{n_j}) \nonumber \tag{i.1} \\
+		& \equiv  \sum_i \overline{(\delta n_j )^2} \nonumber \tag{i.2}
+		\end{align}
+		Dengan demikian 
+		\begin{align}
+			\left \{ \frac{\overline{(\delta n_i)^2}}{\overline{n_j^2}} \right\}= \frac{ \sum_j \overline{n_j} (1+ \overline{n_j})}{\overline{n_j^2}} = \frac{1}{\overline{n_j}} +1 \tag{i.3}
+		\end{align}
+		Persamaan terakhir diperoleh berdasarkan defenisi (i.2) yang diberikan pada soal di buku tersebut, yakni $\overline{n_i}^2 = \overline{n_i^2}$ (QED)
+	\item
+		Untuk distribusi fermi-dirac cara yang sama dapat dilakukan dengan mengintersek penurunan (i.1) yakni pada langkah ketiga  dengan memasukkan defenisi $n_j$ untuk distribusi fermi dirac yakni
+		\[
+		 n_j = \frac{1}{e^{(\epsilon_j -\mu)/kT} + 1} \tag{QED}
+		\]
+	\end{enumerate}
+	\end{description}
+\item 
+	% nomor 2
+	Tinjau asembli dari sistem terlokalisir yang satu sama lain saling terbedakan, tunjukkan bahwa sistem ini akan memiliki fungsi grand partisi dalam bentuk
+	\begin{align}
+	\boldsymbol{Z} & = \sum_{(n_s)} N ! \prod_s \frac{(g_s e^{(\mu - \epsilon_s)/kT})^{ns}}{n_s !} \nonumber \\
+	& = (1 - Z e^{\mu/ kT})^{-1} \nonumber
+	\end{align}
+	Di mana $Z = \displaystyle \sum_s g_s e^{-\epsilon_s /kT }$. Dan   untuk keadaan (asembli) yang diberikan  berlaku $N = \displaystyle \sum_s n_s$
+	\newline
+	\begin{description}
+	\item[Jawab] 
+	Untuk sistem partikel klasik terbedakan, maka bobot konfigirasi ke-$i$  dinyatakan oleh persamaan (2.7) yakni:
+	\begin{align}
+	W_i = N ! \prod_s \left \{ \frac{g_s^{n_s}}{n_s !} \right \}_i \nonumber
+	\end{align}
+	Sehingga dengan memasukkannya ke persamaan (10.27) akan diperoleh:
+	\begin{align}
+	\boldsymbol{Z} & = \sum_{(n_s)} N !\left \{ \prod_s \frac{g_s^{n_s}}{n_s !}  \right \} \exp \left[ \sum_s n_s (\mu - \epsilon_s)/kT \right] \nonumber \\
+	& = \sum_{(n_s)} N ! \prod_s  \frac{(g_s e^{(\mu - \epsilon_s)/kT})^{n_s}}{n_s !} \tag{ii.1}
+	\end{align}
+	Sementara dari persamaan (9.21) diperoleh bahwa 
+	\begin{align}
+	\left(\sum_s x_s \right)^N = \sum_{\left ( \sum_s n_s = N\right )}  N ! \prod_s \frac{x_s^{n_s}}{n_s !} \tag{ii.2}
+	\end{align}
+	Akan tetapi  karena jumlah partikel dalam ensembel grand kanonik tidak tetap, maka tidak ada batasan $\displaystyle \sum_{(n_s)} = N$ alias nilai $N$ mencakup berapa saja mulai dari $0$ sampai $\infty$ . Maka dengan menggunakan persamaan (ii.2), persamaan (ii.1) dapat dituliskan menjadi 
+	\begin{align}
+	\boldsymbol{Z} = \sum_0^\infty (Z e^{\mu /kT })^N \tag{ii.3}
+	\end{align}
+	dengan 
+	\[
+	Z = \sum_s g_s e^{-\epsilon_s / kT} \tag{ii.4}
+	\]
+	\newline
+	ruas kanan persamaan (ii.3) tidak lain merupakan uraian taylor dari fungsi 
+	\[
+	(1 - Z e^{\mu /kT})^{-1} \tag{QED}
+	\]
+	
+%	Sementara pada persamaan (10.41) sudah diberikan uraian yang menghasilkan
+%	\begin{align}
+%	\prod_s (1 - x_s)^{-1} = \sum_{(n_s )} \left(  \prod_s x_s^{n_s} \right ) \tag{ii.1}
+%	\end{align}
+%	Dalam kasus fungsi grand partisi, $s$ menyatakan konfigurasi asembli ke-$s$ yang masing-masing akan menghasilkan  seperangkat bilangan okupasi yang dinyatakan sebagai kombinasi bilangan $n_s$. Jadi (ii.1) dapat dituliskan menjadi 
+%	\begin{align}
+%	\boldsymbol{Z} = N ! 
+%	\end{align}
+%		Untuk sistem partikel tak-terbedakan, maka fungsi grand partisinya sudah diberikan oleh persamaan 10.45. Sehingga untuk sistem partikel terbedakan, maka yang diperlukan hanyalah menambahkan bentuk degenerasi $g_s$ pada pernyataan tersebut yakni:
+%		\begin{align}
+%		\boldsymbol{Z} =\sum_{(s)} \prod_{s} \left [ 1- g_s e^{ (\mu - \epsilon_s)/kT}\right ]^{-1}
+%		\end{align}
+%		Karena dalam sistem partikel terbedakan, 
+	\end{description}
+\item
+	% nomor 3
+	Dengan menggunakan persamaan 10.12 tunjukkan bahwa potensial kimia dari molekul pada gas sempurna semi klasik adalah
+	\begin{align}
+	-k T \log \left [ \frac{V}{N} 
+	 \left \{ \frac{2 \pi m k T}{h^2} \right \}^{3/2} 
+	\right ] \nonumber
+	\end{align}
+	\begin{description}
+	\item[Jawab]
+	Dari persamaan (10.12) diketahui bahwa 
+	\[
+	\alpha = \frac{\mu}{kT} \tag{iii.1}
+	\]
+	Sementara dari persamaan (7.4) pada kasus gas sempurna semi-klasik, berlaku
+	\[
+	e^\alpha = A \Rightarrow  \alpha = \log \left(\frac{N}{Z}\right) 
+	\]
+	Mengingat $A = N/Z$. Dengan demikian
+	\[
+	-\alpha = \log \left(\frac{Z}{N}\right) = - \frac{\mu}{kT}
+	\]
+	Sementara dari persaman (7.28) diketahui bahwa
+	\[
+	Z = \frac{V}{h^3} (2\pi m kT)^{3/2}
+	\]
+	Maka 
+	\begin{align}
+	\mu & = - kT \log \left[\frac{V}{N}  \frac{(2\pi m kT)^{3/2}}{h^3} \right]   \nonumber \\
+	& = - kT \log \left[  \frac{V}{N} \left\{  \frac{2\pi m kT}{h^2}\right \}^{3/2} \right ] \tag{QED}
+	\end{align}
+	\end{description}
+\item 
+	Gunakan persamaan 10.21b dan 10.22 untuk memperoleh pernyataan dari entropi sebagai bentuk fungsi grand partisi. Bandingkan hasilnya dengan yang diperoleh pada persamaan 9.13
+	\begin{description}
+	\item[Jawab]
+	\begin{align}
+	S & = \left\lbrace \frac{\partial (pV)}{\partial T} \right \rbrace_{T, \mu} \nonumber  \\
+	& = \frac{\partial}{\partial T} (k T \log Z) \nonumber \\
+	& = k \left[ \frac{\partial T}{\partial T} \log Z + \frac{\partial}{\partial T} (\log Z) \cdot T  \right ]  \tag{QED}
+	\end{align} 
+	\end{description}
+	
+\end{enumerate}
+
+
+\end{document}}

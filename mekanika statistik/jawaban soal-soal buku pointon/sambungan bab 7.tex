@@ -1,0 +1,70 @@
+\documentclass[a4paper , 12 pt]{article}
+\usepackage[fleqn]{amsmath}
+\usepackage{setspace}
+%\usepackage[margin =2.5 cm]{geometry }
+
+\onehalfspacing
+\pagestyle{empty}
+\allowdisplaybreaks
+
+\begin{document}
+\centering JAWABAN SOAL BAB 7 FISIKA STATISTIK POINTON no. 4 - 6
+\begin{enumerate}
+\item[4]
+Dengan mengevaluasi integral
+\[
+\int_{x = 0}^L \int_{p_x = - \infty}^\infty e^{- p_x^2 / 2 m kT} \frac{dx d p_x}{h} = Z_x 
+\]
+carilah nilai fungsi partisi sebagain (satu arah saja) untuk gerak translasi dari sistem  dalam satu dimensi  dengan gerak dibatasi pada daerah $0 \le x \le L$. Kemudian tunjukkan bahwa fungsi partisi untuk gerak translasi dalam tiga dimensi seperti yang diberikan oleh persamaan 7.28 dinyatakan oleh 
+\[
+Z = Z_x Z_y Z_z
+\]
+dan tunjukkan pula bahwa energi per derajat kebebasan yang dinyatakan oleh $k T^2 \{\partial \log Z_x /\partial T  \}$ adalah $\displaystyle \frac{1}{2} kT$ \newline \newline
+\textbf{Jawab:}
+\begin{align}
+Z_x  &= \int_{x = 0}^L \int_{p_x  - \infty}^\infty e^{- p_x^2 / 2 m kT} \frac{dx d p_x}{h}     \nonumber \\
+& =\frac{\sqrt{m k T}}{h} \int_{0}^L \int_{-\infty}^{\infty} e^ { - p_x} \cdot p_x^{-1/2} d p_x d x \nonumber \\
+& = \frac{\sqrt{m k T \pi }}{h} L_x \tag{iii.1}
+\end{align}
+Sehingga
+\begin{align}
+Z = Z_x Z_y Z_z &  =  \frac{\sqrt{m k T \pi }}{h} L_x \cdot  \frac{\sqrt{m k T \pi }}{h} L_y \cdot  \frac{\sqrt{m k T \pi }}{h} L_z \nonumber \\
+& =  \left(\frac{\sqrt{m k T \pi }}{h}\right)^3 \cdot V \tag{QED}
+\end{align}
+Kemudian energi per derajat kebebasan 
+\begin{align}
+k T^2 \left \{  \frac{\partial \log Z_x}{\partial T} \right\} & = k T^2
+ \frac{\partial}{\partial  T}\log \left ( \sqrt{mkT\pi} L_x\right)  \nonumber
+ \\
+& = k T^2 \frac{1}{\sqrt{\pi mkT} L_x} \cdot L_x \sqrt{m k \pi } \left(\frac{1}{2}\right) \frac{1}{\sqrt{T}} \nonumber \\
+& = \frac{1}{2} k T \tag{QED} 
+\end{align}
+\item[5] Tunjukkan bahwa fungsi partisi total yang diturunkan dari persamaan 7.45 dengan asumsi bahwa energi dari $N$ sub-system dinyatakan oleh
+\[
+E  = \frac{p_{x1}^2}{2m} + \frac{p_{y1}^2}{2m} + \frac{p_{z1}^2}{2m} + ... + \frac{p_{xN}^2}{2m} +\frac{p_{yN}^2}{2m} +\frac{p_{zN}^2}{2m}
+  \] 
+akan sesuai dengan yang diperoleh dengan mensubstitusikan persaman 7.28 ke dalam persamaan 7.31 yakni
+\[
+\boldsymbol{Z} = \frac{V^N}{N ! h^{3N}} (2 \pi m k T)^{3 N/ 2}
+\]
+\textbf{Jawab:}
+\begin{align}
+\boldsymbol{ Z} =\frac{V^N}{N ! h^{3N}} \int_{-infty}^{\infty} e^{-( \frac{p_{x1}^2}{2m} + \frac{p_{y1}^2}{2m} + \frac{p_{z1}^2}{2m} + ... + \frac{p_{xN}^2}{2m} +\frac{p_{yN}^2}{2m} +\frac{p_{zN}^2}{2m})} \nonumber \tag{v.1}
+\end{align}
+Karena $e^{a + b + c} = e^a \cdot e^b \cdot e^c$, sementara untuk sebuah partkel (misalnya partikel ke-1) ungkapan 
+ \[\displaystyle \int_{-\infty}^{\infty} \exp\left[-{\left( \frac{p_{x1}^2}{2m} + \frac{p_{y1}^2}{2m} + \frac{p_{z1}^2}{2m}\right)} \right] dp_{x1} d p_{y1} d p_{z1}\]
+  sudah dihitung pada soal nomor 4 yang nilainya adalah \[\displaystyle   \left(\sqrt{m k T \pi }\right)^3 \cdot V\]
+  dan mengingat fakta bahwa untuk masing-masing  partikel tidak ada keistimewaan dalam orientasi gerak terhadap sumbu tertentu serta gerak masing-masing partikel saling bebas, maka hampiran momentum (dan kemudian energi ) untuk satu partikel tadi dapat juga digunakan untuk  menghitung momentum dan energi partikel lain. Dan karena ada $N$ partikel maka nilai tadi cukup dipangkatkan $N$ berdasarkan aturan eksponensial. Dengan demikian untuk $N$ partikel persamaan (v.1) dapat dituliskan menjadi
+  \begin{align}
+  \boldsymbol{Z} & = \frac{V^N}{N ! h^{3N}} (2 \pi m k T)^{3 N/ 2}  \nonumber \\
+  & = \frac{Z^N}{N !} \tag{QED}
+  \end{align}
+ \item[6] Gunakan persamaan 7.3 untuk memperoleh nilai dari $ \log W_\mathrm{max}$ dalam bentuk energi $E$ dan jumlah partikel $N$ (Gunakan nilai $T$ dan $\alpha$ pada chapter 2). \newline
+ \textbf{Jawab:} \newline
+ Jujur soal ini agak ambigu, mungkin pembaca bisa menjawab....  insting (amatir) saya mengatakan kalo soal ini tidak mempunyai jawaban atau  "salah soal".. ??
+% \begin{align}
+% \log W_\mathrm{max} &= N \log \frac{N}{A} + \frac{E}{kT} \nonumber \\
+% & = 
+% \end{align}
+  \end{enumerate}
+\end{document}

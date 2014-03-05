@@ -1,0 +1,89 @@
+\documentclass[a4paper , 12 pt]{article}
+\usepackage[fleqn]{amsmath}
+\usepackage{setspace}
+%\usepackage[margin =2.5 cm]{geometry }
+
+\onehalfspacing
+\pagestyle{empty}
+\allowdisplaybreaks
+
+\begin{document}
+\centering
+JAWABAN SOAL FISIKA  STATISTIK BAB 7 BUKU POINTON 
+
+\begin{enumerate}
+	\item Tunjukkan bahwa ketika dua buah gas $A$ dan $B$ dengan volume $V_A$ dan $V_B$ dan jumlah molekul $N_A$ dan $N_B$ dicampurkan pada temperatur konstan untuk membentuk volume  $V_A + V_B$, maka akan ada peningkatan dari total entropi yang dinyatakan oleh suku campuran  
+	\[
+		k [ (N_A + N_B ) \log(V_A + V_B ) - N_A \log V_A - N_B \log V_B ]
+	\]
+	Kemudian  turunkan bahwa ketika $V_A = V_B$ dan $N_A = N_B = N$,    maka suku campuran tersebut akan menjadi $2 NK \log 2$ 
+	\begin{description}
+	\item[Jawab] 
+	Ketika belum dicampurkan, entropi kedua gas dinyatakan oleh persamaan
+	\begin{align}
+	S_{tot} & = S_A + S_B  \nonumber \\
+	& = N_A k \log [B V_A (2 \pi m k T)^{3/2} ] +\frac{3}{2} N_A k + \nonumber \\
+	& \hspace{0.5 cm} N_B k \log [B V_B (2\pi m k T)^{3/2}] + \frac{3}{2} N_B k \tag{i.1}
+	\end{align}
+	Ketika sudah dicampurkan maka 
+	\begin{align}
+	S_{TOT} & = S_{A+ B} \nonumber \\
+	& = (N_A + N_B ) k [\log (V_A + V_B )B (2 \pi m kT)^{3/2} ] + \nonumber \\ 
+	& \hspace{0.5 cm } \frac{3}{2} (N_A + N_B ) k  \nonumber \\
+	& = (N_A + N_B )k \log (V_A + V_B ) + 
+	\nonumber \\ 
+	& \hspace{0.5 cm } (N_A + N_B) k \log [B(2 \pi m k T)^{3/2}] + \frac{3}{2} (N_A + N_B) k \nonumber \\
+	& = (N_A + N_B) k \log (V_A + V_B) + N_A  k \log [B (2 \pi m k T)^{3/2}]  \nonumber  \\
+	& \hspace{0.5 cm }  N_B  k \log [B (2 \pi m k T)^{3/2}] + N_A k \log V_A - N_A k \log V_A + \nonumber \\  & \hspace{0.5 cm}N_B k \log V_B - N_B k \log V_B + \frac{3}{2} N_A k + \frac{3}{2} N_B k \nonumber  \\
+	& =  (N_A + N_B) k \log (V_A + V_B) + N_A k \log [B V_A (2 \pi m kT)^{3/2}] + \nonumber \\ 
+	& \hspace{0.5 cm }N_B k \log [B V_B (2 \pi m kT)^{3/2}] - N_A \log V_A - N_B \log V_B \nonumber \\
+	& \hspace{0.5 cm} +  \frac{3}{2}  N_A k + \frac{3}{2} N_B k \nonumber \\
+	& = S_A + S_B + (N_A + N_B ) k \log (V_A + V_B) -  \nonumber \\
+	& \hspace{0.5 cm } - N_A k \log V_A - N_B k \log V_B  \tag{i.2}
+	\end{align}
+	Ketika $N_A = N_B  = N$ dan $V_A = V_B = V$ maka suku campuran (i.2) menjadi
+	\begin{align}
+	& k [N_A + N_B] \log(V_A + V_B) -  N_A k \log V_A - N_B k \log V_B \nonumber \\
+	 & = k [2 N \log (2V ) - 2 N \log V] \nonumber \\
+	 & = k 2N \log 2 \tag{QED}
+	\end{align}
+	\end{description}
+\item Tunjukkan bahwa persamaan Sackur Tetrode (7.29) dapat juga \\dituliskan sebagai  
+\begin{align}
+S = N k \left( \frac{5}{2}  \log T - \log p + \frac{5}{2} \log k +  \frac{3}{2} \log(2 \pi m) - 3 \log h \nonumber +\frac{5}{2}\right)
+\end{align}
+\begin{description}
+\item[Jawab]
+	\begin{align}
+	& N k \left\{ \log \left[ \frac{V (2 \pi m k T)^{3/2} }{N h^3 }  \right] + \frac{5}{2}\right \} \nonumber \\
+	& = N k \left \lbrace \log \left [ 
+	\frac{k T (2 \pi m k T)^{3/2}}{p h^3}  \right ] +\frac{5}{2} \right \rbrace \nonumber \\
+	& = N k \left \{  \log 
+	  \left [ \frac{(kT)^{5/2} (2 \pi m)^{3/2}}{p h^3} \right ] + \frac{5}{2} \right   \} \nonumber \\
+	  & = N k \left \{ \frac{5}{2}  \log T + \frac{5}{2} \log k + \frac{3}{2} \log (2\pi m ) - \log p   \right. \nonumber \\
+	  & \hspace{0.5 cm } \left.  - 3 \log h + \frac{5}{2} \right \}  \tag{QED}
+	\end{align}
+\end{description}
+\item Turunkan persamaan keadaan dan total energi dari gas sempurna semi klasik  dari pernyataan  untuk energi bebas seperti yang diberikan pada persamaan 7.30. Jelaskan mengapa hasil yang diperoleh  sama dengan pada kasus gas sempurna klasik sementara entropy yang diturunkan dari persamaan ini tidak sama. 
+\begin{description}
+\item[Jawab]
+	Dengan memasukkan persamaan (7.30) ke dalam persamaan untuk tekanan (pers. 6.15) maka diperoleh 
+	\begin{align}
+	 p   &= - \left \{  \frac{\partial F}{\partial p} \right \}_T \nonumber \\
+	 & = \frac{\partial}{\partial V} \left \{ \log \left (  \frac{Z^N}{N !}\right ) \right \} \tag{iii.1}
+	\end{align} 
+	Dengan 
+	\[
+	Z = \frac{V}{h^3} (2 \pi m k T)^{3/2} 
+	\]
+	maka 
+	\begin{align}
+	p & = k T \frac{\partial}{\partial V} \left \{ \log \left ( \frac{1}{N !} \left[ \frac{V}{h^3} (2\pi mk T)^{3/2} \right ]^N \right ) \right \}  \nonumber \\
+	& = kT  \frac{\frac{1}{N !} \left ( \frac{(2 \pi m k T)^{3/2}}{h^3} \right )^N N V^{N - 1} }{\frac{1}{N !} \left [ \frac{V}{h^3}  (2 \pi m k T)^{3/2} \right ]^N} \nonumber \\
+	& = k T \frac{N V^{N -1}}{V^N} \nonumber \\
+	& = \frac{k T N }{V}  \tag{iii.2}
+	\end{align}
+	Persamaan (iii.2) merupakan persamaan keadaan untuk gas semi klasik, yang mana hasil ini juga diperoleh pada kasus gas klasik. Sementara entropi pada gas semi klasik (7.29) berbeda dengan gas klasik (7.17) adalah karena entropi sendiri merupakan besaran mikroskopik yang menggambarkan keadaan partikel-partikel penyusun suatu gas. Berbeda halnya dengan  persamaan keadaan,  yang mana menggambarkan hubungan dari besaran-besaran makroskopik  yang nilainya merupakan nilai terukur. Jadi akan tetap sama bagaimanapun tinjauan teoritis yang diambil.
+\end{description}
+\end{enumerate}
+\end{document}

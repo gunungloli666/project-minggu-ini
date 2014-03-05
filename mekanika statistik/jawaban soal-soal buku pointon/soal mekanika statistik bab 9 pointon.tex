@@ -1,0 +1,98 @@
+\documentclass[a4paper , 12 pt]{article}
+\usepackage[fleqn]{amsmath}
+\usepackage{setspace}
+%\usepackage[margin =2.5 cm]{geometry }
+
+\onehalfspacing
+\pagestyle{empty}
+\allowdisplaybreaks
+%\mathscr
+\begin{document}
+
+%\flushleft
+\centering
+JAWABAN SOAL FISIKA  STATISTIK BAB 9 BUKU POINTON 
+
+\begin{enumerate}
+	\item Tunjukkan bahwa defenisi entropi yang dinyatakan sebagai $S = -k \displaystyle \sum_i p_i \log p_i$  akan menghasilkan distribusi kanonik normal, $p_i = e^{F - E_i}/kt$ ketika kondisi $\overline{E} = \displaystyle \sum_i p_i E_i$ diterapkan  dan entropi dituliskan sebagai \newline  $(\overline{S} - F)/T$
+		\begin{description}
+			\item[Jawab:] 
+			\[
+				S = -k \sum_i p_i \log p_i \tag{i.1}
+			\]
+			Sementara
+			\begin{align}
+				S& = (\overline{E} -F )/kt  \tag{i.2}\\ 
+				& = (\sum_i p_i E_i  - F)/kt \tag{i.3}
+			\end{align} 
+			Karena $\displaystyle \sum_i p_i = 1 $ (pers 9.2) maka $F$ dapat dituliskan menjadi $F =  \displaystyle F \sum_i p_i$
+			dengan memasukkan (i.3) ke (i.1) diperoleh 
+			\begin{align}
+				(\overline{E} - F)/T & = -k \sum_i p_i \log p_i \nonumber \\
+				(\sum_i p_i E_i - \sum p_i F)/kt & = - \sum_i p_i \log p_i  \tag{i.4}
+			\end{align}
+			Sehingga untuk $i$ tertentu akan diperoleh
+			\begin{align}
+				\frac{p_i E_i - F p_i}{kT} & = - p_i \log p_i  \nonumber \\
+				\frac{E_i - F}{kT} & = -\log p_i \nonumber\\
+				p_i & = e^{-({E_i - F})/kT} \tag{QED}
+			\end{align}
+		\end{description}
+%		nomor 2
+	\item Asumsikan ada $W$ keadaan yang mungkin dari sebuah asembli sehingga $p_i = 1/W$ untuk semua nilai dari $i$. Tunjukkan bahwa entropi yang didefinisikan oleh persamaan 9.15 akan menjadi $S = k \log W$
+		\begin{description}
+			\item[Jawab]
+			  \begin{align}
+			  	S = - k \sum_i p_i \log p_i \tag{ii.1}
+			  \end{align}
+			  Karena  $p_i = 1/W$ konstan nilainya untuk semua $i$ maka $\log p_i$ juga konstan untuk semua $i$, sehingga dapat dikeluarkan dari penjumlahan.  Dengan demikian (2.1) menjadi
+			  \begin{align}
+			  	S & = -k \sum_i p_i \log \frac{1}{W}  \nonumber \\
+			  	&  = -k \log \frac{1}{W} \sum_i p_i \nonumber \\
+			  	& = -k \log \frac{1}{W} \nonumber \\
+			  	& = k \log W \tag{QED}
+			  \end{align}
+		\end{description}
+%		nomor 3
+ 	\item Gunakan aproksimasi Stirling untuk menemukan nilai dari suku terbesar pada penjumlahan dalam persamaan 9.20. Tunjukkan bahwa akan terdapat sedikit eror yang dihasilkan jika fungsi dalam persamaan 9.20 dihampiri dengan menggunakan suku  terbesar ketimbang keseluruhan suku dalam penjumlahan. 
+		\begin{description}
+			\item[Jawab]
+			Persamaan (9.20) merupakan uraian dari persamaan sebelumnya (pers. 9.19) yakni:
+			\begin{align}
+				\boldsymbol{Z} = \sum_i W_i e^{-E_i/kT} \tag{iii.1}
+			\end{align}
+			Dengan $W_i$ menyatakan bobot konfigurasi asembli ke-$i$ dalam keadaan yang ditentukan oleh seperangkat bilangan okupasi $n_s$ yang memenuhi $\displaystyle \sum_s n_s = N$.
+			Dengan demikian suku terbesar pada persamaan (9.20) menyatakan konfigurasi dengan bobot terbesar. Atau seperti yang dinyatakan  oleh persamaan (7.3) yakni
+			\begin{align}
+				\log W_{max} & = N \log N - N \log A + \frac{E}{kT} \nonumber \\
+				& = N \log \frac{N}{A} + \frac{E}{kt} \nonumber %\tag{iii.2} 
+			\end{align}
+			Suku $N/A$ sudah didefinisikan sebagai fungsi partisi asembli $Z$. Jadi dengan menggunakan bantuan (7.3) untuk konfigurasi dengan bobot terbesar (\textit{most probable configuration}), maka %\newline
+			\begin{align}
+			W_{max} &  = \exp{\left ( N \log \frac{N}{A} + \frac{E}{kt} \right )} \nonumber \\
+			& = \left ( e^{\log \frac{N}{A}} \right )^N \cdot e^{\frac{E}{kt}} \nonumber \\
+			& = \left( \frac{N}{A} \right) ^N \cdot e^{\frac{E}{kT}} \nonumber \\
+			& = Z^N \cdot e^{\frac{E}{kT}} \tag{iii.2}
+ 			\end{align}
+ 			Sehingga untuk suku ke-$i$ pada (9.20) yang memiliki nilai terbesar diperoleh 
+ 			\begin{align}
+ 			W_{i,max} \cdot e^{E_i/kT}& = Z^N \cdot e^{E_i/kT} \cdot  e^{-E_i/kT} \nonumber \\
+ 			& = Z^N = \boldsymbol{Z} \tag{QED}
+ 			\end{align} 
+		\end{description}
+	\item Gunakan persamaan 9.58 dengan operator Hamiltonian $ \mathcal{H}$ ditempatkan pada tempat operator $\mathcal{L}$ untuk memperoleh pernyataan $\displaystyle \sum_{i} p_i E_i  $ untuk mendapatkan energi rata-rata dari asembli.
+	\begin{description}
+		\item[Jawab] 
+		Energi rata-rata asembli dinyatakan oleh persamaan (9.58) sebagai
+		\begin{align}
+		\overline{Q} & = \sum_i \int_\tau \psi_i^\star   \mathcal{L} p \psi_i d \tau \nonumber \\
+		& = \sum_i \int_\tau \psi_i^\star \mathcal{H} p \psi_i d \tau \nonumber  \\
+		& = \sum_i \int_\tau \psi_i^\star E_i p_i \psi_i  d \tau  \nonumber \\
+		& = \sum_i E_i p_i \int_\tau  \psi_i^\star \psi d \tau \nonumber  \\
+		& = \sum_i p_i E_i \tag{QED}
+		\end{align}
+	\end{description}
+\end{enumerate}
+
+
+\end{document}

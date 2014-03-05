@@ -1,0 +1,132 @@
+\documentclass[a4paper , 12 pt]{article}
+\usepackage[fleqn]{amsmath}
+\usepackage{setspace}
+%\usepackage[margin =2.5 cm]{geometry }
+\title{Jawaban Soal Bab 2 dan Bab 3 buku  Fisika Statistik Pointon }
+\onehalfspacing
+\pagestyle{empty}
+\allowdisplaybreaks
+\pagestyle{empty}
+\author{MOH FAJAR}
+\begin{document}
+\textbf{BAB 2}
+\begin{enumerate}
+\item Tunjukkan bahwa distribusi yang diperoleh dari persamaan 2.11  seperti halnya pada persamaan 2.13 tidak bergantung pada apakah bentuk dari aproksimasi Stirling  dinyatakan sebagai $N! \cong [ n/ e ]^N$ ataukah dalam bentuk yang lebih sempurna yakni $ N!  \cong    [N/e]^N \sqrt{2 \pi N}$ \newline
+\textbf{Jawab:} 
+\begin{align}
+N & \cong (N/e)^N \sqrt{2 \pi N } \nonumber  \\  \Rightarrow \log N ! &  \cong \log \left( (N/e)^N  \sqrt{ 2 \pi N } \right) \nonumber \\
+& = N \log N - N + \log \sqrt{2 \pi} + \log \sqrt{N} \nonumber \\
+& = N \log N - N + \log \sqrt{2 \pi } + \frac{1}{2} \log N \nonumber \\
+& = \left( N + \frac{1}{2}\right) \log N - N + \log (2 \pi) \nonumber  \tag{i.1} 
+\end{align}
+Untuk $N$ sangat besar (misalnya sejuta atau semilyar) maka $N + 1/2 \cong N$ dan $N \log N > N = e^{\log N} = 1 + \log N + (\log N)^2/2 ! + (\log N)^3/3 !  + ... \gg \log N > \log (2\pi)$ sehingga 
+\begin{align}
+\log N ! \cong N \log N - N \tag{QED}
+\end{align}
+\item
+Dengan mengintegrasikan secara langsung dari $\displaystyle \int_0^\infty \varepsilon n(\varepsilon ) d \varepsilon$ dengan  $n (\varepsilon)$  diperoleh dari persamaan 2.59  maka tunjukkan bahwa total energi dari asembli dinyatakan sebagai $\displaystyle \frac{3}{2} RT$ dengan $R = Nk$ \newline
+\textbf{Jawab:} 
+\begin{align}
+\int_{0}^{\infty} \varepsilon n (\varepsilon) d \varepsilon & = \frac{2 \pi N}{(\pi kT)^{3/2}} \int_{0}^{\infty}  \varepsilon^{1/2} \varepsilon
+ e^{-\varepsilon/kT } d \varepsilon \nonumber 
+ \\
+ & = \frac{2 \pi N }{(\pi k T )^{3/2}} \int_{0}^{\infty} (\varepsilon kT)^{1/2} (\varepsilon kT) e^{-\varepsilon} d( \varepsilon  kT) \nonumber \\
+ & = \frac{2 \pi N}{\sqrt{\pi }}   kT \int_{0}^{\infty} e^{-\varepsilon } \varepsilon^{3/2 } d \varepsilon \nonumber \\
+ & = \frac{2\pi N kT}{\sqrt{\pi}} \Gamma{(5/2)} \nonumber \\
+ & = \frac{2 \pi N k T}{\sqrt{\pi}} \frac{3}{2} \cdot \frac{1}{2} \Gamma(1/2) \nonumber \\
+ & = \frac{3}{2} N k T \nonumber \\
+ & = \frac{3}{2} R T \tag{QED}
+\end{align}
+\end{enumerate}
+\textbf{BAB 3}
+\begin{enumerate}
+\item Turunkan pernyataan variasi tekanan terhadap ketinggian di dalam kolom gas pada temperatur T. $(a)$ Gunakan fakta bahwa perubahan temperatur terhadap ketinggian  $dh$ adalah $- \rho g h $ di mana $\rho $ menyatakan kerapatan gas kemudian  $(b)$ Gunakan faktor Boltzmann untuk mendapatkan gradient konsentrasi  dari molekul.  \newline 
+\textbf{Jawab:} \\
+Untuk gas ideal berlaku 
+\begin{align}
+PV  = N k T \tag{i.1}
+\end{align}
+atau 
+\begin{align}
+	 P& = \left( \frac{N}{V} \right)  kT \nonumber \\
+	& = \rho k T \nonumber
+\end{align}
+Dengan $\rho$  menyatakan densitas atau jumlah partikel per satuan volume. Jadi 
+\begin{align}
+	P (h)& = - \rho \, g \, h \nonumber \\
+	& =  - \frac{P}{k \, T} \,g \, h \nonumber 
+\end{align}
+atau 
+\begin{align}
+&d P   = - \frac{P}{k T} g \, d h  \nonumber \\
+& \Rightarrow \frac{dP}{P} = - \frac{g}{k \, T} dh  &
+\nonumber  \\
+&\Rightarrow \log P - \log C = - \frac{g}{k \, T} h   \nonumber \tag{i.2}
+\end{align}
+dengan $C =  $ konstanta integrasi  kiri  +  konstanta  integrasi  kanan.  Karena pada ketinggian $0$ tekanan adalah tekanan atmosfir $P_0  $ maka  i.2 dapat dituliskan menjadi
+\begin{align}
+&\log P_0 - \log C = 0 \nonumber \\
+ & \Rightarrow C = P_0 \nonumber 
+\end{align}
+atau 
+\begin{align}
+P (h) = P_0 \exp \left( - \frac{g\,h}{k\, T}\right) \tag{QED}
+\end{align}
+Konsentrasi gradien dapat diperoleh dengan meninjau hubungan $P\,V = N \,k\, T \Rightarrow N = P\,V/k\,T $ demikian pula $P_0 \,V  = N_0 \,k \,T $  sehingga $N_0 = P_0 V / k T$. Jadi
+\begin{align}
+\frac{N(h)}{N_0} = \frac{P(h)}{P_0} = \exp
+ \left( - \frac{g\, h }{k\, T}\right) \nonumber \\
+ \Rightarrow N(h) = N_0  \exp
+  \left( - \frac{g\, h }{k\, T}\right) \nonumber
+\end{align}
+Hal ini benar mengingat dalam meninjau tekanan gas tersebut, gaya eksternal (dan kemudian energi) yang berlaku hanya gaya gravitasi yang hanya bergantung pada ketinggian $h$. (QED)
+\item Hitunglah nilai rata-rata dari $|\nu_x|$ dan $\nu_x^2$ (section  3.3)\newline
+\textbf{Jawab:} 
+\begin{align}
+|v_x|  = \begin{cases}  - v_x  & \text{ untuk } v_x <0 \\
+v_x  &\text{ untuk } v_x \ge 0 
+\end{cases} 
+\nonumber
+\end{align}
+Jadi 
+\begin{align}
+\overline{|v_x| } &  = \left(\frac{m}{2 \pi k T}\right)^{1/2} \left [- \int_{-\infty}^{0} v_x \exp \left(-\frac{m v_x^2}{2 kT}\right) dv_x + \int_{0}^{\infty} v_x \exp \left(\frac{- m v_x^2}{2 k T}\right) d v_x \right ] \nonumber 
+\end{align}
+\begin{align}
+& \text{misalkan }
+m \, v_x^2 /2 k T = u \Rightarrow v_x d v_x  = \frac{k \, T \,du}{m} \nonumber \\
+& \Rightarrow \text{ untuk } v_x = 0 \text{, }  u = 0 \text{ dan untuk } v_x = -\infty \text{, } u  = \infty \nonumber
+\end{align}
+ sehingga  dengan memasukkan fakta tersebut ke persaman sebelumnya dan  mengganti kembali   $u$  menjadi $v_x$ diperoleh 
+\begin{align}
+\overline{|v_x|} & =  \left( \frac{k T}{2 \pi m } \right)^{1/2} \left[ - \int_{\infty}^{0} \exp\left( - v_x \right) d v_x  +\int_{0}^{\infty} \exp \left(- v_x\right) d v_x \right ] \nonumber \\
+& =    \left( \frac{k T}{2 \pi m } \right)^{1/2} \left[\left. e^{-v_x} \right \vert_{\infty}^0 - \left. e^{-v_x} \right \vert_{0}^{\infty} \right ] \nonumber \\
+& =   \left( \frac{k T}{2 \pi m } \right)^{1/2} \left[ \frac{1}{e^0} - \lim_{v_x \rightarrow \infty} \frac{1}{e^{v_x}}  - \lim_{v_x \rightarrow \infty }  \frac{1}{e^{v_x }} + \frac{1}{e^0}\right] \nonumber \\
+& =  \left( \frac{ 2k T}{ \pi m } \right)^{1/2} \tag{QED}
+\end{align}
+untuk $v_x^2$
+\begin{align}
+\overline{v_x^2} & = \left(\frac{m}{2 \pi k T}\right) \int_{-\infty }^{\infty} v_x^2 \exp \left(- \frac{m v_x^2}{2 k T}\right) d v_x  \nonumber 
+\end{align}
+
+Karena $\displaystyle v_x^2 \exp \left( - \frac{mv_x^2}{2 k T}\right) $ merupakan fungsi genap, maka integras dari $-\infty $ ke $0$ sama saja hasilnya dengan integrasi dari $0$ ke $\infty$ sehingga 
+\begin{align}
+\overline{v_x^2} & = \left(\frac{m}{2\pi k T}\right)^{1/2} 2 \left[ \int_{0}^{\infty} \sqrt{2} \left(\frac{k T}{m}\right)^{3/2} \sqrt{v_x} \, d v_x  \, e^{- v_x}\right] \nonumber \\
+& = \left(\frac{2 k T}{\sqrt{\pi} m }\right) \int_{0}^{\infty} e^{-v_x} v_x^{1/2} dv_x \nonumber \\
+& =  \left(\frac{2 k T}{\sqrt{\pi} m }\right) \Gamma \left(\frac{3}{2}\right) \nonumber \\
+& =  \left(\frac{2 k T}{\sqrt{\pi} m }\right) \frac{1}{2}\Gamma \left(\frac{1}{2}\right) \nonumber \\
+& = \left(\frac{k T}{m}\right) \tag{QED}
+\end{align}
+Perlu diperhatikan bahwa nilai kedua besaran ini tidak sama dengan nilai dari $\overline{v_x}$ yang nilainya sama dengan $0$. Anda bisa membayangkannya secara intuitif mengapa. :D 
+\item Tunjukkan bahwa integrasi terhadap persamaan 3.10 untuk semua sudut koordinat kutub akan menghasilkan distribusi seperti pada persamaan 3.8 \newline 
+\textbf{Jawab} 
+\begin{align}
+& N \left(\frac{m }{2 \pi k T}\right)^{3/2} \iiint_{-\infty}^{\infty} \exp \left( - m (v_x^2 + v_y^2 + v_z^2)/ 2 k T\right) dv_x \, dv_y \, dv_z \nonumber \\
+& = N\left(\frac{m }{2 \pi k T}\right)^{3/2} \int_{v_\psi = 0}^{2\pi}\int_{v_\theta = 0}^{\pi} \int_{v_r = 0}^{\infty} e^{-  m v_r^2 /2 k T} \, v_r^2 \, \sin(v_\theta) \, dv_r \, dv_\theta \, d v_\psi \nonumber \\
+& =  N\left(\frac{m }{2 \pi k T}\right)^{3/2}  2\pi  \cdot 2 \int_{0 }^{\infty} v_r^2 \, e^{- m v_r^2 /2 k T} dv_r\nonumber \\
+& =  N\left(\frac{m }{2 \pi k T}\right)^{3/2}  4\pi  \int_{0 }^{\infty} v_r^2 \, e^{- m v_r^2 /2 k T} dv_r 
+\nonumber
+\end{align}
+Karena yang diintegralkan hanya sudut kutubnya maka nilai ini sudah sama dengan yang diperoleh pada persaman 3.8 (QED)
+\end{enumerate}
+ \end{document}

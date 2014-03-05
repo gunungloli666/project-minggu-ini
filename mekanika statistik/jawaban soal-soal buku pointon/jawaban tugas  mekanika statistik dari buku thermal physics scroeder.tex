@@ -1,0 +1,139 @@
+\documentclass[a4paper , 12 pt]{article}
+\usepackage[fleqn]{amsmath}
+\usepackage{amsfonts}
+\usepackage{setspace}
+%\usepackage{mathstone}
+%\usepackage[margin =2.5 cm]{geometry }
+
+
+\onehalfspacing
+\pagestyle{empty}
+\allowdisplaybreaks
+
+\begin{document}
+\begin {singlespace}
+\centering
+TUGAS 2 MEKANIKA STATISTIK
+
+\underline{MOHAMMAD FAJAR} 
+
+20211019
+
+tgl: 5 - maret - 2013
+\end{singlespace}
+
+\begin{enumerate}
+\item 
+Hitunglah nilai rata -rata total jumlah foton pada kesetimbangan termal pada kotak dengan temperatur $T$ dan volume $V$  (kasus radiasi benda hitam). \newline
+%\begin{description}
+\textbf{Jawab:}\newline
+Persamaan schroodinger untuk partikel bebas  dinyatakan oleh
+\begin{align}
+\frac{\partial^2 \psi}{\partial x^2} +\frac{\partial^2 \psi}{\partial y^2} +\frac{\partial^2 \psi}{\partial z^2} + \frac{8\pi ,E}{h^2} \psi = 0 \tag{i.1} 
+\end{align}
+Solusi umumnya adalah  
+\begin{align}
+\psi = \psi_0 e^{j(k_x x + k_y y + k_z z)} \tag{i.2}
+\end{align}
+di mana
+\begin{align}
+(p_x^2  + p_y^2 + p_z^2 ) = 2 m E \nonumber \tag{i.3}
+\end{align}
+Karena pada kasus radiasi benda hitam, partikel terjebak dalam kotak, maka solusi umum tersebut mesti dikenakan sarat batas dari kotak. Katakanlah kotaknya mempunyai panjang dalam arah $x$,  $y$, dan $z$ berturut-turut adalah  $L_x$, $L_y$ dan $L_z$
+sehingga diperoleh
+\begin{align}
+k_x  = \frac{n_x \pi}{L_x}  \nonumber \\
+k_y  = \frac{n_y \pi}{L_y} \nonumber \tag{i.4}\\
+k_z = \frac{n_z \pi }{L_z} \nonumber
+\end{align} 
+atau
+\begin{align}
+L_x = n_x \frac{\lambda_x}{2} \nonumber \\
+L_y = n_y \frac{\lambda_y}{2} \nonumber \tag{i.5} \\
+L_z = n_z \frac{\lambda_z}{2} \nonumber
+\end{align}
+$n$ sendiri menyatakan setengah panjang gelombang yang terdapat di dalam kotak. Atau dengan meninjau hubungan $\lambda = h/p$ maka jika terdapat perubahan momentun sebesar $p  + dp$ maka terdapat pula perubahan jumlah setengah gelombang sebanyak $n + dn $ yang untuk ke setiap sumbu masing-masing dinyatakan oleh
+\begin{align}
+(n_x + d n_x ) = \frac{2 L_x (p_x + dp_x)}{h} \nonumber \\
+(n_y + d n_y ) = \frac{2 L_y (p_y + dp_y)}{h} \nonumber \tag{i.6} \\ 
+(n_z + d n_z ) = \frac{2 L_z (p_z + dp_z)}{h} \nonumber
+\end{align}
+atau 
+\begin{align}
+d n_x = \frac{2 L_x d p_x}{h} \nonumber \\
+d n_x = \frac{2 L_x d p_x}{h} \nonumber \tag{i.7} \\
+d n_x = \frac{2 L_x d p_x}{h} \nonumber 
+\end{align}
+Atau untuk elemen volume $V$ jumlah gelombang berdiri (jumlah setengah panjang gelombang yang eksis) dalam kotak dinyatakan oleh
+\begin{align}
+d n_s &  = d n_x d n_y d n_z  \nonumber \\
+ & = \frac{8 L_x L_y L_z d p_z d p_y d p_z}{h^3} \tag{i.8}
+\end{align}
+Karena untuk satu sumbu saja (misal sumbu $x$) terdapat momentum yang terasosiasi, yakni $p_x$ dan $-p_x$ maka jumlah panjang gelombang sesungguhnya  yang mencerminkan keadaan yang dibolehkan pada kotak tersebut merupakan tinjauan pada satu kuadran saja (kuadran pertama --- yang semua sumbu positif) atau $1/8$ dari nilai di atas yakni 
+%\end{description}
+\begin{align}
+d \mathfrak{n}& = \frac{L_x L_y L_z d p_x d p_y d p_z}{h^3} \nonumber \\ 
+& = \frac{V \cdot 4 \pi p^2 dp}{h^3}\tag{i.9}
+\end{align}
+Persamaan (i.9) tidak lain merupakan elemen volume pada ruang fasa. Dengan demikian persamaan (i.9) sendiri menyatakan jumlah keadaan yang dibolehkan yakni
+\[
+d \mathfrak{n} = \frac{\Delta \Gamma}{h^3} \tag{i.10}
+\]
+jika $\lambda = h/p $ maka 
+\begin{align}
+d \mathfrak{n}& = \frac{V 4 \pi }{h \lambda^2} \left( - \frac{h d\lambda}{\lambda^2} \right) \nonumber \\
+& = - \frac{4 \pi V}{\lambda^4} d\lambda  \tag{i.11}
+\end{align}
+atau untuk satu satuan volume dinyatakan sebagai 
+\begin{align}
+d \mathfrak{n} =  g(\lambda) d \lambda =  \frac{4 \pi }{\lambda^4} d\lambda  \tag{i.12}
+\end{align}
+yang menyatakan banyaknya satu satuan setengah panjang gelombang (modes wave) dalam rentang  $\lambda$ sampai $\lambda + d \lambda$ 
+. Tanda negatif telah dihilangkan karena menyangkut jumlah. 
+
+Pada gelombang elektromagnetik sendiri polarisasi terdiri dari dua arah yang saling tegak lurus sehingga persamaan (i.12) mesti dikalikan 2 yakni
+\begin{align}
+g(\lambda) d \lambda  = \frac{8 \pi}{\lambda^4} d \lambda \tag{i.13}
+\end{align}
+
+Fungsi distribusi bose-einstein sendiri menyatakan bahwa jumlah foton yang berada pada tingkat energi  tertentu dinyatakan oleh hubungan  
+\begin{align}
+n_s = \frac{g_s}{e^{h v_s/kT} - 1} \tag{i.14}
+\end{align}
+Sementara pada foton berlaku $h\nu = h c /\lambda $. Dengan demikian persamaan (i.13) dapat dimasukkan ke dalam persamaan  (i.14)  sebagai jumlah foton, $n_\lambda (\lambda) d \lambda$ dengan panjang gelombang antara $\lambda$ sampai $\lambda + d \lambda $ yakni
+\begin{align}
+n_\lambda (\lambda) d \lambda = \frac{8 \pi}{\lambda^4} d \lambda \cdot \frac{1}{e^{hc/ k \lambda T} - 1} \tag{i.15}
+\end{align}
+jumlah total foton dalam kotak dapat diperoleh dengan mengintegralkan persamaan (i.15) terhadap semua panjang gelombang yang mungkin, yakni 
+\begin{align}
+N_\mathrm{TOT} = \int_{0}^\infty \frac{8 \pi}{\lambda^4}d\lambda \cdot \frac{1}{e^{hc/k \lambda T} - 1} \nonumber \tag{i.16}
+\end{align}
+Jika digunakan pemisalan  $\displaystyle t = hc/ k\lambda T$ maka $ \displaystyle dt = \frac{hc}{kT}(-d\lambda / \lambda^2)$ atau $\displaystyle \frac{d\lambda }{\lambda^2} = - \frac{ kT dt}{hc}$ dan $\displaystyle \lambda^2 = \left(\frac{hc}{kT}\right)^2 t^{-2}$ dan batas pengintegralan akan saling terbalik. Jadi persamaan (i.16) dapat dituliskan menjadi
+\begin{align}
+N_\mathrm{TOT} & = 8\pi \int_\infty^0 \left(- \frac{kT}{hc} dt \right) \left( \frac{kT }{hc} t\right)^2 \left( \frac{1}{e^t - 1}\right) \nonumber \\
+& = 8\pi \left(\frac{kT}{hc }\right)^3 \int_{0}^{\infty} \frac{t^2}{e^t -1} \nonumber \tag{i.17}
+\end{align}
+Persamaan terkahir dapat diselesaikan dengan meninjau hubungan berikut
+\begin{align}
+\frac{1}{e^t - 1} = \frac{e^{-t}}{1- e^{-t}}  \tag{i.18}
+\end{align}
+Dengan mengambil uraian taylor $\displaystyle \frac{1}{1 - x} = \sum_{n=0}^\infty x^n \hspace{0.3 cm} $(untuk $ |x| < 1$ ) pada suku penyebut maka
+\begin{align}
+\frac{1}{e^t - 1} = e^{-t}+ (e^{-t} )^2 + (e^{-t})^3 + ...  \nonumber \tag{i.19}
+\end{align}
+Kemudian tinjau integral berikut 
+\begin{align}
+\int_0^\infty t^2 e^{-n t } &=   \left. - \frac{1}{n} e^{-nt} \cdot t^2 \right \vert_0^\infty + \frac{2}{n}  \left [\left. -\frac{1}{n} e^{-n t} t \right \vert_0^\infty + \frac{1}{n} \int_{0}^{\infty}  e^{-nt} dt \right ] \nonumber \\
+& = \left. \left [ -  \frac{1}{n} e^{-n t} t^2 - \frac{2}{n^2} e^{-nt} t - \frac{2}{n^3} e^{-nt}  \right] \right \vert_0^\infty \nonumber \tag{i.20}
+\end{align}
+Untuk $t$ besar maka $e^t \gg t^2$ jadi $\displaystyle \lim_{t \rightarrow \infty} \frac{t^2}{e^t} = 0$. Sehingga 
+\begin{align}
+ \left. \left [- \frac{1}{n} e^{-n t} t^2 - \frac{2}{n^2} e^{-nt} t - \frac{2}{n^3} e^{-nt}  \right] \right \vert_0^\infty = \frac{2}{n^3} \tag{i.21}
+\end{align}
+Jadi dengan memasukkan hasil (i.21) dan uraian (i.19) ke dalam persamaan (i.17) maka diperoleh total jumlah foton pada kotak dalam kesetimbangan termal  yakni:
+\begin{align}
+16 \pi \left(\frac{kT}{hc}\right)^3 \sum_1^\infty \frac{1}{n^3} \tag{QED}
+\end{align}
+%Tunjukkan bahwa jumlah photon dalam keadaan kesetimbangan pada kotak dengan volume $V$ dengan temperatur $T$  dinyatakan oleh 
+\end{enumerate}
+\end{document}
