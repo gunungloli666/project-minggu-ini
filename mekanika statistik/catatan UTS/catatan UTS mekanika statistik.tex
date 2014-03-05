@@ -1,0 +1,1124 @@
+\documentclass[a4paper  , 6 pt]{article}
+\usepackage[fleqn]{amsmath}
+\usepackage{hyphenat}
+\usepackage{setspace}
+\usepackage{anysize}
+\usepackage{parskip}
+\usepackage{multicol}
+\usepackage{blindtext}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\usepackage{mathtools}
+%\usepackage{enumitem}
+\usepackage{tikz}
+
+%\marginsize{0.3 cm}{0.3 cm}{0 cm }{0 cm }
+\setlength{\mathindent}{0 cm }
+%\setlength{\}{length}
+\usepackage[margin={0.2 cm ,0.2 cm}]{geometry}
+%\setitemize[0]{leftmargin=*}
+%\usepackage[margin =2.5 cm]{geometry }
+%\title{PR 2 MEKANIKA STATISTIK}
+%\author{MOHAMMAD FAJAR \newline 20211019}
+\singlespacing
+\pagestyle{empty}
+\allowdisplaybreaks
+%\pagestyle{empty}
+
+\begin{document}
+
+%\begin{multicols*}{2}
+\begin{tiny}
+\begin{multicols} {5}
+
+\setlength \belowdisplayskip{0 pt} 
+\setlength \abovedisplayskip{0 pt}
+%\underline{\textbf{Statistik Klasik  terbedakan }}
+\textbf{Persamaan-persamaan yang sering digunakan } \newline Bobot konfigurasi statistik fermi dirac dinyatakan oleh:
+\begin{align}
+W = \prod_s w_s 
+\end{align}
+dengan 
+\begin{align}
+w_s = \frac{g_s !}{n_s ! (g_s - n_s) !} 
+\end{align}
+Untuk bose-einstein dinyatakan oleh
+\begin{align}
+W& = \prod_s w_s \nonumber \\
+& = \prod_s \frac{[(g_s - 1) + n_s] !}{(g_s - 1)! n_s ! }
+\end{align} 
+Untuk Boltzmann:
+\begin{align}
+W = N! \prod_s \left \lbrace \frac{g_s^{n_s}}{n_s !}\right \rbrace 
+\end{align}
+Untuk statistik semi-klasik 
+\begin{align}
+W =  \prod_s \left \lbrace \frac{g_s^{n_s}}{n_s !}\right \rbrace 
+\end{align}
+Fungsi distribusi fermi-dirac dinyatakan oleh
+\begin{align}
+\overline{n}_\mathrm{FD} =  \frac{1}{e^{(\epsilon - \mu )/kT} +1} 
+\end{align}
+Fungsi distribusi bose-einstein dinyatakan oleh 
+\begin{align}
+\overline{n}_\mathrm{BE} =  \frac{1}{e^{(\epsilon - \mu )/kT} - 1} 
+\end{align}
+Fungsi distribusi Boltzmann dinyatakan oleh
+\begin{align}
+\overline{n}_\mathrm{boltzmann} &= e^{\mu/ kT} e^{- \epsilon / kT} \nonumber \\
+& = e^{- (\epsilon - \mu )/ kT} 
+\end{align}           
+Energi bebas Helmoltz dinyatakan oleh
+\begin{align}
+F = - kT \, \ln Z 
+\end{align}
+dengan demikian diperoleh
+\begin{align}
+& S = -\left(\frac{\partial F}{\partial T}\right)_{V,N}, \\
+& P  = - \left(\frac{\partial F}{\partial V}\right)_{T,N}, \\
+ & \mu = + \left(\frac{\partial F}{\partial N}\right)_{T,V}
+\end{align}
+\begin{align}
+S = k \ln W
+\end{align}
+\begin{align}
+\frac{\mathcal{F}(s_2) }{\mathcal{F} (s_1)} =  \frac{\Omega (s_2)}{\Omega (s_1)}
+\end{align}
+\begin{align}
+\mathcal{P} (s) = \frac{1}{Z}e^{-E_s/kT} 
+\end{align}
+\begin{align}
+\frac{N_s}{N} = \frac{e^{-E(s)/kT}}{Z}
+\end{align}
+\begin{align}
+\overline{E} & = \frac{\sum_s E(s) N(s)}{N} = \sum_s E(s) \frac{N(s)}{N} \nonumber \\
+& = \sum_s E(s) \mathcal{s} = \frac{1}{Z} \sum_s E(s) e^{-\beta E(s) }
+\end{align}
+\textbf{Degenerasi gas fermi.} \newline Jumlah Keadaan energi dalam rentang energi  antara $\epsilon$ hingga $\epsilon+ d \epsilon$ adalah
+%\setlength \abovedisplayskip{0 pt}
+\begin{flalign}
+g(\epsilon)d\epsilon = \frac{2 \pi (2m )^{3/2} \epsilon^{1/2} d \epsilon \cdot V}{h^3}
+\end{flalign}
+karena fermion terdapat dua keadaan yang mungkin $-1/2$ dan $1/2$ maka nilai ini dikalikan 2 sehingga diperoleh:
+%\setlength \abovedisplayskip {0 pt}
+\begin{align}
+g(\epsilon) = V \cdot 4 \pi \left(\frac{2m}{h^2}\right)^{3/2} \epsilon^{1/2} \label{density of states}
+\end{align}
+Untuk $\epsilon < \epsilon_\mathrm{F}(0)$ maka 
+\begin{align}
+f(\epsilon) = \frac{1}{e^{- \infty} + 1} = 1
+\end{align}
+untuk $\epsilon > \epsilon_\mathrm{F}(0)$ maka 
+\begin{align}
+f(\epsilon) = \frac{1}{e^{\infty} + 1} = 0
+\end{align}
+Sehingga untuk memperoleh nilai energi fermi, maka persamaan ini Mesti diintegralkan dari 0 sampai $\epsilon_F$ 
+%\setlength \abovedisplayskip{0 pt}
+\begin{align}
+\int_0^{\epsilon_\mathrm{F}} V \cdot 4 \pi \left(\frac{2m}{h^2}\right)^{3/2} \epsilon^{1/2} d \epsilon = N 
+\end{align}
+yang hasilnya adalah 
+%\setlength \abovedisplayskip{0 pt}
+\begin{align}
+\epsilon_\mathrm{F} (0)= \frac{h^2}{2m }\left(\frac{3N}{8 \pi V}\right)^{3/2}
+\end{align}
+Temperatur fermi selanjutnya dapat diperoleh melalui hubungan:
+\begin{align}
+kT_\mathrm{F}(0) =  \epsilon_\mathrm{F} (0)
+\end{align}
+kemudian energi rata-rata elektron dapat dinyatakan sebagai:
+\begin{align}
+\overline{\epsilon} (0) = \frac{\int_{0}^{{\epsilon_\mathrm{F}(0)}}\epsilon g(\epsilon) d \epsilon}{\int_{0}^{{\epsilon_\mathrm{F}(0)}} g(\epsilon) d \epsilon} = \frac{3}{5} \epsilon_\mathrm{F} (0) 
+\end{align}
+%\end{multicols}
+Dengan cara yang sama dapat kita hitung momentum rata-rata dan kecepatan rata-rata yakni dengan melakukan transformasi $\epsilon = p^2/2m$. 
+Energi total dinyatakan oleh
+\begin{align}
+U = N \overline{\epsilon } = \frac{3}{5} N \epsilon_\mathrm{F}
+\end{align}
+Sehingga persamaan keadaan dapat diperoleh yakni
+\begin{align}
+P & = - \frac{\partial }{\partial V} \left[ \frac{3}{5} N \frac{h^2}{2m} \left( \frac{3N}{8 \pi }\right)^{3/2} \right. \nonumber \\
+& \hspace{0.2 cm } \left. \cdot V^{-3/2}  \right ] \nonumber \\
+& = \frac{2 N \epsilon_\mathrm{F}}{5 V} = \frac{2 U}{3 V} \label{pers.keadaan fermi dirac}
+\end{align} 
+%Untuk temperatur di atas nol mutlak maka
+\textbf{Statistik bose-einstein: Tinjauan radiasi benda hitam} 
+\newline
+Jumlah mode gelombang yang dibolehkan untuk panjang gelombang $\lambda$ sampai $d \lambda$ dinyatakan oleh
+\begin{align}
+g(\lambda) d \lambda = \frac{4 \pi}{\lambda^4} d \lambda \label{persamaan gelombang em}
+\end{align}
+Karena dalam gelombang elektromagnetik terdapat dua polarisasi yang saling tegak lurus maka nilai ini mesti dikalikan dengan 2 sehingga diperoleh:
+\begin{align}
+g(\lambda) d \lambda = \frac{8 \pi}{\lambda^4} d \lambda 
+\end{align}
+perhatikan: persamaan (6) setara dengan persmaan (1)
+%\end{multicols} 
+\newline
+sementara distribusi bose-einstein dinyatakan oleh:
+\begin{align}
+n_s = \frac{g_s}{e^{h\nu_s /kT} -1}
+\end{align}
+Sehingga jumlah foton, $n_\lambda (\lambda) d\lambda $ untuk rentang panjang gelombang antara $\lambda $ hingga $\lambda  + d \lambda$ dinyatakan oleh:
+\begin{align}
+n_\lambda (\lambda) d \lambda = \frac{8 \pi}{\lambda^4} d \lambda \cdot \frac{1}{e^{hc/ k\lambda T} - 1}
+\end{align}
+Di mana telah disubstitusi $h \nu  = h c/ \lambda$.
+Energi $E(\lambda) =n_\lambda (\lambda) h \nu = n_\lambda (\lambda) h c/ \lambda  $ dapat dinyatakan oleh:
+\begin{align}
+E(\lambda) d \lambda = \frac{8 \pi h c \, d\lambda}{\lambda^5 (e^{hc/k \lambda T} - 1)} 
+\end{align}
+Untuk panjang gelombang yang besar, maka $e^{hc /k \lambda T} \simeq 1+ hc/ k\lambda T$ sehingga diperoleh
+\begin{align}
+E(\lambda ) d\lambda  \simeq \frac{8 \pi k T \, d \lambda}{\lambda^4}
+\end{align}
+yang sama dengan formulasi Rayleigh Jeans. 
+Sementara untuk panjang gelombang yang rendah di mana $e^{hc/k \lambda T} \gg 1$ akan diperoleh:
+\begin{align}
+E(\lambda ) d\lambda  \simeq \frac{8 \pi h c}{\lambda^5} e^{- hc/k \lambda T} \, d \lambda 
+\end{align}
+yang merupakan formulasi distribusi Wein.
+%\end{multicols}
+ Dari persamaan (11) dapat diperoleh total energi persatuan volume yang terlingkupi dalam benda hitam tersebut yakni:
+ \begin{align}
+ E& = \int_{0}^{\infty} E(\lambda) d \lambda \nonumber \\
+ & = \int_{0}^{\infty} \frac{8 \pi h c d \lambda}{\lambda^5 (e^{hc /k \lambda T} -1)} \nonumber \\
+ & = \frac{8 \pi h}{c^3} \left \lbrace \frac{kT}{h} \right \rbrace^4 \int_{0}^{\infty} \frac{t^3 \, dt }{e^t - 1}  \label{energi}
+ \end{align}
+ Dengan 
+ \begin{align}
+ \int_{0}^{\infty} \frac{t^3}{e^t -1} = 6 \sum_{n = 1}^\infty \frac{1}{n^4} = \frac{\pi^4}{15} 
+ \end{align}
+ Maka persamaan \ref{energi} dapat dituliskan menjadi 
+ \begin{align}
+\boxed{E = \left \lbrace  \frac{8 \pi^5 k^4 }{15 h^3 c^3 }\right \rbrace  T^4}
+ \end{align}
+ \newline
+\textbf{Gas fonon.} \newline
+Jumlah fonon $n(\nu) d\nu$ dengan frekuensi antara $\nu$ sampai $\nu + d \nu$ adalah
+\begin{align}
+n_\nu(\nu) d\nu = \frac{g(\nu) d\nu}{e^{h\nu /kT} - 1} \tag{13}
+\end{align}
+Aproksimasi Debye dinyatakan oleh
+\begin{align}
+g(\nu) d\nu &  = C \nu^2 d \nu , & \nu \le \nu_\mathrm{m} \nonumber \\
+g(\nu) d\nu & = 0, & \nu > \nu_\mathrm{m} \nonumber 
+\end{align}
+Untuk mendapatkan konstanta $C$ maka dilakukan  integrasi terhadap seluruh mode yang mungkin yang nantinya akan menghasilkan nilai $3N$ yakni
+\begin{align}
+3N & = \int_{0}^{\infty} g(\nu)  d\nu  = \int_{0}^{\nu_\mathrm{m}} C \nu^2  d\nu  \nonumber \\
+& = \frac{1}{3} C \nu_\mathrm{m}^3 \nonumber \\
+\text{atau }& \nonumber \\
+C_\mathrm{m}& = \frac{9N}{v_\mathrm{m}^3} \nonumber
+ \end{align}
+ sehingga aproksimasi debye memberikan
+ \begin{align}
+ n_\nu (\nu) d\nu& = \frac{9N}{\nu_\mathrm{m}^3} \frac{\nu^2 d\nu}{e^{h\nu /kT} -  1} ,  \nu \le \nu_\mathrm{m} \nonumber \\
+  & = 0,\hspace{0.3 cm}  \nu > \nu_\mathrm{m} \nonumber
+ \end{align}
+ kemudian 
+ \begin{align}
+ E & = \int_{0}^{\nu_\mathrm{m}}  h \nu n_\nu (\nu) d\nu  \nonumber \\
+ & = \frac{9 N_A h}{\nu_\mathrm{m}^3} \int_{0}^{\nu_\mathrm{m}} \frac{\nu^3 d\nu}{e^{h\nu /kT} - 1} \nonumber
+ \end{align}
+ kemudian panas spesifik dapat diperoleh yakni
+  \begin{align}
+  C_\nu & = \left\lbrace \frac{\partial E}{\partial T} \right\rbrace   = \frac{9 N_A h^2}{v_\mathrm{m}^3} \frac{1}{kT^2} \cdot \nonumber \\ 
+   & \hspace{0.2 cm }\int_{0}^{\nu_\mathrm{m}} \frac{\nu^4e^{h\nu /kT} d\nu }{(e^{h\nu /kT} - 1)^2} 
+ \end{align}
+ Jika diadakan perubahan variabel yakni $x = h\nu /kT$ dan $h\nu_\mathrm{m}/k $ diganti oleh $\theta_\mathrm{D}$ maka temperatur karakteristik pada Persamaan di atas dapat dinyatakan menjadi:
+ \begin{align}
+ C_\nu = 9 R \left \lbrace \frac{T}{\theta_\mathrm{D}} \right \rbrace^3 \int_{0}^{\theta_\mathrm{D}/T} \frac{x^4 e^x d x}{(e^x - 1)^2} \nonumber  
+ \end{align}
+ Untuk temperatur tinggi, di mana $\theta_\mathrm{D} \ll 1$ maka $e^x \simeq 1+ x \simeq 1 $ sehingga 
+ \begin{align}
+ C_\nu  \simeq 9 R \left\{ \frac{T}{T_\mathrm{D}} \right \}^3 \int_{0}^{\theta_\mathrm{D}/T} x^2 dx =  3 R \nonumber
+ \end{align}
+ Untuk temperatur rendah, di mana $e^{- \theta_\mathrm{D} /T}\ll 1$ maka batas atas integrasi diganti menjadi $\infty$ sehingga 
+ \begin{align}
+ C_\nu
+ & \simeq 9 R
+ \left\lbrace \frac{T}{\theta_\mathrm{D}}\right\rbrace^3
+  \int_{0}^{\infty}
+   \frac{x^4 e^x dx}{(e^x - 1)^2} \nonumber 
+% \text{ jadi } & \nonumber \\
+% C\nu &  \simeq \frac{12}{5} \pi^4  R \left \lbrace  \frac{T}{\theta_\mathrm{D}}\right \rbrace^3 \nonumber 
+\end{align}
+atau dengan melakukan ekspansi taylor terhadap $ e^x$ maka 
+\begin{align}
+\int_{0}^{\infty } \frac{x^4 e^x dx }{(e^x - 1)^2 } = 24 \sum_{n =1}^{\infty} \frac{1}{n^4}  = \frac{4 \pi^4}{15} \nonumber
+\end{align}
+sehingga
+\begin{align}
+ C\nu &  \simeq \frac{12}{5} \pi^4  R \left \lbrace  \frac{T}{\theta_\mathrm{D}}\right \rbrace^3 \nonumber 
+\end{align} \newline
+\textbf{Statistik Maxwell Boltzmann} \newline
+Untuk sistem partikel terbedakan bobot konfigurasi dinyatakan sebagai
+\begin{align} 
+W = N! \prod_s \left \lbrace \frac{g_s^{n_s }}{n_s !} \right \rbrace 
+\end{align}
+distribusi momentum, kecepatan, dan energi dinyatakan oleh
+\begin{align}
+n_ p dp& =  \frac{4 \pi N }{(2 \pi mk T)^{3/2} } \nonumber \\ & \hspace{0.3 cm} \cdot e^{- p^2 /2 mk T} p^2 dp  
+\end{align}
+\begin{flalign}
+n_v dv& =  4 \pi N \left \lbrace  \frac{m }{2 \pi k T} \right \rbrace^{3/2} \nonumber \\ &\hspace{0.5 cm} \cdot e^{- v^2 /2 mk T} v^2 dv  
+\end{flalign}
+\begin{align}
+	n(\epsilon ) d \epsilon = \frac{2 \pi N }{(\pi kT )^{3/2} } e^{- \epsilon /kT } \epsilon^{1/2} \, d \epsilon 
+\end{align}
+Dengan demikian, untuk sebuah molekul probabilitas kecepatannya berada dalam selang $v$ hingga $v + dv$  dinyatakan oleh  
+\begin{align}
+f_v (v) dv& = \frac{n_v (v) dv }{N} \nonumber \\
+& = 4 \pi \left \lbrace \frac{m}{2 \pi k T} \right \rbrace^{3/2} \cdot \nonumber \\
+&  \exp \left( - mv^2 /2kT\right) v^2 \, dv  \nonumber  
+\end{align}
+Dari sini selanjutnya dapat diperoleh
+\begin{align}
+\overline{v}& = \int_{0}^{\infty} v f_v(v) dv  \nonumber \\
+& = 4 \pi  \left \lbrace \frac{m}{2 \pi kT} \right \rbrace^{3/2} \int_{0}^{\infty} \cdot \nonumber \\
+& \hspace{0.2 cm } \exp \left(- mv^2 /2k T \right) v^3 \nonumber \\
+&  = \boxed{\sqrt{\left(\frac{8kT}{\pi m }\right)}}
+\end{align}
+sementara 
+\begin{align}
+\overline{v^2}& =  \int_{0}^{\infty} v^2 f_v(v) \, dv \nonumber \\
+&  = 4\pi \left \lbrace \frac{m}{2 \pi k T}\right
+ \rbrace^{3/2} \nonumber \\
+ & \hspace{0.2 cm } \cdot \left(
+ \int_{0}^{\infty} \exp\left(-mv^2 /2 kT \right) \right. \nonumber \\
+& \left. \hspace{ 0.4 cm }\cdot  v^4 dv \right )\nonumber \\
+  &  = \boxed{\frac{3kT}{m} }
+\end{align} 
+Nilai most probable velocity dinyatakan oleh
+\begin{align}
+\frac{d f_v (v)}{d v} & = 4 \pi \left \lbrace  \frac{m}{2 \pi k T}\right \rbrace^{3/2} \left \lbrace 2 v - \right. \nonumber \\
+& \left. \hspace{0.2 cm } \frac{m v^3}{kT}\right \rbrace  \exp\left( - m v^2 / 2 kT\right) \nonumber \\
+& = 0 
+\end{align}
+yang menghasilkan 
+\begin{align}
+2  v_m  - \frac{m v_m^3}{kT}  = 0 
+\end{align}
+atau 
+\begin{align}
+\boxed{v_m  = \sqrt{\left( \frac{2 kT}{m}\right)}}
+\end{align}
+\newline
+\textbf{Prinsip ekuipartisi energi.} \newline
+Energi kinetik dalam satu derajat kebebasan (misal x) dinyatakan oleh $\epsilon_x = p_x^2 /2m $ sehingga 
+\begin{align}
+\overline{\epsilon_x} = \frac{\int_{\Gamma} p_x^2 /2m \, e^{-\epsilon/kT d \Gamma}}{\int_\Gamma e^{-\epsilon /kT 
+} d\Gamma}
+\end{align}
+Jika energi dinyatakan dalam dua bagian yakni $p_x^2 /2m $ dan $(\epsilon - p_x^2 / 2m)$ makan persamaan di atas dapat dituliskan menjadi
+\begin{align}
+\overline{ \epsilon_x} & = \left( \frac{\int \exp \left(- \left( \epsilon - \frac{p_x^2}{2m }\right)/kT \right)}{\int \exp \left( - \left( \epsilon - \frac{p_x^2}{2m } \right)/kT\right) } \cdot \right.  \nonumber \\
+& \hspace{0.3 cm }  \frac{ dx \, dy \, dz \, dp_y \, dp_z}{dx \, dy \, dz \, dp_y \, dp_z } \cdot \nonumber \\ 
+& \hspace{0 cm}
+\left.
+\frac{\int_{-\infty}^{\infty} \frac{p_x^2}{2m} \exp \left(- p_x^2 /2mkT\right) dp_x }{\int_{-\infty}^{\infty} \exp\left( -p_x^2 /2mkT \right) dp_x } \right) \nonumber \\
+& = \frac{1}{2} kT  \nonumber
+\end{align}
+Di mana telah dilakukan substitusi $p_x^2 / 2mk T  = u^2 $ \newline
+Untuk harmonik osilator, di mana energinya dinyatakan sebagai
+\begin{align}
+\epsilon_x = \frac{p_x^2}{2m } + \frac{1}{2} \mu x^2 
+\end{align}
+maka energi rata-ratanya adalah:
+\begin{align}
+\overline{\epsilon_x} & = \frac{\int_\Gamma \left \lbrace p_x^2 /2m + \frac{1}{2} \mu x  \right \rbrace e^{-\epsilon/kT}d \Gamma}{\int_\Gamma e^{- \epsilon /kT} d \Gamma } \nonumber \\
+& = \frac{\int_{-\infty}^{\infty} \int_{-\infty}^{\infty}  \left \lbrace   \frac{p_x^2  }{2m} + \frac{1}{2} \mu x^2\right \rbrace }{\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} } \nonumber \\
+& \cdot \frac{ \exp \left( - \left[  \frac{p_x^2  }{2m} + \frac{1}{2} \mu x^2 \right ] /kT \right) }{ \exp \left( - \left[  \frac{p_x^2  }{2m} + \frac{1}{2} \mu x^2 \right ] /kT \right) } \nonumber \\
+& \hspace{0.3 cm }\cdot \frac{ dx \, dp_x}{dx \, dp_x}
+\end{align}
+Jika dilakukan substitusi $p_x^2 /2m  = r^2 \sin^2 \theta $ dan $\frac{1}{2} \mu x^2 = r^2 \cos^2 \theta $ maka diperoleh
+\begin{align}
+\overline{\epsilon_x} &= \frac{\int_{0}^{2 \pi } d\theta \int_{0}^{\infty} e^{-r^2 /kT} r^3 \, dr }{\int_{0}^{2 \pi} d \theta \int_{0}^{\infty} e^{- r^2 /kT} r \, dr }
+\nonumber \\
+& = kT \nonumber
+\end{align} \newline
+\textbf{Statistik Semiklasik} \newline
+Secara klasik, jumlah keadaan energi dalam rentang $\epsilon $ sampai $\epsilon + d \epsilon $ dinyatakan oleh:
+\begin{align}
+g(\epsilon ) d\epsilon = BV 2\pi (2m )^{3/2 }\epsilon^{1/2} d\epsilon  
+\end{align}
+Sehingga fungsi partisi menjadi
+\begin{align}
+Z& = \sum_s g_s e^{-\epsilon_s /kT} \nonumber \\&  \equiv \int_{0}^{\infty} e^{-\epsilon/kT } g(\epsilon ) d \epsilon \nonumber  \\
+& = 2\pi BV (2m)^{3/2 } \cdot \nonumber \\
+& \hspace{0.2 cm } \int_{0}^{\infty} \epsilon^{1/2} e^{-\epsilon /kT} d \epsilon  \nonumber \\ & = BV (2 \pi mkT)^{3/2 } 
+\end{align}
+yang nantinya akan diperoleh
+\begin{align}
+F = - Nk T \ln [BV (2 \pi mkT)^{3/2}]  
+\end{align} 
+dan 
+\begin{align}
+S &= - \left \lbrace  \frac{\partial F}{\partial T}\right \rbrace  \nonumber  \\
+& =\boxed{ Nk \ln [BV (2 \pi mkT )^{3/2 }]+  \frac{3}{2} Nk  }
+\end{align}
+Dengan persamaan ini akan terdapat kenaikan entropi sebesar $2 Nk \ln 2$ pada pencampuran 2 volume gas.
+Fakta ini menuntun pada perumusan statistik semiklasik, di mana bobot konfigurasi dinyatakan oleh 
+\begin{align}
+W_\mathrm{MB} = \prod_s  \frac{g_s^{n_s}}{n_s !} \label{boltzmann-semiklasik}
+\end{align}
+\begin{align}
+W_\mathrm{BE} = \prod_s \frac{(n_s + g_s -1)!}{n_s ! (g_s - 1)!} 
+\end{align}
+\begin{align}
+W_\mathrm{FD} = \prod_s \frac{g_s! }{n_s ! (g_s - n_s )!} 
+\end{align}
+Pada limit klasik, yakni $g_s \gg n_s \gg 1$ maka dengan aproksimasi Stirling diperoleh:
+\begin{align}
+\ln W_\mathrm{MB}& = \sum_s (n_s \ln g_s  - n_s \ln n_s
+ \nonumber \\ 
+ &\hspace{1 cm } 
+ + n_s ) \nonumber \\
+& = \sum_s \left( n_s \ln \frac{g_s }{n_s } + n_s  \right)
+\end{align}
+\begin{align}
+\ln W_\mathrm{BE} &\simeq \sum_s [ (n_s + g_s )\ln (n_s + g_s )\nonumber \\ 
+&  \hspace{0.3 cm } - n_s \ln n_s - g_s \ln g_s ] \nonumber \\
+&  = \prod_s \left [ n_s \ln \left \lbrace  \frac{n_s + g_s }{n_s }\right \rbrace + \right. \nonumber \\
+& \hspace{0.2 cm } \left. g_s \ln \left \lbrace  \frac{n_s + g_s}{g_s }\right \rbrace \right ] \nonumber \\
+& \simeq \prod_s \left( n_s \ln \frac{g_s }{n_s } + n_s \right)
+\end{align}
+di mana telah  digunakan hampiran $n_s + g_s - 1 \simeq (n_s + g_s ) \frac{g_s + n_s }{n_s } \simeq \frac{g_s }{n_s }$. Dan $\ln \left \lbrace \frac{n_s + g_s }{g_s} \right \rbrace  = \ln \left \lbrace  1 + \frac{n_s }{g_s } 
+\right \rbrace \simeq \frac{n_s }{g_s }$ \newline  Kemudian
+\begin{align}
+\ln W_\mathrm{FD}& = \sum_s [ g_s \ln g_s - n_s \ln n_s  \nonumber \\
+& \hspace{0.2 cm } - (g_s - n_s )\ln (g_s -n_s) ] \nonumber \\
+& = \sum_s \left [ n_s \ln \left \lbrace  \frac{g_s - n_s }{n_s }\right \rbrace   - \right. \nonumber
+ \\
+& \hspace{0.2 cm } \left. g_s \ln \left \lbrace \frac{g_s - n_s }{g_s } \right \rbrace \right ] \nonumber \\
+& \simeq \sum_s \left( n_s \ln \frac{g_s }{n_s } + n_s \right) 
+\end{align}
+Entropi kemudian dinyatakan oleh 
+\begin{align}
+S = Nk \ln \frac{Z}{N} + \frac{E}{T} + Nk 
+\end{align}
+Sementara pernyataannya dalam kuantum mekanik adalah:
+\begin{align}
+Z = \frac{V}{h^3} (2 \pi m kT)
+^{3/2 }
+\end{align}
+dengan demikian entropi untuk sistem semi-klasik dinyatakan oleh 
+\begin{align}
+S = Nk \left \lbrace \ln \left [ \frac{V (2 \pi m kT )^{3/2} }{Nh^3} \right ] +
+  \frac{5}{2} \right \rbrace  \nonumber
+\end{align}
+energi bebas helmoltz kemudian dinyatakan sebagai 
+\begin{align}
+F = - kT \ln \frac{Z^N}{N!} 
+\end{align}
+dengan $\boldsymbol{Z} = Z^N /N!$ menyatakan fungsi partisi total untuk sistem semi-klasik. \newline
+\textbf{Ensembel Kanonik} \newline
+Ensembel Kanonik adalah gabungan asembli (konfigurasi sistem/partikel) dengan temperatur yang sama. Jadi asembli dapat dipandang sebagai asembli dari asembli, atau observasi-observasi terhadap  asembli sepanjang evolusinya terhadap waktu.\newline
+Karena ensembel merupakan asembli dari asembli, maka fungsi partisi pada asembli dapat pula digeneralisasi ke ensembel yakni:
+\begin{align}
+\boldsymbol{Z} = \sum_i e^{- E_i /kT}
+\end{align}
+dengan 
+\begin{align}
+p_i &= p(0) e^{-E_i /k T}  = \frac{e^{-E_i /kT}}{\boldsymbol{Z}}   \label{peluang-kanonik}
+\end{align}
+menyatakan peluang asembli pada ensembel untuk berada pada keadaan ke-$i$ sementara 
+p(0) menyatakan fungsi dari temperatur yakni:
+\begin{align}
+p(0) = \frac{1}{\sum_i e^{- E_i /kT}}
+\end{align}
+Jadi
+\begin{align}
+\sum_i p_i = 1 
+\end{align}
+Di sini fungsi partisi analog dengan fungsi partisi total dari asembli pada ensembel. Kemudian energi bebas Helmoltz dinyatakan oleh
+\begin{align}
+F = - kT \ln \boldsymbol{Z}
+\end{align}
+\newline
+\textbf{Fluktuasi energi pada Ensembel Kanonik} \newline
+Penyimpangan energi dari nilai rata-rata dinyatakan oleh
+\begin{align}
+\delta E = E - \overline{ E} 
+\end{align}
+sehingga 
+\begin{align}
+\overline{(\delta E)^2 } &= \overline{(E - \overline{E} )^2 }\nonumber \\
+& = \overline{( E^2 - 2 E \cdot \overline{E} + \overline{E}^2) } \nonumber \\
+& = \overline{E^2} - \overline{E}^2 
+\end{align}
+dengan 
+\begin{align}
+\overline{E} = \sum_i p_i E_i  =  \frac{1}{\boldsymbol{Z}} \frac{\partial \boldsymbol{Z}}{\partial \beta} 
+\end{align}
+dan 
+\begin{align}
+\overline{ E^2} = \sum_i p_i E_i^2  = \frac{1}{\boldsymbol{Z}} \frac{\partial^2 \boldsymbol{Z}}{\partial \beta^2} 
+\end{align}
+maka 
+\begin{align}
+\overline{(\delta E)^2}& = \frac{\partial \overline{E}}{\partial \beta } = kT^2\frac{\partial \overline{E}}{\partial T} \nonumber \\
+& = C_v k T^2  
+\end{align}
+Dengan demikian fraksi fluktuasi energi dapat dinyatakan sebagai
+\begin{align}
+\mathcal{F} & = \left \lbrace \frac{\overline{(\delta E)^2}}{\overline{E}^2} \right \rbrace^{1/2} \nonumber \\
+& = \left \lbrace \frac{kT^2 C_v }{\overline{E}^2}\right \rbrace^{1/2}
+\end{align}
+dengan $C_v = (3/2) Nk$ dan $\overline{E} = (3/2)NkT$ maka 
+\begin{align}
+\mathcal{F} &= \left \lbrace \frac{\frac{3}{2} N k^2 T^2 }{\left( \frac{3}{2} Nk T\right)^2} \right \rbrace^{1/2} \nonumber \\
+& = \left( \frac{3}{2} N\right)^{- 1/2 }
+\end{align}
+\newline
+\textbf{Enesembel Grand Kanonik}\newline
+Fungsi partisi grand-kanonik dinyatakan oleh persamaan 
+\begin{align}
+\boldsymbol{\mathcal{Z} }= \sum_i e^{(\mu N - E)_i / kT }  \label{partisi grand kanonik}
+\end{align}
+dengan 
+\begin{align}
+p_i &=  e^{-[ pV + (\mu N_i - E_i )/k T}
+ \label{peluang grand kanonik}
+\end{align}
+di mana 
+\begin{align}
+&\sum_i p_i  = 1  \\
+& \text{atau } \\
+ &  e^{- pV /kT} \sum_i e^{(\mu N_i  - E_i )/kT} = 1
+\end{align}
+atau 
+\begin{align}
+  e^{- pV/kT}& = \frac{1}{\sum_i e^(\mu N_i - E_i )/kT} \nonumber  \\
+&  = \frac{1}{\boldsymbol{\mathcal{Z}} } \label{identitas grand kanonik}
+\end{align}
+Sehingga 
+\begin{align}
+p_i = \frac{e^{(\mu N_i - E_i )/kT}}{\boldsymbol{\mathcal{Z}}} 
+\end{align}
+analog dengan pers.\ref{peluang-kanonik} untuk ensembel kanonik.\newline 
+Kemudian 
+\begin{align}
+\overline{N}& =  \sum_i p_i N_i \nonumber \\
+ & = \sum_i \frac{N_i e^{(\mu N_i - E_i )/kT}}{\boldsymbol{\mathcal{Z}}} \nonumber \\
+& = \frac{kT}{\boldsymbol{\mathcal{Z}}} \left \lbrace \frac{\partial \boldsymbol{\mathcal{Z}}}{\partial \mu }\right \rbrace \nonumber \\
+& = kT \left \lbrace \frac{\partial \ln \boldsymbol{\mathcal{Z}}}{\partial \mu} \right \rbrace_{V,T} 
+  \label{jumlah rata-rata partikel}
+\end{align}
+dan 
+\begin{align}
+\overline{N^2} = \frac{(kT)^2}{\boldsymbol{\mathcal{Z}}} \left \lbrace 
+\frac{\partial^2 \boldsymbol{ \mathcal{Z}}}{\partial \mu^2 } \right \rbrace_{V,T} \label{jumlah rata-rata kuadrat partikel}  
+\end{align}
+Dari pers.\ref{identitas grand kanonik} dapat pula diperoleh
+\begin{align}
+(pV) = kT \ln \boldsymbol{\mathcal{Z}} 
+\end{align}
+sehingga jumlah rata-rata partikel pada pers.\ref{jumlah rata-rata partikel} dapat dinyatakan ke dalam
+\begin{align}
+\overline{ N} = \left \lbrace \frac{\partial (pV)}{\partial \mu } \right \rbrace_{T,V} 
+\end{align}
+Perhatikan
+\begin{align}
+d(pV) = p\,  dV  + S \, d T + \overline{N} \, d \mu 
+\end{align}
+demikian pula 
+\begin{align}
+p & = \left \lbrace \frac{\partial (pV)}{\partial V} \right \rbrace_{T, \mu}
+\end{align}
+\begin{align}
+S& = \left \lbrace  \frac{\partial (pV)}{\partial T}\right \rbrace_{V, \mu}
+\end{align}
+Untuk distribusi Bose-einstein, pers. \ref{jumlah rata-rata partikel} akan menghasilkan
+\begin{align}
+\overline{N} &= kT \frac{\partial}{\partial \mu } \left \lbrace \ln \prod_j [1 - \right. \nonumber \\ 
+& \hspace{0.2 cm } \left. e^{(\mu - \epsilon_j)kT}]^{-1} \right \rbrace_{V,T} \nonumber \\
+& = - kT \sum_j \left \lbrace \frac{\partial}{\partial \mu} \right. \nonumber \\
+& \hspace{0.2 cm} \left. \ln[1 - e^{(\mu - \epsilon_j )/kT}] \right \rbrace_{V,T} \nonumber \\
+& = \sum_j \frac{1}{e^{(\epsilon_j - \mu )/kT} - 1} \nonumber \\
+& = \sum_j \overline{n_j }
+\end{align}
+Dengan cara yang sama untuk distribusi fermi-dirac diperoleh
+\begin{align}
+\overline{N} &  = \sum_j \overline{n_j } \nonumber \\
+& = \sum_j \frac{1}{e^{(\epsilon_j - \mu )/kT} + 1}
+\end{align}
+\newline
+\textbf{Fluktuasi Jumlah Partikel dalam ensembel grand kanonik} \newline
+Dari pers. \ref{jumlah rata-rata partikel} dan pers. \ref{jumlah rata-rata kuadrat partikel} dapat diturunkan
+\begin{align}
+& \frac{\partial}{\partial \mu } \left \lbrace  \frac{1}{\boldsymbol{ \mathcal{Z}}} \left( \frac{\partial \boldsymbol{\mathcal{Z}}}{\partial \mu }\right)\right  \rbrace_{V,T}\nonumber \\ &  = \left\lbrace  \frac{1}{\boldsymbol{\mathcal{Z}}} \frac{\partial^2 \boldsymbol{\mathcal{Z}}}{\partial \mu^2}  - \frac{1}{\boldsymbol{\mathcal{Z}}^2} \left(\frac{\partial \boldsymbol{\mathcal{Z}}}{\partial \mu }\right)^2\right \rbrace_{V,T}
+\end{align}
+di mana telah disebutkan
+\begin{align}
+\frac{N}{kT} = \frac{1}{\boldsymbol{\mathcal{Z}}} \left \lbrace \frac{\partial \boldsymbol{\mathcal{Z}}}{\partial \mu } \right \rbrace_{V,T}
+\end{align}
+ini akhirnya menghasilkan
+\begin{align}
+&\frac{1}{(kT)} \left \lbrace \frac{\partial \overline{N}}{\partial \mu }\right \rbrace_{V,T}  \nonumber \\
+ &  = \frac{1}{(kT)^2} (\overline{N^2} - \overline{N}^2 )
+\end{align}
+atau 
+\begin{align}
+\overline{(\delta N)^2 } = kT \left \lbrace  \frac{\partial \overline{N}}{\partial \mu}\right \rbrace_{V,T} 
+\end{align}
+ \newline
+\textbf{Penurunan  persamaan \ref{persamaan gelombang em}} \newline
+Persamaan schrodinger tak bergantung waktu dinyatakan oleh:
+\begin{align}
+\frac{\partial^2 \psi}{\partial x^2} + \frac{\partial^2 \psi}{\partial y^2} + \frac{\partial^2 \psi}{\partial z^2} + \frac{8 \pi^2 m E}{h^2} \psi  = 0 
+\end{align}
+Untuk partikel bebas, solusinya dinyatakan oleh
+\begin{align}
+\psi  = \psi_0 e^{j(k_x x + k_y y + k_z z)} \label{solusi} 
+\end{align}
+di mana $k_x  = 2 \pi / \lambda_x $, $k_y = 2 \pi / \lambda_y$, $2 \pi / \lambda_z$ dan $(p_x^2 + p_y^2 + p_z^2 ) = 2 m E$. \newline
+Jika partikel/sistem dianggap terperangkap dalam kotak yang sisi-sisinya diberikan oleh $L_x$, $L_y$, $L_z$ maka dengan menerapkan sarat batas terhadap solusi (pers. \ref{solusi}), akan diperoleh
+\begin{align}
+\left. 
+\begin{array}{l}
+n_x \frac{\lambda_x}{2} = L_x \\
+n_y \frac{\lambda_y}{2} = L_y \\
+n_z \frac{\lambda_z}{2} = L_z   
+\end{array} \right \rbrace \label{jumlah setengah panjang gelombang}
+\end{align}
+yang menyatakan jumlah "setengah panjang gelombang" pada masing-masing arah. Mengingat $\lambda_x = 2 L_x / n_x $ maka  pers. (\ref{jumlah setengah panjang gelombang}) dapat untuk arah-x dapat dinyatakan menjadi 
+\begin{align}
+n_x = \frac{2 L_x p_x }{h} 
+\end{align}
+demikian pula untuk arah yang lain. Sementara itu diperoleh pula 
+\begin{align}
+(n_x + d n_x ) = \frac{2\, L_x (p_x + d p_x)}{h}
+\end{align}
+atau 
+\begin{align}
+d n_x = \frac{2 L_x d p_x }{h}
+\end{align}
+demikian pula untuk arah yang lain. \newline
+Dengan demikian diperoleh
+\begin{align}
+dn_s& = d n_x \, d n_y \, d n_z \nonumber \\
+& = \frac{8 L_x L_y L_z  \, d p_z d p_y d p_z}{h^3}  \label{seluruh kuadran}
+\end{align}
+Karena dalam satu sumbu, ada dua keadaan momentum yang dibolehkan, yakni  ($p_x$ dan $-p_x$), maka nilai aktual dari jumlah keadaan
+ $d \mathfrak{n}$ yang memiliki nilai momentum dalam rentang $+ \, dp_x$, $+\, d p_y$, $+ \, d p_z$ adalah 1/8 dari nilai  pers.\ref{seluruh kuadran}, yakni kuadran pertama koordinat rectilinear  atau
+ \begin{align}
+ d \mathfrak{n} = \frac{L_x L_y L_z \, d p_z d p_y d p_z }{h^3} \label{1/8-kuadran}
+ \end{align}
+ Jika $L_x L_y L_z $ menyatakan volume $V$, maka
+pers.\ref{1/8-kuadran} dapat ditransformasikan ke dalam pernyataan pada koordinat bola, yakni 
+\begin{align}
+d \mathfrak{n} =  \frac{V \cdot 4 \pi p^2  \, dp }{h^3}  = \frac{\Delta \Gamma}{h^3}
+\end{align}
+Jika pernyataan ini dinyatakan dalam panjang helombang $\lambda  = h/p$, maka diperoleh 
+\begin{align}
+d \mathfrak{ n} = g (\lambda ) d \lambda = \frac{4 \pi }{\lambda^4} d \lambda 
+\end{align}
+\textbf{Ekspansi Sommerfeld}
+Aproksimasi Sommerfeld digunakan untuk menghitung pernyataan integral 
+\begin{align}
+N & = \int_{0}^{\infty} g(\epsilon) \overline{n}_\mathrm{FD} \, d \epsilon \nonumber \\
+& = g_0 \int_{0}^{\infty} \epsilon^{1/2} \overline{n}_\mathrm{FD} \, d\epsilon 
+\end{align}
+dengan $\overline{n}_\mathrm{FD}$ menyatakan fungsi distribusi fermi-dirac (dalam buku pointon dinyatakan sebagai  $f(\epsilon)$). 
+Karen daerah yan g ditinjau hanya disekitar $\epsilon = \mu $,maka integralnya dapat dinyatakan ke dalam integral parsial
+\begin{align}
+N  & = 
+ \frac{2}{3} g_0 \epsilon^{3/2} \overline{n}_\mathrm{FD} (\epsilon)  \vline_{0}^{\infty} +  \nonumber \\
+ &  \frac{2}{3} g_0 \int_0^\infty \epsilon^{3/2} \left( - \frac{d \overline{n}_\mathrm{FD}}{d \epsilon }\right) d \epsilon 
+\end{align}  
+suku pertama akan habis pada kedua batas integral sementara suku kedua dinyatakan kembali melalui 
+\begin{align}
+- \frac{d \overline{n}_\mathrm{FD}}{d \epsilon } & = - \frac{d}{d \epsilon } (e^{(\epsilon - \mu )/kT }+ 1)^{-1} \nonumber \\
+& = \frac{1}{kT} \frac{e^x}{(e^x + 1) ^2} 
+\end{align}
+dengan $x = (\epsilon - \mu )/ kT$. \newline Jadi 
+\begin{align}
+N& = \frac{2}{3} g_0 \int_{0}^{\infty} \frac{1}{kT} \frac{e^x}{(e^x +1)^2} \epsilon^{3/2} \, d \epsilon  \nonumber \\
+& = \frac{2}{3} g_0 \int_{-\mu/kT}^{\infty} \frac{e^x}{(e^x + 1)^2} \epsilon^{3/2}  \, d \epsilon
+\end{align}
+Ada dua pendekatan yang dilakukan, yang pertama adalah
+dengan melakukan uraian Taylor terhadap $\epsilon^{3/2} $ di sekitar $\epsilon = \mu $  dan hanya mengambil beberapa suku pertama. Sementara yang kedua adalah meng-ekstends batas bawah integralnya sampai $- \infty$ agar mudah dalam mnipulasi matematis selanjutnya dan ini sama sekali tidak berpengaruh pada fungsi secara keseluruhan mengingat pada daerh negatif, fungsinya nol.
+\newline Dengan demikian diperoleh
+\begin{align}
+\epsilon^{3/2}& = \mu^{3/2} + (\epsilon - \mu  ) \frac{d}{d \epsilon} \epsilon^{3/2} \vline_{\epsilon = \mu } \nonumber \\
+&+ \frac{1}{2} (\epsilon - \mu )^2  \frac{d^2}{d \epsilon^2} \epsilon^{3/2} \vline_{\epsilon = \mu } + \cdots \nonumber \\ 
+& = \mu^{3/2} + \frac{3}{2} (\epsilon -\mu )\mu^{1/2} + \nonumber \\
+& \frac{3}{8} (\epsilon - \mu )^2 \mu^{1/2} + \cdots  
+ \end{align}
+sehingga 
+%\columnbreak
+%\pagebreak
+\begin{align}
+N & = \frac{2}{3} g_0 \int_{-\infty}^{\infty} \frac{e^x}{(e^x + 1)^2} \left [ \mu^{ 3/2} + \right. \nonumber \\
+ & \frac{3}{2} (\epsilon - \mu )\mu^{1/2}  + \frac{3}{8} (\epsilon - \mu)^2 \mu^{1/2}\nonumber \\
+ & \hspace{0.2 cm } + \cdots 
+\end{align}
+Integrasi selanjutnya dapat dilakukan pada masing-masing suku yakni untuk suku pertama adalah
+\begin{align}
+&\int_{- \infty}^{\infty} \frac{e^x}{(e^x + 1)^2} \, dx  = 
+\nonumber \\
+& \int_{- \infty}^{\infty} - \frac{d \overline{n}_\mathrm{FD}}{d \epsilon} \, d\epsilon \nonumber \\
+& = \overline{n}_\mathrm{FD} (- \infty) - \overline{ n}_\mathrm{FD} (\infty)  =\nonumber \\
+& \hspace{0.2 cm } 1- 0 =1
+ \end{align}
+ Untuk suku kedua 
+ \begin{align}
+& \int_{-\infty}^{\infty} \frac{x e^x }{(e^x + 1)^2}  \, dx =   \nonumber \\
+ & \int_{-\infty}^{\infty} \frac{x}{(e^x + 1)(1+ e^{-x})} \, dx  = 0. 
+ \end{align}
+ mengingat pernyataan tersebut merupakan fungsi ganjil dari $x$. \newline
+ Suku ketiga dapat diintegrasikan secara parsial secara berurutan yang natinya akan menghasilkan 
+ \begin{align}
+ \int_{- \infty}^{\infty} \frac{x^2 e^x }{(e^x +1)^2 } \,  dx = \frac{\pi^2}{3} 
+ \end{align}
+ Dengan mengumpulkan hasil-hasil tersebut, maka nilai $N$ selanjutnya dapat dituliskan menjadi
+ \begin{align}
+ N & = \frac{2}{3} g_0 \mu^{3/2} + \frac{1}{4} g_0 (kT)^2 \mu^{-1/2}\nonumber \\
+ & \hspace{0.1 cm }  \cdot \frac{\pi^2} {3} + \cdots \nonumber \\
+ & = N \left(\frac{\mu}{\epsilon_\mathrm{F}}\right)^{3/2 } + N \frac{\pi^2}{8} \frac{(kT) ^2}{\epsilon_\mathrm{F}^{3/2} \mu^{1/2}} \nonumber \\
+ & \hspace{0.3 cm } + \cdots
+ \end{align}
+ Di mana telah dilakukan substitusi untuk $g_0  = 3N / 2 \epsilon_\mathrm{F}^{3/2}$. Dengan membagi kedua ruas dengan $N$ diperoleh
+ \begin{align}
+ \frac{\mu}{\epsilon_\mathrm{F}}  &=  \left [  1 -  \frac{\pi^2}{8} \left(\frac{kT}{\epsilon_\mathrm{F}}\right)^2 + \cdots\right]^{2/3} \nonumber \\
+ & = 1- \frac{\pi^2}{12} \left(\frac{kT}{\epsilon_\mathrm{F}}\right)^2  + \cdots \label{potensial kimia}
+ \end{align} 
+ yang menunjukkan  potensial kimia $\mu$ akan naik secara berangsur-angsur seiring naiknya $T$. \newline
+ Hasil ini juga dapat digunakan untuk menhitung integral untuk nilai total energi yakni
+ \begin{align}
+ U &= \int_{0}^{\infty} \epsilon g(\epsilon) \overline{n}_\mathrm{FD} (e\epsilon) d \epsilon \nonumber \\
+ & = \int_{0}^{\infty} \epsilon g(\epsilon) \frac{1}{e^{(\epsilon - \mu)/kT}+1}  \, d\epsilon 
+ \end{align}
+yakni 
+\begin{align}
+U& =\frac{3}{5} N \frac{\mu^{5/2}}{\epsilon_\mathrm{F}^{3/2}} + \nonumber \\
+& \hspace{0.2 cm} \frac{3\pi^2 }{8} N \frac{(kT)^2}{\epsilon_\mathrm{F}} + \cdots
+\end{align}
+Di mana dengan memasukkan pers. \ref{potensial kimia} diperoleh
+\begin{align}
+U&  = \frac{3}{5} N \epsilon_\mathrm{F} + \frac{\pi^2}{4} N \frac{(kT)^2}{\epsilon_\mathrm{F}} + \cdots
+\end{align}
+\textbf{Kondensasi Bose-Einstein} \newline
+Kondensasi bose-eintein adalah kondensasi di mana sebagian besar partikel penyusun gas boson akan mengalami kondensasi/pendinginan yakni menempati keadaan energi dasar (ground state). \newline
+Jumlah boson yang menempati keadaan dasar dinyatakan oleh:
+\begin{align}
+N_0 & = \frac{1}{e^{(\epsilon_0 - \mu )/kT} - 1} \label{jumlah partikel dalam ground state}
+\end{align}
+Untuk $T =0$, nilai $N_0$ cukup besar yang bisa terpenuhi jika peneyebut  pada pers. \ref{jumlah partikel dalam ground state} cukup kecil. Dengan demikian potensial kimia $\mu$ hanya berbeda cukup kecil dengan $\epsilon$.  Dan $kT \gg \epsilon_0$. Jumlah total boson tentunya dinyatakan oleh
+\begin{align}
+\boxed{N = \sum_{\mathrm{semua \hspace{0.1 cm} s}} \frac{1}{e^{(\epsilon_s - \mu)/ kT} - 1} }
+\end{align}
+karena masing-masing suku pada penjumlahan cukup kecil ($kT \gg \epsilon_0 \approx \mu$ ), dapat dilakukan transformasi ke dalam bentuk integral, yakni:
+\begin{align}
+N = \int_{0}^{\infty} g(\epsilon ) \frac{1}{e^{(\epsilon_0 - \mu)/kT} -1 } \, d\epsilon
+\end{align}
+dengan $g(\epsilon)$ dinyatakan oleh persamaan \ref{density of states}. Dengan demikian 
+\begin{align}
+N &= \frac{2}{\sqrt{\pi}} \left(\frac{2 \pi m}{h^2}\right)^{3/2} V \nonumber \\
+& \hspace{0.2 cm } \cdot \int_{0}^{\infty} \frac{\sqrt{\epsilon} \, d \epsilon}{e^{\epsilon/kT} -1} \nonumber \\
+& = \frac{2}{\sqrt{\pi}} \left( \frac{2 \pi mk T}{h^2}\right)^{3/2} V \nonumber \\ & \hspace{0.2 cm} \cdot \int_{0}^{\infty} \frac{\sqrt{x} \, dx}{e^x - 1}
+\end{align}
+Integral terhadap $x$ nilainya adalah $2.315$ sehingga dengan mengkomninasikan dengan $2/ \sqrt{\pi}$ akan menghasilkan formula 
+\begin{align}
+N = 2.162 \left( \frac{2 \pi mkT}{h^2}\right)^{3/2} V 
+\end{align}
+Karena jumlah boson $N$ tidak bergantung pada temperatur $T$ makan hanya satu nilai temperatur di mana persamaan di atas benar, yakni $T = T_c $, sehingga diperoleh
+\begin{align}
+N = 2.162 \left( \frac{2 \pi mkT_c}{h^2}\right)^{3/2} V 
+\end{align}
+atau 
+\begin{align}
+kT_c = 0.527 \left( \frac{h^2}{2 \pi m}\right) \left( \frac{N}{V}\right)^{2/3}
+\end{align}
+sementara jumlah boson dalam kedaan tereksitasi, dinyatakan oleh
+\begin{align}
+N_\mathrm{excited} &= 2.612 \left( \frac{2 \pi m kT}{h^2}\right)^{3/2} V \nonumber \\
+& \hspace{0.2 cm } (\text{untuk } T < T_c )
+\end{align}
+Dengan demikian 
+\begin{align}
+N_\mathrm{excited} &  = \left( \frac{T}{T_c }\right)^{3/2} N  \nonumber \\
+& \hspace{0.3 cm } (\text{untuk }) (T < T_c)
+\end{align}
+dan 
+\begin{align}
+N_0 &= N - N_\mathrm{excited} \nonumber \\
+& = \left [  1 - \left( \frac{T}{T_c }\right)^{3/2} \right ] N  \nonumber \\
+& \hspace{ 0.5 cm } (\text{untuk } T < T_c)
+\end{align}
+\textbf{Contoh penentuan fungsi partisi dan peluang keadaan suatu partikel} \newline 
+1. \textbf{ Dipol elementer} dengan energi "up states" $-\mu B$ dan "down states"$+\mu B$, maka fungsi partisinya adalah
+\newcommand{\pindah}{\nonumber \\}
+\newcommand{\sama}{& =}
+\begin{align}
+Z &= \sum_s e^{-\beta E(s)} \pindah 
+\sama e^{+ \beta \mu B} +  e^{-\beta \mu B} \pindah 
+\sama 2 \cosh (\beta \mu B)
+\end{align}
+Peluang dipole untuk berada dalam "up states" adalah
+\begin{align}
+\mathcal{P}_\uparrow = \frac{e^{+\beta \mu B}}{Z} = \frac{e^{+ \beta \mu B}}{2 \cosh (\beta \mu B)}
+\end{align}
+Peluang dipole untuk berada dalam "down states" adalah
+\begin{align}
+\mathcal{P}_\downarrow = \frac{e^{-\beta \mu B}}{Z} =  \frac{e^{- \beta \mu B}}{2 \cosh (\beta \mu B)}
+\end{align}
+Dengan demikian energi rata-rata adalah
+\begin{align}
+\overline{E}& = \sum_s E(s) \mathcal{P}(s) \nonumber \\ 
+& = (- \mu B )\mathcal{P}_\uparrow + (+ \mu B)\mathcal{P}_\downarrow  \nonumber \\
+& = - \mu B \frac{e^{\beta \mu B} - e^{- \beta \mu B}}{2 \cosh (\beta \mu B)}  \nonumber \\
+& = - \mu B \tanh (\beta \mu B) 
+\end{align}
+Sementara total energi dinyatakan oleh
+\begin{align}
+U = - N \mu B \tanh(\beta \mu B)
+\end{align}
+Momen magnetik dipole kemudian dinyatakan oleh
+\begin{align}
+\overline{\mu_z } &= \sum_s \mu_s (s) \mathcal{P}(s)  \nonumber \\
+& = (+ \mu ) \mathcal{P}_\uparrow + (\mu ) \mathcal{P}_\downarrow \nonumber \\
+& = \mu \tanh(\beta \mu B) 
+\end{align}
+Sementara total magnetisasi dinyatakan oleh 
+\begin{align}
+M = N \overline{\mu_z} = N \mu \tanh (\beta \mu B)
+\end{align}
+Perhatikan antara energi dipol dan momen Magnetik berbeda tanda.\newline 
+2. \textbf{Pembuktian Teorema} equipartisi dengan menggunakan fungsi partisi. Jika energi dinyatakan dalam 
+\begin{align}
+E(q) = c q^2 
+\end{align}
+anggap yang ditinjau hanya dalam satu derajat kebebasan, sehingga fungsi partisinya dinyatakan dalam
+\begin{align}
+Z & = \sum_q e^{- \beta E(q)} = \sum_q e^{-\beta cq^2}
+\end{align}
+jika ditambahkan $\Delta$ di dalam dan di luar persamaan di atas, maka akan diperoleh
+\begin{align}
+Z& = \frac{1}{\Delta q} \sum_q e^{-\beta c q^2} \nonumber \\
+& = \frac{1}{\Delta q} \int_{-\infty}^{\infty} e^{-\beta c q^2} \nonumber \\
+& = \frac{1}{\Delta q} \frac{1}{\sqrt{\beta c}} \int_{-\infty }^{\infty} e^{- x^2} \, dx  \nonumber \\
+& = \frac{1}{\Delta q} \sqrt{\frac{\pi}{\beta c}}  = C \beta^{-1/2} 
+\end{align}
+dengan $C = \sqrt{\pi / c } / \Delta q$. Dengan demikian 
+\begin{align}
+\overline{ E} &= -  \frac{1}{Z} \frac{\partial Z}{\partial \beta } \nonumber \\
+& = - \frac{1}{C \beta ^{- 1/2}} \frac{\partial }{\partial \beta } C \beta^{-1/2} \nonumber \\
+& = - \frac{1}{C \beta^{-1/2} } (- 1/2) C \beta^{- 3/2} \nonumber \\
+& = \frac{1}{2} \beta^{-1}  = \frac{1}{2} kT
+\end{align}
+3. \textbf{Oilator Harmonik} dalam kuantum memiliki energi dinyatakan dalam 
+\begin{align}
+\epsilon = (n + 1/2) h \nu 
+\end{align}
+dengan demikian fungsi partisinya dinyatakan oleh
+\begin{align}
+Z & = \sum_{n = 0}^{\infty} e^{- (n+ 1/2)h \nu / kT} \nonumber \\
+& = e^{- 1/2 \, h \nu / kT} \sum_{n = 0}^{\infty} e^{- n h \nu / kT} \nonumber \\
+& = \frac{e^{- 1/2 h \nu /k T}}{(1 - e^{- h\nu /kT})}
+\end{align}
+dengan demikian 
+\begin{align}
+\overline{\epsilon} = h \nu \left \lbrace  1/2  + \frac{1}{e^{h\nu /kT} - 1}\right \rbrace 
+\end{align}
+untuk temperatur tinggi $h\nu /kT \ll 1$ sehingga 
+\begin{align}
+e^{h\nu /kT} &\simeq 1 + \left \lbrace \frac{h\nu}{kT} \right \rbrace + \frac{1}{2} \left \lbrace \frac{h\nu}{kT} \right \rbrace^{2} 
+\end{align}
+dengan demikian 
+\begin{align}
+\overline{\epsilon} & \simeq h\nu \left \lbrace \frac{1}{2} + \frac{1}{\frac{h\nu}{kT} + \frac{1}{2} \left (\frac{h\nu}{kT} \right )^2}  \right \rbrace  \nonumber \\
+&\simeq h \nu \left \lbrace \frac{1}{2} + \frac{kT}{h\nu} \left( 1 - \frac{1}{2} \frac{h\nu}{kT}\right) \right \rbrace  \nonumber \\
+& = kT
+\end{align}
+4. Fungsi partisi \textbf{Molekul diatomik} akan dinyatakan oleh
+\begin{align}
+Z & = Z_t Z_r Z_v Z_e Z_n 
+\end{align}
+$Z_t $ menyatakan fungsi partisi berkaitan dengan gerak translasi yang dinyatakan oleh
+\begin{align}
+Z_t = \frac{V}{h^3} (2\pi m kT)^{3/2} 
+\end{align}
+Untuk gerak rotasi, energinya dinyatakan oleh $\epsilon_j = j(j+1) \frac{h^2} {8 \pi \mathcal{I}}$. Sehingga fungsi partisinya akan menjadi 
+\begin{align}
+Z_r & = \sum_{j = 0}^{\infty} (2 j + 1) e^{-\epsilon_j /kT} \nonumber \\
+& = \sum_{j = 0}^{\infty} (2 j + 1) e^{- j (j+1)K /k T}  
+\end{align}
+dengan $K =  \frac{h^2} {8 \pi \mathcal{I}}$ \newline
+Kemudian fungsi partisi yang berkaitan dengan gerak vibrasi dinyatakan oleh 
+\begin{align}
+\boxed{Z_\nu = \frac{e^{- (1/2) h\nu /k T}}{1 - e^{-  h\nu /kT}}}
+\end{align}
+Fungsi partisi elektronik kemudian dinyatakan oleh 
+\begin{align}
+Z_e &  = g_0 + g_1 e^{- \epsilon_{e1} /kT} + \nonumber \\
+& \hspace{0.3 cm } g_2 e^{- \epsilon_{e2}/ kT} + \cdots
+\end{align}
+Tidak ada kontribusi dari $Z_n $ karena nilainya tidak bergantung pada temperatur.
+ \newline
+\textbf{Jawaban Soal-Soal} \newline
+\textbf{1. soal bab 4 buku pointon} \newline
+Fungsi distribusi bose-einstein sendiri menyatakan bahwa jumlah foton yang berada pada tingkat energi  tertentu dinyatakan oleh hubungan  
+\begin{align}
+n_s = \frac{g_s}{e^{h v_s/kT} - 1} 
+\end{align}
+Sementara pada foton berlaku $h\nu = h c /\lambda $. Dengan demikian persamaan (i.13) dapat dimasukkan ke dalam persamaan  (i.14)  sebagai jumlah foton, $n_\lambda (\lambda) d \lambda$ dengan panjang gelombang antara $\lambda$ sampai $\lambda + d \lambda $ yakni
+\begin{align}
+n_\lambda (\lambda) d \lambda = \frac{8 \pi}{\lambda^4} d \lambda \cdot \frac{1}{e^{hc/ k \lambda T} - 1} \label{jumlah foton}
+\end{align}
+jumlah total foton dalam kotak dapat diperoleh dengan mengintegralkan persamaan (\ref{jumlah foton}) terhadap semua panjang gelombang yang mungkin, yakni 
+\begin{align}
+N_\mathrm{tot} = \int_{0}^\infty \frac{8 \pi}{\lambda^4}d\lambda \cdot \frac{1}{e^{hc/k \lambda T} - 1}  \label{total foton}
+\end{align}
+Jika digunakan pemisalan  $\displaystyle t = hc/ k\lambda T$ maka $ \displaystyle dt = \frac{hc}{kT}(-d\lambda / \lambda^2)$ atau $\displaystyle \frac{d\lambda }{\lambda^2} = - \frac{ kT dt}{hc}$ dan $\displaystyle \lambda^2 = \left(\frac{hc}{kT}\right)^2 t^{-2}$ dan batas pengintegralan akan saling terbalik. Jadi persamaan (\ref{total foton}) dapat dituliskan menjadi
+\begin{align}
+N_\mathrm{tot} & = 8\pi \int_\infty^0 \left(- \frac{kT}{hc} dt \right) \left( \frac{kT }{hc} t\right)^2 \nonumber \\
+& \hspace{0.2 cm } \cdot \left( \frac{1}{e^t - 1}\right) \nonumber \\
+& = 8\pi \left(\frac{kT}{hc }\right)^3 \int_{0}^{\infty} \frac{t^2}{e^t -1} \label{n_tot}
+\end{align}
+Persamaan terkahir dapat diselesaikan dengan meninjau hubungan berikut
+\begin{align}
+\frac{1}{e^t - 1} = \frac{e^{-t}}{1- e^{-t}}  
+\end{align}
+Dengan mengambil uraian taylor $\displaystyle \frac{1}{1 - x} = \sum_{n=0}^\infty x^n \hspace{0.3 cm} $(untuk $ |x| < 1$) pada suku penyebut maka
+\begin{align}
+\frac{1}{e^t - 1} = e^{-t}+ (e^{-t} )^2 + (e^{-t})^3 + ...  \label{hasil uraian}
+\end{align}
+Kemudian tinjau integral berikut 
+\begin{align}
+& \int_0^\infty t^2 e^{-n t } =  
+ \left. - \frac{1}{n} e^{-nt} \cdot t^2 \right \vert_0^\infty + \nonumber 
+ \\
+& \frac{2}{n}  \left [\left. -\frac{1}{n} e^{-n t} t \right \vert_0^\infty + \frac{1}{n} \int_{0}^{\infty}  e^{-nt} dt \right ]
+\nonumber 
+\\
+& =  \left [ -  \frac{1}{n} e^{-n t} t^2 - \frac{2}{n^2} e^{-nt} t\, - \right.
+ \nonumber \\
+& \left. \frac{2}{n^3} e^{-nt}  \right]_0^\infty 
+\end{align}
+Untuk $t$ besar maka $e^t \gg t^2$ jadi $\displaystyle \lim_{t \rightarrow \infty} \frac{t^2}{e^t} = 0$. Sehingga 
+\begin{align}
+& \left [- \frac{1}{n} e^{-n t} t^2 - \frac{2}{n^2} e^{-nt} t\,  - \right. \nonumber \\
+& \left.  \frac{2}{n^3} e^{-nt}  \right]_0^\infty = \frac{2}{n^3} \label{hasil limit}
+\end{align}
+Jadi dengan memasukkan hasil (\ref{hasil limit}) dan uraian (\ref{hasil uraian}) ke dalam persamaan (\ref{n_tot}) maka diperoleh total jumlah foton pada kotak dalam kesetimbangan termal  yakni:
+\begin{align}
+\boxed{16 \pi \left(\frac{kT}{hc}\right)^3 \sum_1^\infty \frac{1}{n^3}}
+\end{align}
+\textbf{2. Penentuan fungsi partisi untuk statistik fermi dirac, bose-einstein, dan statistik klasik terbedakan}
+\newline
+Misal, $\epsilon _0 = 0 $; $\epsilon_1 = \epsilon $;$ \epsilon_2 = 2 \epsilon$, $N = 2; g_0 = g_1 = 2; g_2 = 1 $. Maka untuk statistik fermi-dirac akan diperoleh tabulasi sebagai berikut: \newline
+\begin{tabular}{|c | c| }
+ \cline{1-1} \\ \hline
+ &  \\ \hline 
+x & x  \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 0$} \\ \hline
+\end{tabular}
+\begin{tabular}{|c | c| }
+ \cline{1-1}  \\ \hline
+x &  \\ \hline 
+x &   \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 1$} \\ \hline
+\end{tabular}
+\begin{tabular}{|c | c| }
+ \cline{1-1}  \\ \hline
+ & x \\ \hline 
+x &   \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 1$} \\ \hline
+\end{tabular}
+\newline 
+\begin{tabular}{|c | c| }
+ \cline{1-1}  \\ \hline
+x &  \\ \hline 
+ & x  \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 1$} \\ \hline
+\end{tabular}
+\begin{tabular}{|c | c| }
+ \cline{1-1}  \\ \hline
+ & x \\ \hline 
+ & x  \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 1$} \\ \hline
+\end{tabular}
+\begin{tabular}{|c | c| }
+ \cline{1-1} x \\ \hline
+ &  \\ \hline 
+x &   \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 2$} \\ \hline
+\end{tabular} \newline
+\begin{tabular}{|c | c| }
+ \cline{1-1} x \\ \hline
+ &  \\ \hline 
+ & x  \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 2$} \\ \hline
+\end{tabular}
+\begin{tabular}{|c | c| }
+ \cline{1-1}  \\ \hline
+x &  x \\ \hline 
+ &   \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 2$} \\ \hline
+\end{tabular}
+\begin{tabular}{|c | c| }
+ \cline{1-1} x \\ \hline
+x &  \\ \hline 
+ &   \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 3$} \\ \hline
+\end{tabular} \newline
+\begin{tabular}{|c | c| }
+ \cline{1-1} x \\ \hline
+ & x \\ \hline 
+ &   \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 3$} \\ \hline
+\end{tabular} \newline
+Dengan demikian fungsi partisinya adalah:
+\begin{align}
+\boldsymbol{Z}& =\sum_i W_i e^{- \epsilon_i /kT} \nonumber \\
+& = e^0 + 4 e^{- \epsilon/ kT} + 3 e^{-2\epsilon /kT} + 2 e^{-3\epsilon /kT}  
+\end{align}
+sehingga energi rata-ratanya adalah
+\begin{align}
+\overline{E}& = \frac{kT^2}{\boldsymbol{Z}} \frac{\partial \boldsymbol{Z}}{\partial T} \nonumber \\
+& = \frac{2 \epsilon e^{- \epsilon /kT}}{\boldsymbol{Z}} (2 + 3 e^{- \epsilon /k T }+ \nonumber \\
+& \hspace{ 0.3 cm }3 e^{- 2 \epsilon /kT})
+\end{align}
+Untuk statistik bose-einstein, tabulasinya adalah sebagai berikut 
+\begin{tabular}{|c | c| }
+ \cline{1-1}  \\ \hline
+ &  \\ \hline 
+xx &   \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 0$} \\ \hline
+\end{tabular}
+\begin{tabular}{|c | c| }
+ \cline{1-1}  \\ \hline
+ &  \\ \hline 
+ & xx  \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 0$} \\ \hline
+\end{tabular}
+\begin{tabular}{|c | c| }
+ \cline{1-1}  \\ \hline
+ &  \\ \hline 
+x & x  \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 0$} \\ \hline
+\end{tabular} \newline
+\begin{tabular}{|c | c| }
+ \cline{1-1}  \\ \hline
+x &  \\ \hline 
+x &   \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 1$} \\ \hline
+\end{tabular}
+\begin{tabular}{|c | c| }
+ \cline{1-1}  \\ \hline
+ & x \\ \hline 
+ &  x \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 1$} \\ \hline
+\end{tabular}
+\begin{tabular}{|c | c| }
+ \cline{1-1}  \\ \hline
+x &  \\ \hline 
+ & x   \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 1$} \\ \hline
+\end{tabular} \newline
+\begin{tabular}{|c | c| }
+ \cline{1-1}  \\ \hline
+ & x \\ \hline 
+x &   \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 1$} \\ \hline
+\end{tabular}
+\begin{tabular}{|c | c| }
+ \cline{1-1} x \\ \hline
+ &  \\ \hline 
+x &   \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 2$} \\ \hline
+\end{tabular}
+\begin{tabular}{|c | c| }
+ \cline{1-1} x \\ \hline
+ &  \\ \hline 
+ & x  \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 2$} \\ \hline
+\end{tabular} \newline
+\begin{tabular}{|c | c| }
+ \cline{1-1}  \\ \hline
+x & x \\ \hline 
+ &   \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 2$} \\ \hline
+\end{tabular}
+\begin{tabular}{|c | c| }
+ \cline{1-1}  \\ \hline
+xx &  \\ \hline 
+ &   \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 2$} \\ \hline
+\end{tabular}
+\begin{tabular}{|c | c| }
+ \cline{1-1}  \\ \hline
+ & xx \\ \hline 
+ &   \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 2$} \\ \hline
+\end{tabular} \newline
+\begin{tabular}{|c | c| }
+ \cline{1-1}x  \\ \hline
+x &  \\ \hline 
+ &   \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 3$} \\ \hline
+\end{tabular}
+\begin{tabular}{|c | c| }
+ \cline{1-1}x  \\ \hline
+ & x \\ \hline 
+ &   \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 3$} \\ \hline
+\end{tabular}
+\begin{tabular}{|c | c| }
+ \cline{1-1}x x \\ \hline
+ &  \\ \hline 
+ &   \\
+\hline
+\multicolumn{2}{|c|}{$\epsilon = 4$} \\ \hline
+\end{tabular} \newline
+Sehingga fungsi partisinya adalah
+\begin{align}
+\boldsymbol{Z}& = 3e^0 + 4 e^{-\epsilon /kT} + 5 e^{- 2 \epsilon /kT} + \nonumber \\
+& \hspace{0.3 cm } 2e^{- 3 \epsilon /kT} + e^{-4 \epsilon /kT}
+\end{align}
+Dengan demikian 
+\begin{align}
+\overline{E}& = \frac{kT^2}{\boldsymbol{Z}} (0+ \frac{4\epsilon}{kT^2} e^{-\epsilon /kT} + \frac{10 \epsilon}{kT^2} e^{- 2 \epsilon /kT} + \nonumber \\
+& \hspace{0.3 cm } \frac{6 \epsilon }{kT^2} e^{-3 \epsilon /kT} + \frac{4 \epsilon}{kT^2} e^{- 4 \epsilon}/kT)
+\end{align}
+Untuk sistem klasik terbedakan, pernyataan $\boldsymbol{ Z} = Z^N $ bisa digunakan, dengan demikain 
+\begin{align}
+\boldsymbol{Z}& = Z^N \nonumber \\
+& = \left(\sum_i g_i e^{-\epsilon_i /kT} \right)^N \nonumber \\
+& = \left( g_0 e^{-\epsilon_0 /kT }+ g_1 e^{-\epsilon_1 /kT} + \right.\nonumber 
+\\
+& \hspace{0.3 cm} \left. g_2 e^{-\epsilon_2 /kT} \right )^2\nonumber \\
+& = \left( 2 + 2e^{-\epsilon /kT} + e^{- 2\epsilon /kT} \right)^2  
+\end{align}
+
+\end{multicols}
+\end{tiny}
+\end{document}

@@ -1,0 +1,1052 @@
+\documentclass[a4paper  , 6 pt]{article}
+\usepackage[fleqn]{amsmath}
+\usepackage{hyphenat}
+\usepackage{setspace}
+\usepackage{anysize}
+\usepackage{parskip}
+\usepackage{multicol}
+\usepackage{blindtext}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+
+\usepackage{mathtools}
+%\usepackage{enumitem}
+\usepackage{tikz}
+%\usepackage[landscape]{geometry}
+\usepackage{units}
+%\marginsize{0.3 cm}{0.3 cm}{0 cm }{0 cm }
+\setlength{\mathindent}{0 cm }
+%\setlength{\}{length}
+\usepackage[margin={0.2 cm ,0.2 cm}]{geometry}
+%\setitemize[0]{leftmargin=*}
+%\usepackage[margin =2.5 cm]{geometry }
+%\title{PR 2 MEKANIKA STATISTIK}
+%\title{text}
+%\author{MOHAMMAD FAJAR \newline 20211019}
+\singlespacing
+\pagestyle{empty}
+\allowdisplaybreaks
+%\pagestyle{empty}
+
+\begin{document}
+
+%\begin{multicols*}{2}
+\begin{tiny}
+\begin{multicols} {5}
+
+\setlength \belowdisplayskip{0 pt} 
+\setlength \abovedisplayskip{0 pt}
+%\underline{\textbf{Statistik Klasik  terbedakan }}
+%\maketitle
+\textbf{Persamaan-persamaan yang sering digunakan } 
+\begin{align}
+W 
+& = \prod_s \frac{[(g_s - 1) + n_s] !}{(g_s - 1)! n_s ! } \hspace{0.1 cm } \text{  (BE)}
+\end{align} 
+\begin{align}
+W = N! \prod_s \left \lbrace \frac{g_s^{n_s}}{n_s !}\right \rbrace \hspace{0.1 cm }\text{(Boltzmann)}
+\end{align}
+\begin{align}
+W =  \prod_s \left \lbrace \frac{g_s^{n_s}}{n_s !}\right \rbrace \hspace{0.1 cm} \text{(semiklasik)} 
+\end{align}
+\begin{align}
+\overline{n}_\mathrm{FD} =  \frac{1}{e^{(\epsilon - \mu )/kT} +1} \hspace{0.1 cm}  
+\end{align}
+\begin{align}
+\overline{n}_\mathrm{BE} =  \frac{1}{e^{(\epsilon - \mu )/kT} - 1} 
+\end{align}
+\begin{align}
+\overline{n}_\mathrm{boltzmann} &= e^{\mu/ kT} e^{- \epsilon / kT} \nonumber \\
+& = e^{- (\epsilon - \mu )/ kT} 
+\end{align}           
+\begin{align}
+F = - kT \, \ln Z 
+\end{align}
+\begin{align}
+& S = -\left(\frac{\partial F}{\partial T}\right)_{V,N}, \\
+& P  = - \left(\frac{\partial F}{\partial V}\right)_{T,N}, \\
+ & \mu = + \left(\frac{\partial F}{\partial N}\right)_{T,V}
+\end{align}
+\begin{align}
+S = k \ln W
+\end{align}
+\begin{align}
+\frac{\mathcal{F}(s_2) }{\mathcal{F} (s_1)} =  \frac{\Omega (s_2)}{\Omega (s_1)}
+\end{align}
+\begin{align}
+\mathcal{P} (s) = \frac{1}{Z}e^{-E_s/kT} 
+\end{align}
+\begin{align}
+\frac{N_s}{N} = \frac{e^{-E(s)/kT}}{Z}
+\end{align}
+\begin{align}
+\overline{E} & = \frac{\sum_s E(s) N(s)}{N} = \sum_s E(s) \frac{N(s)}{N} \nonumber \\
+& = \sum_s E(s) \mathcal{s} = \frac{1}{Z} \sum_s E(s) e^{-\beta E(s) }
+\end{align}
+\textbf{Degenerasi gas fermi.} \newline Jumlah Keadaan energi dalam rentang energi  antara $\epsilon$ hingga $\epsilon+ d \epsilon$ adalah
+%\setlength \abovedisplayskip{0 pt}
+\begin{flalign}
+g(\epsilon)d\epsilon = \frac{2 \pi (2m )^{3/2} \epsilon^{1/2} d \epsilon \cdot V}{h^3}
+\end{flalign}
+karena ada $-1/2$ dan $1/2$ maka dikali 2 
+\begin{align}
+g(\epsilon) = V \cdot 4 \pi \left(\frac{2m}{h^2}\right)^{3/2} \epsilon^{1/2} \label{density of states}
+\end{align}
+Untuk $\epsilon < \epsilon_\mathrm{F}(0)$ maka 
+\begin{align}
+f(\epsilon) = \frac{1}{e^{- \infty} + 1} = 1
+\end{align}
+untuk $\epsilon > \epsilon_\mathrm{F}(0)$ maka 
+\begin{align}
+f(\epsilon) = \frac{1}{e^{\infty} + 1} = 0
+\end{align}
+jadi:
+%\setlength \abovedisplayskip{0 pt}
+\begin{align}
+\int_0^{\epsilon_\mathrm{F}} V \cdot 4 \pi \left(\frac{2m}{h^2}\right)^{3/2} \epsilon^{1/2} d \epsilon = N 
+\end{align}
+%\setlength \abovedisplayskip{0 pt}
+\begin{align}
+\epsilon_\mathrm{F} (0)= \frac{h^2}{2m }\left(\frac{3N}{8 \pi V}\right)^{3/2}
+\end{align}
+\begin{align}
+kT_\mathrm{F}(0) =  \epsilon_\mathrm{F} (0)
+\end{align}
+\begin{align}
+\overline{\epsilon} (0) = \frac{\int_{0}^{{\epsilon_\mathrm{F}(0)}}\epsilon g(\epsilon) d \epsilon}{\int_{0}^{{\epsilon_\mathrm{F}(0)}} g(\epsilon) d \epsilon} = \frac{3}{5} \epsilon_\mathrm{F} (0) 
+\end{align}
+%\end{multicols}
+Dengan  $\epsilon = p^2/2m$, maka
+\begin{align}
+U = N \overline{\epsilon } = \frac{3}{5} N \epsilon_\mathrm{F}
+\end{align}
+\begin{align}
+P & = - \frac{\partial }{\partial V} \left[ \frac{3}{5} N \frac{h^2}{2m} \left( \frac{3N}{8 \pi }\right)^{3/2} \right. \nonumber \\
+& \hspace{0.2 cm } \left. \cdot V^{-3/2}  \right ] \nonumber \\
+& = \frac{2 N \epsilon_\mathrm{F}}{5 V} = \frac{2 U}{3 V} \label{pers.keadaan fermi dirac}
+\end{align} 
+%Untuk temperatur di atas nol mutlak maka
+\textbf{Statistik bose-einstein: Tinjauan radiasi benda hitam} 
+\newline
+Jumlah mode panjang gelombang $\lambda$ sampai $d \lambda$ 
+\begin{align}
+g(\lambda) d \lambda = \frac{4 \pi}{\lambda^4} d \lambda \label{persamaan gelombang em}
+\end{align}
+Karena ada dua polarisasi 
+\begin{align}
+g(\lambda) d \lambda = \frac{8 \pi}{\lambda^4} d \lambda 
+\end{align}
+perhatikan: persamaan (6) setara dengan persmaan (1)
+\newline
+dis. BE 
+\begin{align}
+n_s = \frac{g_s}{e^{h\nu_s /kT} -1}
+\end{align}
+Sehingga jumlah foton, $n_\lambda (\lambda) d\lambda $ untuk rentang $\lambda $ hingga $\lambda  + d \lambda$ 
+\begin{align}
+n_\lambda (\lambda) d \lambda = \frac{8 \pi}{\lambda^4} d \lambda \cdot \frac{1}{e^{hc/ k\lambda T} - 1}
+\end{align}
+Di mana disubst. $h \nu  = h c/ \lambda$.
+Energi $E(\lambda) =n_\lambda (\lambda) h \nu = n_\lambda (\lambda) h c/ \lambda  $ dinyatakan oleh:
+\begin{align}
+E(\lambda) d \lambda = \frac{8 \pi h c \, d\lambda}{\lambda^5 (e^{hc/k \lambda T} - 1)} 
+\end{align}
+Untuk panjang gelombang yang besar,  $e^{hc /k \lambda T} \simeq 1+ hc/ k\lambda T$ sehingga 
+\begin{align}
+E(\lambda ) d\lambda  \simeq \frac{8 \pi k T \, d \lambda}{\lambda^4}
+\end{align}
+atau formulasi Rayleigh Jeans. 
+untuk panjang gelombang yang rendah, $e^{hc/k \lambda T} \gg 1$ 
+\begin{align}
+E(\lambda ) d\lambda  \simeq \frac{8 \pi h c}{\lambda^5} e^{- hc/k \lambda T} \, d \lambda 
+\end{align}
+atau formulasi Wein.
+ Dari persamaan (11) dapat diperoleh total energi persatuan volume yang terlingkupi dalam benda hitam tersebut yakni:
+ \begin{align}
+ E& = \int_{0}^{\infty} E(\lambda) d \lambda \nonumber \\
+ & = \int_{0}^{\infty} \frac{8 \pi h c d \lambda}{\lambda^5 (e^{hc /k \lambda T} -1)} \nonumber \\
+ & = \frac{8 \pi h}{c^3} \left \lbrace \frac{kT}{h} \right \rbrace^4 \int_{0}^{\infty} \frac{t^3 \, dt }{e^t - 1}  \label{energi}
+ \end{align}
+ Dengan 
+ \begin{align}
+ \int_{0}^{\infty} \frac{t^3}{e^t -1} = 6 \sum_{n = 1}^\infty \frac{1}{n^4} = \frac{\pi^4}{15} 
+ \end{align}
+ Maka persamaan \ref{energi} dapat dituliskan menjadi 
+ \begin{align}
+\boxed{E = \left \lbrace  \frac{8 \pi^5 k^4 }{15 h^3 c^3 }\right \rbrace  T^4}
+ \end{align}
+ \newline
+\textbf{Gas fonon.} \newline
+Jumlah fonon $n(\nu) d\nu$ dengan frekuensi antara $\nu$ sampai $\nu + d \nu$ adalah
+\begin{align}
+n_\nu(\nu) d\nu = \frac{g(\nu) d\nu}{e^{h\nu /kT} - 1} \tag{13}
+\end{align}
+Aproksimasi Debye dinyatakan oleh
+\begin{align}
+g(\nu) d\nu &  = C \nu^2 d \nu , & \nu \le \nu_\mathrm{m} \nonumber \\
+g(\nu) d\nu & = 0, & \nu > \nu_\mathrm{m} \nonumber 
+\end{align}
+Untuk mendapatkan konstanta $C$ maka dilakukan  integrasi terhadap seluruh mode yang mungkin yang nantinya akan menghasilkan nilai $3N$ yakni
+\begin{align}
+3N & = \int_{0}^{\infty} g(\nu)  d\nu  = \int_{0}^{\nu_\mathrm{m}} C \nu^2  d\nu  \nonumber \\
+& = \frac{1}{3} C \nu_\mathrm{m}^3 \nonumber \\
+\text{atau }& \nonumber \\
+C_\mathrm{m}& = \frac{9N}{v_\mathrm{m}^3} \nonumber
+ \end{align}
+ sehingga aproksimasi debye memberikan
+ \begin{align}
+ n_\nu (\nu) d\nu& = \frac{9N}{\nu_\mathrm{m}^3} \frac{\nu^2 d\nu}{e^{h\nu /kT} -  1} ,  \nu \le \nu_\mathrm{m} \nonumber \\
+  & = 0,\hspace{0.3 cm}  \nu > \nu_\mathrm{m} \nonumber
+ \end{align}
+ kemudian 
+ \begin{align}
+ E & = \int_{0}^{\nu_\mathrm{m}}  h \nu n_\nu (\nu) d\nu  \nonumber \\
+ & = \frac{9 N_A h}{\nu_\mathrm{m}^3} \int_{0}^{\nu_\mathrm{m}} \frac{\nu^3 d\nu}{e^{h\nu /kT} - 1} \nonumber
+ \end{align}
+ kemudian panas spesifik dapat diperoleh yakni
+  \begin{align}
+  C_\nu & = \left\lbrace \frac{\partial E}{\partial T} \right\rbrace   = \frac{9 N_A h^2}{v_\mathrm{m}^3} \frac{1}{kT^2} \cdot \nonumber \\ 
+   & \hspace{0.2 cm }\int_{0}^{\nu_\mathrm{m}} \frac{\nu^4e^{h\nu /kT} d\nu }{(e^{h\nu /kT} - 1)^2} 
+ \end{align}
+ Jika diadakan perubahan variabel yakni $x = h\nu /kT$ dan $h\nu_\mathrm{m}/k $ diganti oleh $\theta_\mathrm{D}$ maka temperatur karakteristik pada Persamaan di atas dapat dinyatakan menjadi:
+ \begin{align}
+ C_\nu = 9 R \left \lbrace \frac{T}{\theta_\mathrm{D}} \right \rbrace^3 \int_{0}^{\theta_\mathrm{D}/T} \frac{x^4 e^x d x}{(e^x - 1)^2} \nonumber  
+ \end{align}
+ Untuk temperatur tinggi, di mana $\theta_\mathrm{D} \ll 1$ maka $e^x \simeq 1+ x \simeq 1 $ sehingga 
+ \begin{align}
+ C_\nu  \simeq 9 R \left\{ \frac{T}{T_\mathrm{D}} \right \}^3 \int_{0}^{\theta_\mathrm{D}/T} x^2 dx =  3 R \nonumber
+ \end{align}
+ Untuk temperatur rendah, di mana $e^{- \theta_\mathrm{D} /T}\ll 1$ maka batas atas integrasi diganti menjadi $\infty$ sehingga 
+ \begin{align}
+ C_\nu
+ & \simeq 9 R
+ \left\lbrace \frac{T}{\theta_\mathrm{D}}\right\rbrace^3
+  \int_{0}^{\infty}
+   \frac{x^4 e^x dx}{(e^x - 1)^2} \nonumber 
+% \text{ jadi } & \nonumber \\
+% C\nu &  \simeq \frac{12}{5} \pi^4  R \left \lbrace  \frac{T}{\theta_\mathrm{D}}\right \rbrace^3 \nonumber 
+\end{align}
+atau dengan melakukan ekspansi taylor terhadap $ e^x$ maka 
+\begin{align}
+\int_{0}^{\infty } \frac{x^4 e^x dx }{(e^x - 1)^2 } = 24 \sum_{n =1}^{\infty} \frac{1}{n^4}  = \frac{4 \pi^4}{15} \nonumber
+\end{align}
+sehingga
+\begin{align}
+ C\nu &  \simeq \frac{12}{5} \pi^4  R \left \lbrace  \frac{T}{\theta_\mathrm{D}}\right \rbrace^3 \nonumber 
+\end{align} \newline
+\textbf{Prinsip ekuipartisi energi.} \newline
+Energi kinetik dalam satu derajat kebebasan (misal x) dinyatakan oleh $\epsilon_x = p_x^2 /2m $ sehingga 
+\begin{align}
+\overline{\epsilon_x} = \frac{\int_{\Gamma} p_x^2 /2m \, e^{-\epsilon/kT d \Gamma}}{\int_\Gamma e^{-\epsilon /kT 
+} d\Gamma}
+\end{align}
+Jika energi dinyatakan dalam dua bagian yakni $p_x^2 /2m $ dan $(\epsilon - p_x^2 / 2m)$ makan persamaan di atas dapat dituliskan menjadi
+\begin{align}
+\overline{ \epsilon_x} & = \left( \frac{\int \exp \left(- \left( \epsilon - \frac{p_x^2}{2m }\right)/kT \right)}{\int \exp \left( - \left( \epsilon - \frac{p_x^2}{2m } \right)/kT\right) } \cdot \right.  \nonumber \\
+& \hspace{0.3 cm }  \frac{ dx \, dy \, dz \, dp_y \, dp_z}{dx \, dy \, dz \, dp_y \, dp_z } \cdot \nonumber \\ 
+& \hspace{0 cm}
+\left.
+\frac{\int_{-\infty}^{\infty} \frac{p_x^2}{2m} \exp \left(- p_x^2 /2mkT\right) dp_x }{\int_{-\infty}^{\infty} \exp\left( -p_x^2 /2mkT \right) dp_x } \right) \nonumber \\
+& = \frac{1}{2} kT  \nonumber
+\end{align}
+Di mana telah dilakukan substitusi $p_x^2 / 2mk T  = u^2 $ \newline
+Untuk harmonik osilator, di mana energinya dinyatakan sebagai
+\begin{align}
+\epsilon_x = \frac{p_x^2}{2m } + \frac{1}{2} \mu x^2 
+\end{align}
+maka energi rata-ratanya adalah:
+\begin{align}
+\overline{\epsilon_x} & = \frac{\int_\Gamma \left \lbrace p_x^2 /2m + \frac{1}{2} \mu x  \right \rbrace e^{-\epsilon/kT}d \Gamma}{\int_\Gamma e^{- \epsilon /kT} d \Gamma } \nonumber \\
+& = \frac{\int_{-\infty}^{\infty} \int_{-\infty}^{\infty}  \left \lbrace   \frac{p_x^2  }{2m} + \frac{1}{2} \mu x^2\right \rbrace }{\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} } \nonumber \\
+& \cdot \frac{ \exp \left( - \left[  \frac{p_x^2  }{2m} + \frac{1}{2} \mu x^2 \right ] /kT \right) }{ \exp \left( - \left[  \frac{p_x^2  }{2m} + \frac{1}{2} \mu x^2 \right ] /kT \right) } \nonumber \\
+& \hspace{0.3 cm }\cdot \frac{ dx \, dp_x}{dx \, dp_x}
+\end{align}
+Jika dilakukan substitusi $p_x^2 /2m  = r^2 \sin^2 \theta $ dan $\frac{1}{2} \mu x^2 = r^2 \cos^2 \theta $ maka diperoleh
+\begin{align}
+\overline{\epsilon_x} &= \frac{\int_{0}^{2 \pi } d\theta \int_{0}^{\infty} e^{-r^2 /kT} r^3 \, dr }{\int_{0}^{2 \pi} d \theta \int_{0}^{\infty} e^{- r^2 /kT} r \, dr }
+\nonumber \\
+& = kT \nonumber
+\end{align} \newline
+\textbf{Statistik Semiklasik} \newline
+Secara klasik, jumlah keadaan energi dalam rentang $\epsilon $ sampai $\epsilon + d \epsilon $ dinyatakan oleh:
+\begin{align}
+g(\epsilon ) d\epsilon = BV 2\pi (2m )^{3/2 }\epsilon^{1/2} d\epsilon  
+\end{align}
+Sehingga fungsi partisi menjadi
+\begin{align}
+Z& = \sum_s g_s e^{-\epsilon_s /kT} \nonumber \\&  \equiv \int_{0}^{\infty} e^{-\epsilon/kT } g(\epsilon ) d \epsilon \nonumber  \\
+& = 2\pi BV (2m)^{3/2 } \cdot \nonumber \\
+& \hspace{0.2 cm } \int_{0}^{\infty} \epsilon^{1/2} e^{-\epsilon /kT} d \epsilon  \nonumber \\ & = BV (2 \pi mkT)^{3/2 } 
+\end{align}
+yang nantinya akan diperoleh
+\begin{align}
+F = - Nk T \ln [BV (2 \pi mkT)^{3/2}]  
+\end{align} 
+dan 
+\begin{align}
+S &= - \left \lbrace  \frac{\partial F}{\partial T}\right \rbrace  \nonumber  \\
+& =\boxed{ Nk \ln [BV (2 \pi mkT )^{3/2 }]+  \frac{3}{2} Nk  }
+\end{align}
+Dengan persamaan ini akan terdapat kenaikan entropi sebesar $2 Nk \ln 2$ pada pencampuran 2 volume gas.
+Fakta ini menuntun pada perumusan statistik semiklasik, di mana bobot konfigurasi dinyatakan oleh 
+\begin{align}
+W_\mathrm{MB} = \prod_s  \frac{g_s^{n_s}}{n_s !} \label{boltzmann-semiklasik}
+\end{align}
+\begin{align}
+W_\mathrm{BE} = \prod_s \frac{(n_s + g_s -1)!}{n_s ! (g_s - 1)!} 
+\end{align}
+\begin{align}
+W_\mathrm{FD} = \prod_s \frac{g_s! }{n_s ! (g_s - n_s )!} 
+\end{align}
+Pada limit klasik, yakni $g_s \gg n_s \gg 1$ maka dengan aproksimasi Stirling diperoleh:
+\begin{align}
+\ln W_\mathrm{MB}& = \sum_s (n_s \ln g_s  - n_s \ln n_s
+ \nonumber \\ 
+ &\hspace{1 cm } 
+ + n_s ) \nonumber \\
+& = \sum_s \left( n_s \ln \frac{g_s }{n_s } + n_s  \right)
+\end{align}
+\begin{align}
+\ln W_\mathrm{BE} &\simeq \sum_s [ (n_s + g_s )\ln (n_s + g_s )\nonumber \\ 
+&  \hspace{0.3 cm } - n_s \ln n_s - g_s \ln g_s ] \nonumber \\
+&  = \prod_s \left [ n_s \ln \left \lbrace  \frac{n_s + g_s }{n_s }\right \rbrace + \right. \nonumber \\
+& \hspace{0.2 cm } \left. g_s \ln \left \lbrace  \frac{n_s + g_s}{g_s }\right \rbrace \right ] \nonumber \\
+& \simeq \prod_s \left( n_s \ln \frac{g_s }{n_s } + n_s \right)
+\end{align}
+di mana telah  digunakan hampiran $n_s + g_s - 1 \simeq (n_s + g_s ) \frac{g_s + n_s }{n_s } \simeq \frac{g_s }{n_s }$. Dan $\ln \left \lbrace \frac{n_s + g_s }{g_s} \right \rbrace  = \ln \left \lbrace  1 + \frac{n_s }{g_s } 
+\right \rbrace \simeq \frac{n_s }{g_s }$ \newline  Kemudian
+\begin{align}
+\ln W_\mathrm{FD}& = \sum_s [ g_s \ln g_s - n_s \ln n_s  \nonumber \\
+& \hspace{0.2 cm } - (g_s - n_s )\ln (g_s -n_s) ] \nonumber \\
+& = \sum_s \left [ n_s \ln \left \lbrace  \frac{g_s - n_s }{n_s }\right \rbrace   - \right. \nonumber
+ \\
+& \hspace{0.2 cm } \left. g_s \ln \left \lbrace \frac{g_s - n_s }{g_s } \right \rbrace \right ] \nonumber \\
+& \simeq \sum_s \left( n_s \ln \frac{g_s }{n_s } + n_s \right) 
+\end{align}
+Entropi kemudian dinyatakan oleh 
+\begin{align}
+S = Nk \ln \frac{Z}{N} + \frac{E}{T} + Nk 
+\end{align}
+Sementara pernyataannya dalam kuantum mekanik adalah:
+\begin{align}
+Z = \frac{V}{h^3} (2 \pi m kT)
+^{3/2 }
+\end{align}
+dengan demikian entropi untuk sistem semi-klasik dinyatakan oleh 
+\begin{align}
+S = Nk \left \lbrace \ln \left [ \frac{V (2 \pi m kT )^{3/2} }{Nh^3} \right ] +
+  \frac{5}{2} \right \rbrace  \nonumber
+\end{align}
+energi bebas helmoltz kemudian dinyatakan sebagai 
+\begin{align}
+F = - kT \ln \frac{Z^N}{N!} 
+\end{align}
+dengan $\boldsymbol{Z} = Z^N /N!$ menyatakan fungsi partisi total untuk sistem semi-klasik. \newline
+\textbf{Ensembel Kanonik} \newline
+\begin{align}
+\boldsymbol{Z} = \sum_i e^{- E_i /kT}
+\end{align}
+\begin{align}
+p_i &= p(0) e^{-E_i /k T}  = \frac{e^{-E_i /kT}}{\boldsymbol{Z}}   \label{peluang-kanonik}
+\end{align}
+\begin{align}
+p(0) = \frac{1}{\sum_i e^{- E_i /kT}}
+\end{align}
+Jadi
+\begin{align}
+\sum_i p_i = 1 
+\end{align}
+\begin{align}
+F = - kT \ln \boldsymbol{Z}
+\end{align}
+\newline
+\textbf{Fluktuasi energi pada Ensembel Kanonik} 
+\begin{align}
+\overline{(\delta E)^2 } &= \overline{(E - \overline{E} )^2 }= \overline{E^2} - \overline{E}^2 
+\end{align}
+\begin{align}
+\overline{E} = \sum_i p_i E_i  =  \frac{1}{\boldsymbol{Z}} \frac{\partial \boldsymbol{Z}}{\partial \beta} 
+\end{align}
+\begin{align}
+\overline{(\delta E)^2}& = \frac{\partial \overline{E}}{\partial \beta } = kT^2\frac{\partial \overline{E}}{\partial T} = C_v k T^2  
+\end{align}
+\begin{align}
+\mathcal{F} & = \left \lbrace \frac{\overline{(\delta E)^2}}{\overline{E}^2} \right \rbrace^{1/2} = \left \lbrace \frac{kT^2 C_v }{\overline{E}^2}\right \rbrace^{1/2}
+\end{align}
+dengan $C_v = (3/2) Nk$ dan $\overline{E} = (3/2)NkT$ maka 
+\begin{align}
+\mathcal{F} &= \left \lbrace \frac{\frac{3}{2} N k^2 T^2 }{\left( \frac{3}{2} Nk T\right)^2} \right \rbrace^{1/2}= \left( \frac{3}{2} N\right)^{- 1/2 }
+\end{align}
+\newline
+\textbf{Enesembel Grand Kanonik}
+\begin{align}
+\boldsymbol{\mathcal{Z} }= \sum_i e^{(\mu N - E)_i / kT }  \label{partisi grand kanonik}
+\end{align}
+\begin{align}
+p_i &=  e^{-[ pV + (\mu N_i - E_i )/k T}
+ \label{peluang grand kanonik}
+\end{align}
+\begin{align}
+&\sum_i p_i  = 1  \\
+& \text{atau } \\
+ &  e^{- pV /kT} \sum_i e^{(\mu N_i  - E_i )/kT} = 1
+\end{align}
+\begin{align}
+  e^{- pV/kT}& = \frac{1}{\sum_i e^(\mu N_i - E_i )/kT} \nonumber  \\
+&  = \frac{1}{\boldsymbol{\mathcal{Z}} } \label{identitas grand kanonik}
+\end{align}
+Sehingga 
+\begin{align}
+p_i = \frac{e^{(\mu N_i - E_i )/kT}}{\boldsymbol{\mathcal{Z}}} 
+\end{align}
+\begin{align}
+\overline{N}& =  \sum_i p_i N_i \nonumber \\
+ & = \sum_i \frac{N_i e^{(\mu N_i - E_i )/kT}}{\boldsymbol{\mathcal{Z}}} \nonumber \\
+& = \frac{kT}{\boldsymbol{\mathcal{Z}}} \left \lbrace \frac{\partial \boldsymbol{\mathcal{Z}}}{\partial \mu }\right \rbrace \nonumber \\
+& = kT \left \lbrace \frac{\partial \ln \boldsymbol{\mathcal{Z}}}{\partial \mu} \right \rbrace_{V,T} 
+  \label{jumlah rata-rata partikel}
+\end{align}
+dan 
+\begin{align}
+\overline{N^2} = \frac{(kT)^2}{\boldsymbol{\mathcal{Z}}} \left \lbrace 
+\frac{\partial^2 \boldsymbol{ \mathcal{Z}}}{\partial \mu^2 } \right \rbrace_{V,T} \label{jumlah rata-rata kuadrat partikel}  
+\end{align}
+Dari pers.\ref{identitas grand kanonik} dapat pula diperoleh
+\begin{align}
+(pV) = kT \ln \boldsymbol{\mathcal{Z}} 
+\end{align}
+sehingga jumlah rata-rata partikel pada pers.\ref{jumlah rata-rata partikel} dapat dinyatakan ke dalam
+\begin{align}
+\overline{ N} = \left \lbrace \frac{\partial (pV)}{\partial \mu } \right \rbrace_{T,V} 
+\end{align}
+Perhatikan
+\begin{align}
+d(pV) = p\,  dV  + S \, d T + \overline{N} \, d \mu 
+\end{align}
+demikian pula 
+\begin{align}
+p & = \left \lbrace \frac{\partial (pV)}{\partial V} \right \rbrace_{T, \mu}
+\end{align}
+\begin{align}
+S& = \left \lbrace  \frac{\partial (pV)}{\partial T}\right \rbrace_{V, \mu}
+\end{align}
+Untuk distribusi Bose-einstein, pers. \ref{jumlah rata-rata partikel} akan menghasilkan
+\begin{align}
+\overline{N} &= kT \frac{\partial}{\partial \mu } \left \lbrace \ln \prod_j [1 - \right. \nonumber \\ 
+& \hspace{0.2 cm } \left. e^{(\mu - \epsilon_j)kT}]^{-1} \right \rbrace_{V,T} \nonumber \\
+& = - kT \sum_j \left \lbrace \frac{\partial}{\partial \mu} \right. \nonumber \\
+& \hspace{0.2 cm} \left. \ln[1 - e^{(\mu - \epsilon_j )/kT}] \right \rbrace_{V,T} \nonumber \\
+& = \sum_j \frac{1}{e^{(\epsilon_j - \mu )/kT} - 1} \nonumber \\
+& = \sum_j \overline{n_j }
+\end{align}
+Dengan cara yang sama untuk distribusi fermi-dirac diperoleh
+\begin{align}
+\overline{N} &  = \sum_j \overline{n_j }   = \sum_j \frac{1}{e^{(\epsilon_j - \mu )/kT} + 1}
+\end{align}
+\newline
+\textbf{Fluktuasi Jumlah Partikel dalam ensembel grand kanonik} 
+\begin{align}
+& \frac{\partial}{\partial \mu } \left \lbrace  \frac{1}{\boldsymbol{ \mathcal{Z}}} \left( \frac{\partial \boldsymbol{\mathcal{Z}}}{\partial \mu }\right)\right  \rbrace_{V,T}\nonumber \\ &  = \left\lbrace  \frac{1}{\boldsymbol{\mathcal{Z}}} \frac{\partial^2 \boldsymbol{\mathcal{Z}}}{\partial \mu^2}  - \frac{1}{\boldsymbol{\mathcal{Z}}^2} \left(\frac{\partial \boldsymbol{\mathcal{Z}}}{\partial \mu }\right)^2\right \rbrace_{V,T}
+\end{align}
+ini akhirnya menghasilkan
+\begin{align}
+&\frac{1}{(kT)} \left \lbrace \frac{\partial \overline{N}}{\partial \mu }\right \rbrace_{V,T}  = \frac{1}{(kT)^2} (\overline{N^2} - \overline{N}^2 ) \nonumber
+\end{align}
+\begin{align}
+\overline{(\delta N)^2 } = kT \left \lbrace  \frac{\partial \overline{N}}{\partial \mu}\right \rbrace_{V,T} 
+\end{align}
+\textbf{Ekspansi Sommerfeld} \newline 
+\begin{align}
+N & = \int_{0}^{\infty} g(\epsilon) \overline{n}_\mathrm{FD} \, d \epsilon \nonumber \\
+& = g_0 \int_{0}^{\infty} \epsilon^{1/2} \overline{n}_\mathrm{FD} \, d\epsilon 
+\end{align}
+$\overline{n}_\mathrm{FD}$ menyatakan fungsi dist. FD($f(\epsilon)$). 
+Karen daerah yan g ditinjau hanya disekitar $\epsilon = \mu $,maka integralnya dapat dinyatakan ke dalam integral parsial
+\begin{align}
+N  & = 
+ \frac{2}{3} g_0 \epsilon^{3/2} \overline{n}_\mathrm{FD} (\epsilon)  \vline_{0}^{\infty} +  \nonumber \\
+ &  \frac{2}{3} g_0 \int_0^\infty \epsilon^{3/2} \left( - \frac{d \overline{n}_\mathrm{FD}}{d \epsilon }\right) d \epsilon 
+\end{align}  
+suku pertama akan habis pada kedua batas integral sementara suku kedua dinyatakan kembali melalui 
+\begin{align}
+- \frac{d \overline{n}_\mathrm{FD}}{d \epsilon } & = - \frac{d}{d \epsilon } (e^{(\epsilon - \mu )/kT }+ 1)^{-1} \nonumber \\
+& = \frac{1}{kT} \frac{e^x}{(e^x + 1) ^2} 
+\end{align}
+dengan $x = (\epsilon - \mu )/ kT$. \newline Jadi 
+\begin{align}
+N& = \frac{2}{3} g_0 \int_{0}^{\infty} \frac{1}{kT} \frac{e^x}{(e^x +1)^2} \epsilon^{3/2} \, d \epsilon  \nonumber \\
+& = \frac{2}{3} g_0 \int_{-\mu/kT}^{\infty} \frac{e^x}{(e^x + 1)^2} \epsilon^{3/2}  \, d \epsilon
+\end{align}
+Ada dua pendekatan yang dilakukan, pertama adalah uraian Taylor terhadap $\epsilon^{3/2} $ di sekitar $\epsilon = \mu $  kedua meng-ekstends batas bawah integralnya sampai $- \infty$ 
+\newline Dengan demikian diperoleh
+\begin{align}
+\epsilon^{3/2}& = \mu^{3/2} + (\epsilon - \mu  ) \frac{d}{d \epsilon} \epsilon^{3/2} \vline_{\epsilon = \mu } \nonumber \\
+&+ \frac{1}{2} (\epsilon - \mu )^2  \frac{d^2}{d \epsilon^2} \epsilon^{3/2} \vline_{\epsilon = \mu } + \cdots \nonumber \\ 
+& = \mu^{3/2} + \frac{3}{2} (\epsilon -\mu )\mu^{1/2} + \nonumber \\
+& \frac{3}{8} (\epsilon - \mu )^2 \mu^{1/2} + \cdots  
+ \end{align}
+sehingga 
+%\columnbreak
+%\pagebreak
+\begin{align}
+N & = \frac{2}{3} g_0 \int_{-\infty}^{\infty} \frac{e^x}{(e^x + 1)^2} \left [ \mu^{ 3/2} + \right. \nonumber \\
+ & \frac{3}{2} (\epsilon - \mu )\mu^{1/2}  + \frac{3}{8} (\epsilon - \mu)^2 \mu^{1/2}\nonumber \\
+ & \hspace{0.2 cm } + \cdots 
+\end{align}
+Integrasi selanjutnya dapat dilakukan pada masing-masing suku yakni untuk suku pertama adalah
+\begin{align}
+&\int_{- \infty}^{\infty} \frac{e^x}{(e^x + 1)^2} \, dx  = 
+\nonumber \\
+& \int_{- \infty}^{\infty} - \frac{d \overline{n}_\mathrm{FD}}{d \epsilon} \, d\epsilon \nonumber \\
+& = \overline{n}_\mathrm{FD} (- \infty) - \overline{ n}_\mathrm{FD} (\infty)  =\nonumber \\
+& \hspace{0.2 cm } 1- 0 =1
+ \end{align}
+ Untuk suku kedua 
+ \begin{align}
+& \int_{-\infty}^{\infty} \frac{x e^x }{(e^x + 1)^2}  \, dx =   \nonumber \\
+ & \int_{-\infty}^{\infty} \frac{x}{(e^x + 1)(1+ e^{-x})} \, dx  = 0. 
+ \end{align}
+ mengingat pernyataan tersebut merupakan fungsi ganjil dari $x$. \newline
+ Suku ketiga dapat diintegrasikan secara parsial secara berurutan yang natinya akan menghasilkan 
+ \begin{align}
+ \int_{- \infty}^{\infty} \frac{x^2 e^x }{(e^x +1)^2 } \,  dx = \frac{\pi^2}{3} 
+ \end{align}
+ Dengan mengumpulkan hasil-hasil tersebut, maka nilai $N$ selanjutnya dapat dituliskan menjadi
+ \begin{align}
+ N & = \frac{2}{3} g_0 \mu^{3/2} + \frac{1}{4} g_0 (kT)^2 \mu^{-1/2}\nonumber \\
+ & \hspace{0.1 cm }  \cdot \frac{\pi^2} {3} + \cdots \nonumber \\
+ & = N \left(\frac{\mu}{\epsilon_\mathrm{F}}\right)^{3/2 } + N \frac{\pi^2}{8} \frac{(kT) ^2}{\epsilon_\mathrm{F}^{3/2} \mu^{1/2}} \nonumber \\
+ & \hspace{0.3 cm } + \cdots
+ \end{align}
+ Di mana telah dilakukan substitusi untuk $g_0  = 3N / 2 \epsilon_\mathrm{F}^{3/2}$. Dengan membagi kedua ruas dengan $N$ diperoleh
+ \begin{align}
+ \frac{\mu}{\epsilon_\mathrm{F}}  &=  \left [  1 -  \frac{\pi^2}{8} \left(\frac{kT}{\epsilon_\mathrm{F}}\right)^2 + \cdots\right]^{2/3} \nonumber \\
+ & = 1- \frac{\pi^2}{12} \left(\frac{kT}{\epsilon_\mathrm{F}}\right)^2  + \cdots \label{potensial kimia}
+ \end{align} 
+ yang menunjukkan  potensial kimia $\mu$ akan naik secara berangsur-angsur seiring naiknya $T$. \newline
+ Hasil ini juga dapat digunakan untuk menhitung integral untuk nilai total energi yakni
+ \begin{align}
+ U &= \int_{0}^{\infty} \epsilon g(\epsilon) \overline{n}_\mathrm{FD} (e\epsilon) d \epsilon \nonumber \\
+ & = \int_{0}^{\infty} \epsilon g(\epsilon) \frac{1}{e^{(\epsilon - \mu)/kT}+1}  \, d\epsilon 
+ \end{align}
+yakni 
+\begin{align}
+U& =\frac{3}{5} N \frac{\mu^{5/2}}{\epsilon_\mathrm{F}^{3/2}} + \nonumber \\
+& \hspace{0.2 cm} \frac{3\pi^2 }{8} N \frac{(kT)^2}{\epsilon_\mathrm{F}} + \cdots
+\end{align}
+Di mana dengan memasukkan pers. \ref{potensial kimia} diperoleh
+\begin{align}
+U&  = \frac{3}{5} N \epsilon_\mathrm{F} + \frac{\pi^2}{4} N \frac{(kT)^2}{\epsilon_\mathrm{F}} + \cdots
+\end{align}
+ \textbf{ Dipol elementer}\\
+energi rata-rata 
+\begin{align}
+\overline{E} = - \mu B \tanh (\beta \mu B) 
+\end{align}
+\begin{align}
+U = - N \mu B \tanh(\beta \mu B)
+\end{align}
+\begin{align}
+\overline{\mu_z } =  \mu \tanh(\beta \mu B) 
+\end{align}
+\begin{align}
+M = N \overline{\mu_z} = N \mu \tanh (\beta \mu B)
+\end{align}
+\textbf{Meand Field Theoreme} \newline 
+\begin{align}
+\mathcal{H} = - J \sum_j \sigma_j \, \sigma_{j + 1} - h \sum_j \sigma_j 
+\end{align}
+\begin{align}
+& \langle \mathcal{H} - \mathcal{ H}_0 \rangle_0   =
+ \nonumber \\ 
+  & -    \frac{ \begin{pmatrix}
+  \sum_{\{s \}} - J \sum_{<ij>} \sigma_j \, \sigma_{j+1} \\  \cdot   \exp\left[ \beta H_0 \sum_j \sigma_j \right] 
+   \end{pmatrix} }{\sum_{\{ s\}} \exp \left[  B H_0 \sum_j \sigma_j \right ]}
+   \nonumber \\
+ &   -  \frac{ \sum_{\{s \}} h \sum_j \sigma_j  \exp\left[ \beta H_0 \sum_j \sigma_j \right] }{\sum_{\{ s\}} \exp \left[  B H_0 \sum_j \sigma_j \right ]}
+  \nonumber \\
+ &  + \frac{ \sum_{\{s \}} H_0 \sum_j \sigma_j \exp\left[ \beta H_0 \sum_j \sigma_j \right] }{\sum_{\{ s\}} \exp \left[  B H_0 \sum_j \sigma_j \right ]} \nonumber \\
+ & =  - J \sum_{<ij>} \langle \sigma_i \rangle_0 \langle \sigma_j \rangle_0  - h \sum_i \langle \sigma_i \rangle_0
+ \nonumber  \\
+ & \hspace{0.1 cm} + H_0 \sum_i \langle \sigma_i \rangle_0  \nonumber \\
+ & = -J \sum_i \langle \sigma \rangle_0^2 - h \sum_i \langle \sigma_i \rangle_0 \nonumber \\ 
+ & \hspace{0.1 cm } + H_0 \sum \langle \sigma_i \rangle_0  \nonumber \\
+ & = - \frac{J z N}{2} \tanh^2 \beta H_0 - N h \tanh \beta H_0 \nonumber \\
+ & \hspace{0.1 cm} + N H_0 \tanh \beta H_0 
+\end{align}
+Jadi 
+\begin{align}
+\Phi &= f_0 + (\mathcal{H} - \mathcal{H}_0 )_0  \nonumber \\
+&=   - N kT \ln (2 \cosh \beta H_0 ) \nonumber \\
+&  \hspace{0.1 cm} - \frac{Jz N}{2} \tanh^2 \beta H_0 \nonumber \\
+& \hspace{0.1 cm}  + NH_0 \tanh \beta H_0  \nonumber \\
+& \hspace{0.1 cm} - Nh \tanh \beta H_0 
+\end{align}
+\begin{align}
+&\frac{\partial \Phi }{\partial H_0  } = 0 \nonumber \\
+& \Rightarrow  - \frac{NkT (2 \sinh \beta H_0 ) \beta }{2 \cosh \beta H_0 } - \nonumber \\
+&\hspace{0.2 cm }  \frac{J z N \beta  \tanh \beta H_0 }{\cosh^2 \beta H_0 } + \nonumber \\
+&  \hspace{0.2 cm}\frac{N H_0 \beta }{\cosh^2 \beta H_0 } + N \tanh \beta H_0 \nonumber \\
+& \hspace{0.2 cm } + \frac{N h \beta }{\cosh^2 \beta H_0 } = 0 \nonumber \\
+& \Rightarrow - N \tanh \beta H_0  - \frac{Jz \beta N \tanh \beta H_0 }{\cosh^2 \beta H_0 } \nonumber \\
+& \hspace{0.2 cm } + \frac{N H_0 \beta }{\cosh^2 \beta H_0 } + N \tanh \beta H_0  \nonumber \\
+& \hspace{0.2 cm} +  \frac{N h \beta }{\cosh^2  \beta H_0 } = 0 \nonumber \\
+&\Rightarrow  \frac{- Jz B N \tanh \beta H_0 }{\cosh^2 \beta H_0 } + \frac{N \beta H_0 }{\cosh^ \beta H_0 }  \nonumber  \\
+& \hspace{0.2 cm}  - \frac{N h \beta }{\cosh \beta H_0 } = 0 \nonumber \\
+& \Rightarrow = - J z \tanh \beta H_0  + H_0  - h  = 0 \nonumber \\ 
+& \Rightarrow     H_0 =  Jz \tanh \beta H_0  + h  =  \nonumber \\
+\hspace{0.2 cm } & = Jz \langle s \rangle_0 + h 
+\end{align}
+Dari defenisi $\langle s \rangle_0  = \tanh \beta H_0 $, maka 
+\begin{align}
+\langle s \rangle_0  = \tanh \beta (Jz \langle s \rangle_0  + h )
+\end{align}
+\textbf{Susceptibilitas per spin:} \newline 
+\newcommand{\susep}{\langle \sigma \rangle_0} 
+\begin{align}
+\chi = \frac{\partial \susep}{\partial h}
+\end{align}
+\newcommand{\susun}{\frac{\partial \susep}{\partial h}}
+\newcommand{\susur}{\frac{\partial}{\partial h}}
+\newcommand{\sech}{\text{sech}}
+%\newcommand{\kalsum}{\langle}
+\begin{align}
+& \susun  = \susur \tanh [ \beta (J q \susep + h )] \nonumber \\ 
+& = \sech^2 \left({\beta (J q \susep + h )} \right) \beta \nonumber \\
+& \hspace{0.2 cm} \left( Jq \susun  + \susur h\right) \nonumber \\
+& = \left( 1 - \tanh^2 [\beta (J q \susep  + h )]\right) \nonumber \\
+&\hspace{0.2 cm}  \beta (J q \susun  + 1 ) \nonumber 
+\end{align}
+maka 
+\begin{align}
+&\susun \left(1 - Jq \left( 1 - \tanh^2 [\beta (Jq \susep \right. \right.  \nonumber \\ 
+& \hspace{0.1 cm} \left. \left. +  h )]\right) \right) 
+\nonumber \\
+&  = \left( 1 - \tanh^2 [ \beta (Jq \susep + h )]\right) \cdot \beta
+\end{align}
+atau 
+\begin{align}
+& \susun =  \nonumber \\
+&  \frac{(1 - \tanh^2 [\beta (Jq \susep +h )  ])\cdot\beta}{
+\begin{pmatrix}
+1 - \beta Jq + \\ \beta Jq \tanh^2 [\beta (Jq \susep + h)]
+\end{pmatrix}
+} \nonumber \\
+& = \frac{1 - \tanh^2 [\beta (Jq \susep +h )  ]}{
+\begin{pmatrix}
+\frac{1}{\beta } - Jq + \\ Jq \tanh^2 [\beta (Jq \susep  + h )]
+\end{pmatrix}
+} \nonumber \\
+& = \frac{1 - \susep^2 }{Jq \left( 
+\begin{pmatrix}
+\frac{1}{\beta Jq } - 1 +  \\ \tanh^2 [\beta (Jq \susep + h )]
+\end{pmatrix}
+\right)} \nonumber \\
+& = \frac{1 - \susep^2 }{Jq \left( \frac{1}{\beta Jq } - 1 + \susep^2 \right)} \nonumber \\
+& =\frac{1 - \susep^2 }{ Jq \left( \frac{kT}{kT_c } - 1 + \susep^2 \right)}   \nonumber \\
+& = \boxed{\frac{1 - \susep^2}{Jq (t + \susep^2)}}
+\end{align}
+
+\textbf{Ekspansi Virial } \\
+\newcommand{\fjr}{\displaystyle}
+\newcommand{\bbar}{\bar{b}}
+\begin{align}
+\frac{P v}{kT } = \frac{\fjr \sum_{l = 1}^\infty  \bbar z^l }{\fjr \sum_{l = 1}^{\infty } l \bbar_l z^l \bbar} \hspace{0.1 cm;} v =  \frac{N}{V} 
+\end{align}
+Sementara ekspansi virial sendiri didefenisikan sebagai:
+\begin{align}
+\frac{Pv}{kT} = \sum_{l = 1}^\infty a_l (T) \left( \frac{\lambda^3}{v}\right)^{l - 1 } \label{40}
+\end{align}
+sehingga:
+\begin{align}
+& \sum_{l = 1}^\infty a_l \left( \sum_{n = 1}^\infty n \bbar  z^n \right)^{l - 1} \nonumber \\ 
+ & \hspace{0.1 cm } =  \frac{\fjr \sum_{l = 1}^\infty  \bbar z^l }{\fjr \sum_{l = 1}^{\infty } l \bbar_l z^l \bbar}
+\end{align}
+atau:
+\begin{align}
+&(\bbar_1 z + 2 \bbar_2 z^2 + 3 \bbar_3 z^3  + \cdots ) \nonumber \\
+& \left[ a_1 + a_2 \left( \sum_{n=1}^{\infty} n \bbar_n z^n \right) \right. \nonumber \\
+& \left. + a_3 \left( \sum_{n=1}^{\infty} n \bbar_n z^n \right)^2 + \cdots \right ] \nonumber \\
+ & \hspace{0.3 cm } = \bbar_1 z + \bbar_2 z^2 + \bbar_3 z^3 +\cdots  \nonumber \\
+ & \Rightarrow (\bbar_1 z + 2 \bbar_2 z^2 + 3 \bbar_3 z^3  + \cdots ) \nonumber \\
+ &  \left[ a_1  + a_2 (\bbar_1 z + 2 \bbar_2 z^2 + 3 \bbar_3 z^3 +  \cdots  ) \right . \nonumber \\ 
+ & \hspace{ 0.2 cm } \left.  + a_3 \left( \bbar_1^2  z^2 + 2 \bbar_1 z\,  2 \bbar_2 z^2 + \cdots  \right) \right.  \nonumber \\
+ &  \left. + a_4 (b_1^3 z^3 + \cdots  ) \right ] 
+ \nonumber \\
+ &  = \bbar_1 z + \bbar_2 z^2 + \cdots \nonumber  
+\end{align}
+Jadi:
+untuk $z^1$:
+\begin{align}
+\bbar_1 z \, a_1  = \bbar_1 z \Rightarrow \bbar_1 = a_1 = 1 
+\end{align}
+untuk $z^2$: 
+\begin{align}
+& 2 \bbar_2 z^2 \, a_1 + a_2 \bbar_1 z \, \bbar_1 z  = \bbar z^2 \nonumber \\
+& \Rightarrow 2 \bbar_2 z^2 + a_2 z^2 = \bbar_2 z^2 \nonumber \\
+& \Rightarrow a_2 z^2  = - \bbar_2 z^2  \nonumber \\
+& \Rightarrow a_2 = - \bbar_2 
+\end{align}
+untuk $z^3$:
+\begin{align}
+& 3 \bbar_3 z^3 a_1 + 2 \bbar_2 z^2 a_2 \bbar_1 z + \nonumber \\
+&  a_2 2 \bbar_2 z^2 \bbar_1 z + a_3 \bbar_1^2 z^2 \bbar_1 z = \bbar_3 z^3  \nonumber \\
+& \Rightarrow a_3 z^3 = (\bbar_3 - 3 \bbar_3 - 2 \bbar_2 a_2 \nonumber \\
+&  - a_2 2 \bbar_2)z^3  \nonumber \\
+& a_3 = - 2 \bbar_3 + 2 \bbar_2^2 + 2 \bbar_2^2 \nonumber \\
+& \Rightarrow a_3 = - 2 \bbar_3 + 4 \bbar_2^2
+\end{align}
+untuk $z^4$:
+\begin{align}
+& 2 \bbar_2 z^2 a_2 2 \bbar_2 z + 2 \bbar_2 z^2 a_3 \bbar_1^2 z^2 +  \nonumber \\
+& 4 \bbar_4 z^4 + a_4 \bbar_1^3 z^3 \bbar_1 z  + \bbar_1 z a_2 3 \bbar_3 z^3 \nonumber \\
+& + 2 \bbar_1 z  a_3 \bbar_1 z 2 \bbar_2 z^2  + 3 \bbar_3 z^3 a_2 \bbar_1 z  \nonumber \\
+&  = b_4v z^4 \nonumber \\
+&\Rightarrow 4 \bbar_2^2 a_2 + 2 \bbar_2 a_3 + 3 a_2 \bbar_3 + 4 a_3 \bbar_2  \nonumber \\
+& + 6 \bbar_3 a_2 + 4 \bbar_4 + a_4 = \bbar_4 \nonumber \\
+& \Rightarrow - 3\bbar_4 + 4\bbar_2^4  - 2 \bbar_2 (4 \bbar_2^2 - 2 \bbar_3) + \nonumber \\
+&  \bbar_3 a_2 + 4(4 \bbar_2^2 - 2 \bbar_3)\bbar_2  = a_4\nonumber \\
+& \Rightarrow a_4 = -3 \bbar_4 + 4 \bbar_2^3 - 8 \bbar_2^3 + 4 \bbar_2 \bbar_3 \nonumber \\
+&  + 6 \bbar_2 \bbar_3 - 16 \bbar_2^3 + 8 \bbar_2 \bbar_3 \nonumber \\
+& \Rightarrow a_4 = - 3\bbar_4 - 20 \bbar_2^3 + 8\bbar_2 \bbar_3
+\end{align}
+Dengan demikian deret virial dapat dinyatakan menjadi:
+\begin{align}
+& \frac{Pv}{kT}  =  \frac{PN}{NkT} = a_1 +  
+ a_2 \left( \frac{N}{V}\right) + \nonumber \\
+ &  a_3 \left( \frac{N}{V}\right)^2 +
+a_4  \left( \frac{N}{V}\right)^3 + \cdots \nonumber \\
+& = 1 + (- \bbar_2 )(\frac{N}{V}) +   (4 \bbar_2^2 - 2 \bbar_3) \nonumber \\
+& \left( \frac{N}{V}\right)^2 
+  + (- 20 \bbar_2^3 + 18 \bbar_2 \bbar_3  - 3 \bbar_4) \nonumber \\
+  &  \left( \frac{N}{V}\right)^3 
+\end{align}\\
+\textbf{Ekspansi Cluster :} \\
+\begin{align}
+U(r) = \left\{ 
+\begin{array}{ll}
+0 & r > R \\
+& \\
+\infty & r\le R
+\end{array}
+ \right.
+\end{align}
+\begin{align}
+b_j = \frac{1}{j! \lambda^{3 (j -1) }V} [\text{jml gugus }j]
+\end{align}
+untuk $j = 1$ maka:
+\begin{align}
+b_2&= \frac{1}{2 \lambda^3 V} \iint f_{12} d^3r_1 \, d^3 r_2 \nonumber \\
+& \approx \frac{1}{2 \lambda^3} \int f_{12} d^3 r_{12} \nonumber \\
+&  = \frac{2\pi}{\lambda^3} \int_{0}^{\infty } f(r) r^2 \, dr \nonumber \\
+& = \frac{1}{2 \lambda^3 } \int_{ 0}^{\infty } \left( e^{- U(r)/kT} \right. \nonumber \\
+& \hspace{0.1 cm } \left.  -1 \right) r^2  dr  
+\end{align}
+dengan demikian:
+\begin{align}
+a_2 & = - b_2  = \frac{2\pi}{\lambda^3} \int_{0}^{\infty} (1 - e^{- U(r)} \nonumber \\
+& \hspace{0.2 cm } - 1)r^2 \, dr \nonumber \\
+& = \frac{2\pi }{\lambda^3} \left[ \int_0^R (1 - e^{- \infty /kT}) r^2 \, dr + \right. \nonumber \\
+& \hspace{0.2 cm } \left.  \int_{R}^{\infty } (1 - e^{- 0 /kT} )r^2 \, dr  \right]  \nonumber \\
+& = \frac{2 \pi }{\lambda^3} \left [ \int_{0}^{R} r^2 \, dr  + 0 \right ]  \nonumber \\
+& = \left. \frac{2 \pi }{\lambda^3} \left( \frac{r^3}{3}\right)\right |_0^R  = \frac{2 \pi }{\lambda^3} \frac{R^3}{3} \nonumber \\
+& = \frac{2 \pi }{3} \left( \frac{R}{\lambda}\right)^3
+ \end{align}
+ \textbf{Tinjauan sistem dengan interaksi lemah}\\
+ \begin{align}
+ \boldsymbol{Z} = \int_{\Gamma_{6N}} e^{- E/kT} \frac{d \Gamma_{6N}}{h^{3N}}
+ \end{align}
+ untuk semi-klasik:
+ \begin{align}
+ \boldsymbol{Z} = \int_{\Gamma_{6N}} e^{- E/kT} \frac{d \Gamma_{6N}}{h^{3N} N! }
+ \end{align}
+ Totak energi asembli:
+ \begin{align}
+&  E = \frac{1}{2m }\sum_{j = 1}^N (p_{xj }^2 + p_{yj}^2 + p_{zj}^2 ) + \nonumber \\
+& \hspace{0.2 cm} \sum_j^N \sum_{l > j} U_{jl}
+ \end{align}
+ dengan demikian:
+\begin{align}
+ & \boldsymbol{Z} = \frac{1}{N! h^{3N}} \int_{\Gamma_{6N}} \exp \left[  - \sum_{j = 1}^N   \right .  \nonumber \\
+  & \hspace{0.2 cm } \left\{ \frac{1}{2m} (p_{xj}^2 + p_{yj}^2 + p_{zj}^2)  \right . \nonumber 
+  \\
+  &\left.  \nicefrac{ \left.  \hspace{0.2 cm} + \sum_{l > j } U_{jl} \right \}  }{kT} \right ] d \Gamma_{6N} \nonumber \\
+  &  =\frac{1}{N ! h^{3N }} \left\{ \int_{ - \infty}^{\infty} \exp(- p_{x1}^2 /2mkT) \right.  \nonumber \\
+  & \hspace{0.2 cm} \left. \frac{}{} d p_{x1}  \right \}^{3N} \times \int_V \int_V \cdots \int_V  \nonumber \\
+  & \exp \left( - \sum_{j = 1}^N \sum_{l > j} \nicefrac{U_{jl}}{kT} \right) \nonumber \\
+  & \hspace{0.2 cm } \times \prod_{j = 1}^N  dx_j \, dy_j \, dz_j  \nonumber \\
+  & = \frac{(2 \pi m kT )^{3 N/ 2}}{N ! h^{3N} } \int_V \int_V \cdots \int_V \nonumber \\
+  & \hspace{0.2 cm} \exp \left (  - \sum_{j = 1}^N \sum_{l> j} U_{jl} /kT  \right ) \nonumber \\
+  & \hspace{0.2 cm} \times \prod_{j = 1}^N dx_j \, dy_j \, d z_j \nonumber \\
+  & = \frac{(2 \pi m kT)^{3N / 2}}{N ! h^{3N}} I_N  \label{interkasi lemah 1}
+\end{align}
+persamaan keadaan diperoleh: 
+\begin{align}
+& F = - kT \ln \boldsymbol{Z} \nonumber \\
+& \hspace{0.2 cm} = -kT \left[ \ln \left \{ \frac{(2 \pi m kT)^{3 N/ 2}}{N ! h^{3N}} \right \} \right. \nonumber \\
+& \hspace{0.2 cm} \left.  + \frac{}{} \ln I_N \right ]   
+\end{align}
+tekanan gas kemudian diperoleh:
+\begin{align}
+p = - \left \{  \frac{\partial F}{\partial V}\right \}_{T}  = \frac{kT}{I_N} \left\{ \frac{\partial I_N}{\partial V} \right\}_T \label{pers keadaan interkasi lemah}
+\end{align}
+Jika interaksi molekul cukup lemah, yakni $\fjr e^{-U_{jl }/kT} \simeq 1$ maka
+\begin{align}
+& I_N = \int_V \int_V \cdots \int_V \nonumber \\
+& \hspace{0.2 cm} \exp \left ( - \sum_{j =1}^N \sum_{l > j } U_{jl} / kT  \right ) \nonumber \\
+& \hspace{0.2 cm} \times \prod_{j = 1}^N d x_j d y_j d z_j  \nonumber \\
+& \hspace{0.2 cm} \simeq \int_V dx_j \, d y_j \, d z_j  \nonumber \\
+&\hspace{0.2 cm} = V^N 
+\end{align}
+atau 
+\begin{align}
+p = \frac{Nk T}{V} 
+\end{align}
+\textbf{Pers. keadaan dengan gugus meyer }\\
+\begin{align}
+e^{- U_{jl} /kT }= 1 + f(r_{jl}) 
+\end{align} 
+maka 
+\begin{align}
+& \exp \left ( - \sum_{j = 1}^N \sum_{l >j} U_{jl} /k T  \right ) \nonumber \\
+& \hspace{0.2 cm} =  \prod_{l > j, j = 1} \{ 1 + f(r_{jl })\} \nonumber 
+\end{align}
+Jika diasumsikan energi interaksi cukup lemah, maka dua suku pertama dari hasil perkalian di atas (bentuk $f_{ab}$) yang ditinjau, yakni:
+\begin{align}
+& \prod_{l> j , j = 1}^{j = N}  \{ 1 + f(r_{jl})\} \simeq 1 + \nonumber \\
+& \hspace{0.4 cm} \sum_{j = 1}^N \sum_{l > j}^N f(r_{jl})
+ \end{align}
+ dengan demikian:
+ \begin{align}
+ & I_N = \int_V \int_V \cdots \int_V \left\{ \frac{}{} 1  + \right. \nonumber \\
+ & \left.  \sum_{j= 1}^N \sum_{l > j} f(r_{jl }) \right \}  \cdot\prod_{j = 1}^N d x_j d y_j d z_j  \nonumber \\
+ & \hspace{0.1 cm } = V^N + \int_V \int_V \cdots \nonumber \\
+ & \hspace{0.1 cm } \int_V \sum_{j = 1}^N \sum_{l > j} f(r_{jl}) \prod_{j = 1}^N d x_j 
+ \end{align}
+ Jika dianggap energi interaksi dua buah molekul tidak bergantung pada $N - 2$ molekul lain dan tidak ada keistimewaan antara pasangan molekul yang ditinjau:
+ \begin{align}
+ & I_N  = V^N + \frac{N(N - 1)}{2} \int_V \int_V \cdots \nonumber \\
+ & \hspace{0.1 cm} \int_V f(r_{jl}) \prod_{j = 1}^N dx_j dy_j d z_j \nonumber \\
+ & = V^N + \frac{N (N - 1) V^{N - 2}}{2} \nonumber \\
+ & \times \int_V \int_V f(r_{jl} ) d x_j d y_j d z_j d x_l dy_l d z_l 
+ \end{align}
+ Jika dianggap koordinat mula-mula dari molekul $j$ berada pada posisi molekul $l$ dan diasumsikan  $f(r_{jl})$ akan menuju nol ketika $r_{jl}$ meningkat. maka:
+ \begin{align}
+ & \int_V \int_V f(r_{jl }) dx_j dy_j dz_j d x_l d y_l d z_l \nonumber \\
+ & \simeq \int_V d x_l d y_l d z_l \int_0^\pi \sin \theta \, d\theta \nonumber \\
+ & \times \int_0^{2 \pi} d \psi \int_0^\infty f(r) r^2 \, dr \nonumber \\
+ & = V \int_{0}^{\infty} f (r) 4 \pi r^2 \, dr 
+ \end{align}
+ Jika dimisalkan $\fjr \int_0^\infty f(r) 4 \pi r^2 \, dr = a $ maka
+ \begin{align}
+ & I_N  =  V^N + \frac{N (N - 1) }{2 } V^{N - 1} a 
+ \end{align}
+ sehingga dengan memasukkan ke dalam pers. \ref{pers keadaan interkasi lemah} diperoleh:
+ \begin{align}
+  & p = \frac{kT }{\left \{ V^N + \frac{N (N - 1)}{2} V^{N - 1} a  \right \}} \nonumber \\
+  &\times \left \{ N V^{N - 1}  + \frac{N (N - 1)^2}{2}  \right. \nonumber \\
+  & \hspace{0.1 cm} \left. V^{N - 2} a \frac{}{} \right \}  
+ \end{align}
+ Jika energi interaksi $U_{jl}$  cukup kecil yakni $e^{- U_{jl }/ kT}\simeq 1 - U_{jl} /kT $ maka $ f(r_{jl })  \simeq - U_{jl }/kT$ dan konstanta a  menjadi  $\fjr a = - (1/ kT) \int_{0}^{\infty} U (r)  4 \pi r^2 \, dr  = a' /k T $ dengan $a'$ positif karena $U(r)$ negatif dalam domain tinjauan. Sehingga $a/ V = a' /kTV \simeq a' N/ pV^2 $yang menghasilkan 
+ \begin{align}
+ & p \simeq  \frac{Nk T}{p} \left ( 1 - \frac{(N - 1)}{2} \frac{N a' }{p V^2} \right ) \nonumber \\
+ \end{align}
+ atau 
+ \begin{align}
+ \left( p + \frac{a''}{V^2}  \right) V \simeq  Nk T
+ \end{align}
+ dengan $\fjr a'' = (N - 1) N a' /2 $ \\
+ \textbf{Ekspansi deret temperatur tinggi}
+ karena perkalian $s_i s_j$ hanya bernilai $\pm 1$ maka 
+ \begin{align}
+ & e^{\beta J s_i s_j}  = \cosh \beta J  + s_i s_j  \sinh \beta J \nonumber \\
+ & \equiv \cosh \beta J ( 1 + s_i s_j v) \text{; } \hspace{0.1 cm} v = \tanh \beta J
+ \end{align}
+ di mana $ v \rightarrow 0 $ ketika $T \rightarrow \infty$. Jadi fungsi partisi dapat dituliskan menjadi:
+ \newcommand{\sumof}{\sum_{\{s\}}}
+ \newcommand{\prodij}{\prod_{\langle ij \rangle }} 
+ \newcommand{\spasi}{& \hspace{ 0.2 cm}} 
+ \newcommand{\pindah}{\nonumber \\}
+\begin{align}
+ & \mathcal{Z}  = \sumof \prodij e^{\beta  J s_i s_j }\nonumber \\
+ & \hspace{0.2 cm} = (\cosh  \beta J )^{
+ \mathcal{B}} \sumof \prodij  ( 1 +  s_i s_jv) \pindah 
+ \spasi =  (\cosh \beta J )^\mathcal{B} \sumof (1 + v \sum_{\langle ij \rangle }  s_i s_j \pindah  
+ \spasi + v^2 \sum_{\langle ij \rangle ; \langle kl \rangle } s_i s_j s_k s_l + \cdots ) 
+\end{align}
+Karena $s_i = \pm 1$ maka dalam fungsi partisi akan berlaku 
+\begin{align}
+\sumof (s_i^{n_i } s_j^{n_j} s_k^{n_k} \cdots ) & = 2^N  \hspace{0.1 cm} 
+\begin{pmatrix}
+ \text{all } n_i \\   \text{ even} 
+\end{pmatrix}
+\pindah 
+& = 0 \hspace{0.1 cm} (\text{lainnya}) \nonumber
+\end{align}
+sehingga pernyataan untuk suku-suku dalam orde $v^n$ dapat dinyatakan ke dalam loop tertutup yang menghubungkan titik-titik latis. Dengan demikian fungsi Partisinya menjadi :
+\begin{align}
+& \mathcal{Z} = (\cosh \beta J)^{\mathcal{B}} 2^N \left \{ 1+  N v^4 + 2 N  v^6   \frac{}{}  \right . \pindah 
+\spasi  + \frac{1}{2} N (N + 9) v^8 + 2 N (N + 6 )v^{10}   \pindah 
+\spasi \left. \frac{}{}+ O(v^{12}) \right \} 
+\end{align}
+sehingga energi bebas :
+\begin{align}
+& \mathcal{F} = - Nk T \left \{  \frac{}{} \ln 2  + v^2 + \frac{3}{2} v^4 + \frac{7}{3} v^6 \right.  \pindah 
+\spasi \left. \frac{}{} + \frac{19}{4} v^8 + \frac{61}{5} v^{10} + O(v^{12}) \right\}
+\end{align}
+\textbf{Ekspansi deret temperatur rendah} \\
+\begin{align}
+\mathcal{Z} = e^{- E_0 / kT   } \left( 1+ \sum_{n = 1}^\infty  \Delta  \mathcal{Z}_N^{(n)} \right) 
+\end{align}
+$\Delta \mathcal{Z}_N^{(n)}$ menyatakan penjumlahan terhadap faktor Boltzmann. Untuk model ising tiap ikatan yang salah yang diasosiasikan dengan spin flip akan mempunyai energi $2J$ relative terhadap ground state sehingga faktor Boltzmann:
+\begin{align}
+x= e^{- 2 J kT} 
+\end{align}
+jadi:
+\begin{align}
+& \mathcal{Z} =  e^{- E_0 /k T}  \left \{ \frac{}{} 1 + N x^4  + 2 N x^6 \right. \pindah 
+\spasi   \frac{1}{2}  N(N + 9 ) x^8  + 2 N (N+ 6) x^{10} \pindah   \spasi \left. + O(x^{12}) \right \}
+\end{align}
+\textbf{Mean Field Critical Exponent}\\
+\begin{align}
+T = T_c (1+ t )  = \frac{J z}{k} ( 1 + t)
+\end{align}
+maka
+\begin{align}
+\susep  = \tanh \left \{ \susep / (1 + t) \right \}
+\end{align}
+jika diuraikan dalam darat untuk $\susep$ dan $t$ kecil, maka:
+\begin{align}
+& \susep =  \susep /(1 +t)  - \susep^3 /3 (1+t)^3   \pindah 
+\spasi +  O(\susep^5 /(1 + t)^5 ) \pindah 
+\spasi = \susep (1- t)  - \susep^3 /3 + \pindah 
+\spasi  O (\susep t^2, \susep^3 t, \susep^5 )
+\end{align}
+jika diaransemen kembali menghasilkan:
+\begin{align}
+- t = \susep^2 /3 + O(t^2 , \susep^2 t , \susep^4 )
+\end{align}
+atau
+\begin{align}
+\susep \sim (-t)^{1/2 }
+\end{align}
+\begin{align}
+\susep = \tanh \beta  (J z \susep  + H) 
+\end{align}
+untuk $T = T_c $ maka 
+\begin{align}
+\susep = \tanh (\susep + H/ jz ) 
+\end{align}
+jika diuraikan untuk $\susep$ dan $H$ kecil:
+\begin{align}
+& \susep  = \susep + H /jz  - \susep^3/ 3  \pindah 
+\spasi +  O (\susep^2 H, \susep H^2 , H^3 , \susep^5 )
+\end{align} 
+atau 
+\begin{align}
+\susep \sim H^{1/3}
+\end{align}
+\textbf{contoh soal MF}\\
+Jika dipole menunjuk ke atas: 
+\begin{align}
+E_\uparrow  = - \varepsilon \sum_{\text{tetangga}} s_\text{tetangga}  = - n \overline{s} 
+\end{align}
+\begin{align}
+E_\downarrow = + \varepsilon  n \overline{s}
+\end{align}
+fungsi partisi 
+\begin{align}
+& Z_i  = e^{\beta \varepsilon  n \overline{s}} + e^{- \beta \varepsilon n \overline{s}} \pindah 
+\spasi  = 2 \cosh (\beta  \varepsilon n \overline{s})   
+\end{align}
+nilai ekspektasi spin :
+\begin{align}
+&\overline{s_i } = \frac{1}{Z_i } \left[  (1)e^{\beta \epsilon n \overline{s}} + (-1) e^{-\beta \varepsilon n \overline{s}}\right ] \pindah 
+\spasi =  \frac{2 \sinh (\beta n \varepsilon n \overline{s})}{2 \cosh 
+ (\beta \varepsilon n \overline{s})} =\tanh (\beta \varepsilon n \overline{s})
+ \end{align}
+ sehingga jika $s_i$ merupakan ekspektasi spin keseluruhan atau $\overline{s}$, maka diperoleh :
+ \begin{align}
+ \overline{s} = \tanh(\beta \varepsilon  n \overline{s})
+ \end{align}
+ \textbf{Transfer Matrix} \\
+ \begin{align}
+ \mathcal{Z} = \sum_{\{s\}} e^{\begin{pmatrix}
+ BJ (s_0s_1 + s_1 S_2 + \cdots \\ + s_{N - 1}s_0) +\\ BH (s_0 + s_1 + \cdots \\+ s_{N -1})
+ \end{pmatrix}} 
+ \end{align}
+ atau
+\begin{align}
+& \mathcal{Z}  = \sum_{\sigma_1 = \pm 1} \cdots \sum_{\sigma_N = \pm 1}
+ \exp  \pindah 
+ \spasi  \left[
+  \beta  \sum_{i = 1}^{N} 
+  \left\{ 
+  J \sigma_i \, \sigma_{i + 1} + \right. \right.  \pindah 
+  \spasi \left. \left.  \frac{1}{2} \mu B (\sigma_i + \sigma_{i +1})
+  \right\} 
+  \right]  \pindah
+  \spasi  =   \sum_{\sigma_1 = \pm 1} \cdots \sum_{\sigma_N = \pm 1} \pindah 
+  \spasi  \langle \sigma_1 \lvert \boldsymbol{P} \lvert \sigma_N \rangle   \langle \sigma_2 \lvert \boldsymbol{P} \lvert \sigma_N \rangle \cdots \pindah 
+  \spasi   \langle \sigma_{N - 1} \lvert \boldsymbol{P} \lvert \sigma_{N} \rangle   \langle \sigma_N \lvert \boldsymbol{P} \lvert \sigma_1 \rangle
+\end{align}
+dengan $\boldsymbol{P}$ menyatakan operator matriks yang elemen-elemennya dapat dinyatakan dalam:
+\begin{align}
+ &  \langle \sigma_i \lvert \boldsymbol{P} \lvert \sigma_{i +1} \rangle = \pindah 
+ \spasi  \exp \left[ \beta \left\{ J \sigma_i \, \sigma_{i +1}  -  \right. \right. \pindah \spasi  \left. \left. \frac{1}{2} \mu B ( \sigma_i + \sigma_{i + 1})\right\}\right]
+\end{align}
+yakni:
+\begin{align}
+(\boldsymbol{P}) = \left( 
+\begin{array}{ll}
+e^{\beta(J + \mu B)} & e^{- \beta J} \\
+e^{- \beta J} & e^{\beta (J - \mu B)}
+\end{array}
+\right)
+\end{align}
+Karena $\sigma_1  = \sigma_{N +1}$ maka pernyataan untuk fungsi partisi di atas dapat dituliskan kembali sebagai:
+\begin{align}
+& \mathcal{Z} = \sigma_{\sigma_1 = \pm 1} \langle \sigma_1  \lvert \boldsymbol{P}^N \lvert \sigma_1 \rangle \pindah 
+\spasi  =  \boldsymbol{\text{Trace}} (\boldsymbol{P}^N)  = \lambda_1^N + \lambda_2^N   
+\end{align}
+dengan $\lambda_1$ dan $\lambda_2$ menyatakan nilai eigen dari matriks $\boldsymbol{P}$ yang dapat diperoleh melalui:
+\begin{align}
+\left \lvert 
+\begin{array}{ll}
+e^{\beta(J + \mu B)} - \lambda  & e^{- \beta J} \\
+e^{- \beta J} & e^{\beta (J - \mu B)} - \lambda
+\end{array}
+ \right \lvert  = 0
+\end{align}
+atau 
+\begin{align}
+& \lambda^2 - 2 \lambda e^{\beta J} \cosh (\beta \mu B) + \pindah \spasi  2 \sinh (2 \beta J) = 0 
+\end{align}
+maka 
+\begin{align}
+& \left( 
+\begin{array}{l}
+\lambda_1 \\
+\lambda_2 
+\end{array}
+\right)
+ = e^{\beta J} \cosh (\beta \mu B) \pindah \spasi \pm [e^{- 2 \beta J} + e^{2 \beta J} \sinh^2 (\beta \mu B)]^{1/2}
+\end{align}
+ Karena $\lambda_2 < \lambda_1$ maka $(\lambda_2 /\lambda_1)^N \rightarrow 0$ ketika $N \rightarrow \infty$ sehingga nilai eigen yang dominan adalah $\lambda_1$ atau:
+ \begin{align}
+&  \ln \mathcal{Z}  \approx N \ln \lambda_1 \pindah 
+& \text{maka} \pindah
+&  \frac{1}{N} \ln \mathcal{Z} \approx \ln \lambda_1 \pindah
+ \spasi = \ln \left[ e^{\beta J} \cosh (\beta \mu B) + \right. \pindah \spasi \left. \left \lbrace e^{ - 2 \beta J} + e^{2 \beta J} \sinh^2 (\beta \mu B) \right \rbrace\right] 
+ \end{align}
+ maka 
+  \begin{align}
+  & f  = - kT \ln \mathcal{Z} \pindah 
+ \spasi =  - kT \ln (e^{\beta J} \cosh (\beta h ))
+   + \pindah 
+   \spasi  \sqrt{e^{2 \beta J} \sinh^2 \beta h _+ e^{- 2 \beta J}}
+  \end{align} 
+  \end{multicols}
+\end{tiny}
+\end{document}
+                        
