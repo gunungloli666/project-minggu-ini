@@ -1,0 +1,389 @@
+\documentclass[a4paper , 12pt, cc]{article}
+\usepackage{amsmath} 
+%\usepackage{IEEEtran}
+
+\usepackage{fancybox}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{anysize}
+\usepackage{parskip}
+\usepackage{multicol}
+\usepackage{blindtext}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\usepackage{mathtools}
+%\usepackage{titlepic}
+\usepackage{hyphenat}
+\usepackage[margin={3 cm ,3 cm}]{geometry}
+\allowdisplaybreaks
+
+\hyphenation{di-nya-ta-kan}
+\title{PR 3 Mekanika Statistik}
+\author{MOHAMMAD FAJAR\\
+20211019\\
+\textbf{INSTITUT TEKNOLOGI BANDUNG}}
+
+\onehalfspacing
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+\item \label{nomor 1} Hamiltonian model Ising tetangga terdekat 1D diberikan oleh:
+\begin{align}
+H = - J \sum_j \sigma_j \sigma_{j +1}  - h \sum_j \sigma_j 
+\end{align}
+\begin{enumerate}
+\item  Buktikan fungsi energi bebas spin untuk model Ising tetangga terdekat dengan medan luar $h$ 1D dapat dituliskan sebagai  \label{makan}
+\begin{align} 
+f = - kT \ln \left( e^{hJ} \cosh (\beta h) + \sqrt{ e^{2 BJ} \sinh^2 \beta h + e^{-2\beta J}}\right)
+\end{align}
+\textbf{Jawab:} \newline
+Dari persamaan \ref{makan} maka kita dapat menyatakan fungsi partisi total sebagai:
+\begin{align}
+\mathcal{Z} = \sum_{\{s\}} e^{BJ (s_0s_1 + s_1 S_2 + \cdot + s_{N - 1}s_0) + BH (s_0 + s_1 + \cdots + s_{N -1})} 
+\end{align}
+Dengan $\{s\}$ menyatakan penjumlahan terhadap semua keadaan spin dari kombinasi spin yang mungkin yang dapat pula dinyatakan sebagai:
+\begin{align}
+\mathcal{Z} & = \sum_{\sigma_1 = \pm 1} \cdots \sum_{\sigma_N = \pm 1}
+ \exp 
+ \left[
+  \beta  \sum_{i = 1}^{N} 
+  \left\{ 
+  J \sigma_i \, \sigma_{i + 1} + \frac{1}{2} \mu B (\sigma_i + \sigma_{i +1})
+  \right\} 
+  \right] \nonumber \\
+  & =  \sum_{\sigma_1 = \pm 1} \cdots \sum_{\sigma_N = \pm 1}  \langle \sigma_1 \lvert \boldsymbol{P} \lvert \sigma_N \rangle   \langle \sigma_2 \lvert \boldsymbol{P} \lvert \sigma_N \rangle \cdots   \langle \sigma_{N - 1} \lvert \boldsymbol{P} \lvert \sigma_{N} \rangle   \langle \sigma_N \lvert \boldsymbol{P} \lvert \sigma_1 \rangle
+\end{align}
+dengan $\boldsymbol{P}$ menyatakan operator matriks yang elemen-elemennya dapat dinyatakan dalam:
+\begin{align}
+  \langle \sigma_i \lvert \boldsymbol{P} \lvert \sigma_{i +1} \rangle = \exp \left[ \beta \left\{ J \sigma_i \, \sigma_{i +1}  - \frac{1}{2} \mu B ( \sigma_i + \sigma_{i + 1})\right\}\right]
+\end{align}
+yakni:
+\begin{align}
+(\boldsymbol{P}) = \left( 
+\begin{array}{ll}
+e^{\beta(J + \mu B)} & e^{- \beta J} \\
+e^{- \beta J} & e^{\beta (J - \mu B)}
+\end{array}
+\right)
+\end{align}
+Karena $\sigma_1  = \sigma_{N +1}$ maka pernyataan untuk fungsi partisi di atas dapat dituliskan kembali sebagai:
+\begin{align}
+\mathcal{Z} = \sigma_{\sigma_1 = \pm 1} \langle \sigma_1  \lvert \boldsymbol{P}^N \lvert \sigma_1 \rangle  = \boldsymbol{\text{Trace}} (\boldsymbol{P}^N)  = \lambda_1^N + \lambda_2^N   
+\end{align}
+dengan $\lambda_1$ dan $\lambda_2$ menyatakan nilai eigen dari matriks $\boldsymbol{P}$ yang dapat diperoleh melalui:
+\begin{align}
+\left \lvert 
+\begin{array}{ll}
+e^{\beta(J + \mu B)} - \lambda  & e^{- \beta J} \\
+e^{- \beta J} & e^{\beta (J - \mu B)} - \lambda
+\end{array}
+ \right \lvert  = 0
+\end{align}
+atau 
+\begin{align}
+\lambda^2 - 2 \lambda e^{\beta J} \cosh (\beta \mu B) + 2 \sinh (2 \beta J) = 0 
+\end{align}
+maka 
+\begin{align}
+\left( 
+\begin{array}{l}
+\lambda_1 \\
+\lambda_2 
+\end{array}
+\right)
+ = e^{\beta J} \cosh (\beta \mu B) \pm [e^{- 2 \beta J} + e^{2 \beta J} \sinh^2 (\beta \mu B)]^{1/2}
+\end{align}
+ Dengan demikian:
+ \begin{align}
+ \ln \mathcal{Z} = \ln (\lambda_1^N + \lambda_2^N)
+ \end{align}
+ Karena $\lambda_2 < \lambda_1$ maka $(\lambda_2 /\lambda_1)^N \rightarrow 0$ ketika $N \rightarrow \infty$ sehingga nilai eigen yang dominan adalah $\lambda_1$ atau:
+ \begin{align}
+ \ln \mathcal{Z} & \approx N \ln \lambda_1 \nonumber \\
+ \frac{1}{N} \ln \mathcal{Z} &\approx \ln \lambda_1 \nonumber \\
+ & = \ln \left[ e^{\beta J} \cosh (\beta \mu B) + \left \lbrace e^{ - 2 \beta J} + e^{2 \beta J} \sinh^2 (\beta \mu B) \right \rbrace\right] 
+ \end{align} 
+ dengan demikian energi bebas Helmoltz dapat dinyatakan sebagai:
+ \begin{align}
+ f & = - kT \ln \mathcal{Z} \nonumber \\
+f  & =\boxed{ - kT \ln (e^{\beta J} \cosh (\beta h ))
+  + \sqrt{e^{2 \beta J} \sinh^2 \beta h _+ e^{- 2 \beta J}}}
+ \end{align}
+ \item  Berdasarkan (\ref{makan}) hitunglah energi bebas per spin pada temperatur $T \rightarrow 0K$ 
+ 
+ \textbf{Jawab:} \newline 
+ Ketika $T \rightarrow 0$ atau $\beta \rightarrow \infty $ maka $e^{- 2 \beta J} = 0$ sehingga:
+ \begin{align}
+ f &= - kT \ln \left\{ e^{\beta J} \cosh \beta h + \sqrt{e^{2 \beta J} \sinh^2 \beta h + 0} \right\} \nonumber \\
+ & =\boxed{ - kT \ln \left\lbrace e^{\beta J} \cosh + e^{\beta J}\sinh \beta h  \right \rbrace }
+ \end{align}
+\item \label{1c}Tunjukkan bahwa nilai spin rata-rata (magnetisasi) adalah:
+\begin{align}
+<\sigma> = \frac{e^{hJ} \sinh (\beta h)}{\sqrt{ e^{2 \beta J} \sinh^2 (\beta h) + e^{2 \beta J}}}
+\end{align}
+\textbf{Jawab:} \newline 
+Jika didefenisikan 
+\begin{align}
+\sigma_{\pm}^2 = \frac{1}{2} \left( 1 \pm \frac{e^{\beta J} \sinh \beta h}{\sqrt{e^{2 \beta J} \sinh^2 \beta h + e^{-2 \beta J}}}\right)
+\end{align}
+maka 
+\begin{align}
+\langle \sigma \rangle  & = (a_+ , a_-) \left ( \begin{array}{ll}
+1 & 0 \\ 
+0 & - 1 
+\end{array} \right )
+\left ( 
+\begin{array}{l}
+a_+ \\
+a_- 
+\end{array}
+ \right ) \nonumber \\
+ & = a_+^2 - a_-^2 \nonumber \\
+ & = \frac{1}{2} \left( 1 + \frac{e^{\beta J} \sinh \beta h }{\sqrt{ e^{2 \beta J} \sinh^2 \beta h + e^{- 2 \beta J}}}\right) - \frac{1}{2} \left( 1 - \frac{e^{\beta J} \sinh \beta h }{\sqrt{ e^{2 \beta J} \sinh^2 \beta h + e^{- 2 \beta J}}}\right) \nonumber \\
+ & =\boxed{ \frac{e^{\beta J} \sinh \beta h }{\sqrt{ e^{2 \beta J} \sinh^2 \beta h + e^{- 2 \beta J}}}} \label{persamaan 1.d}
+\end{align}
+\pagebreak 
+\item Berdasarkan (\ref{1c}) tunjukkan bahwa untuk suhu tinggi maka $<\sigma> \rightarrow \tanh \beta h$
+
+\textbf{Jawab:} \newline 
+Untuk suhu tinggi maka $e^{- 2 \beta J} = 1 = e^{2 \beta J} $. Dengan demikian maka persamaan \ref{persamaan 1.d} dapat dituliskan menjadi:
+\begin{align}
+\langle \sigma \rangle & = \frac{\sinh \beta h}{\sqrt{ \sinh^2 \beta h + 1 }} \nonumber \\
+& = \frac{\sinh \beta h }{\cosh \beta h } =\boxed{ \tanh \beta h}
+\end{align}
+\end{enumerate}
+\item Lihat model Ising pada nomor. \ref{nomor 1} 
+\begin{enumerate}
+\item \label{2a} Turunkan dalam pendekatan mean field persamaan self-konsistent yang harus dipenuhi adalah:
+\begin{align}
+<\sigma>_0 = \tanh (\beta (Jq <\sigma>_0 + h))
+\end{align}
+Dengan $q$: jumlah tetangga trdekat, dan indeks 0 menunjuk pada Hamiltonian mean field. \newline
+\textbf{Jawab:} \newline 
+Dengan 
+\begin{align}
+\mathcal{H} = - J \sum_j \sigma_j \, \sigma_{j + 1} - h \sum_j \sigma_j 
+\end{align}
+maka
+\begin{align}
+ \langle \mathcal{H} - \mathcal{ H}_0 \rangle_0  =\frac{ \sum_{\{s \}} \left( - J \sum_{<ij>} \sigma_j \, \sigma_{j+1}  - h \sum_j \sigma_j  + H_0 \sum_j \sigma_j \right) \exp\left[ \beta H_0 \sum_j \sigma_j \right] }{\sum_{\{ s\}} \exp \left[  B H_0 \sum_j \sigma_j \right ]} \label{pers uraian nomor 2}
+\end{align}
+dengan  $\mathcal{H}_0  = - H_0 \sum_j \sigma_j $  menyatakan trial Hamiltonian. 
+Pada  persamaan \ref{pers uraian nomor 2} pada bagian pembilangnya setiap suku di dalam tanda kurung lengkung  dapat  langsung dikalikan satu per satu terhadap bentuk eksponensial $\exp  [ \beta H_0 \sum_j \sigma_j]$ Sehingga pernyataan $H_0 \sum_i \sigma_i \exp  [ \beta H_0 \sum_j \sigma_j]$ akan menghasilkan uraian
+\begin{align}
+&e^{\beta H_0 \sigma_2 }\,  e^{\beta H_0 \sigma_3} \cdots e^{\beta H_0 \sigma_N } \, H_0 \, \sigma_1 e^{\beta H_0 \sigma_1} \, +  \nonumber \\
+& e^{\beta H_0 \sigma_1} \,  e^{\beta H_0 \sigma_3}  \cdots e^{\beta H_0 \sigma_N}  \,H_0 \, \sigma_2 \, e^{\beta H_0 \sigma_2}   \, + \nonumber  \\
+& \cdots \nonumber \\
+& e^{\beta H_0 \sigma_1} \, e^{\beta H_0 \sigma_2} \cdots  e^{\beta H_0 \sigma_{N - 1} } \, H_0 \, \sigma_N e^{\beta H_0 \sigma_N}  
+\end{align}
+Selanjutnya jika dilakukan pernjumlahan terhadap $\sigma_1 ( = \pm 1)$ maka diperoleh:
+\begin{align}
+& e^{\beta H_0 \sigma_2} \, e^{\beta H_0 \sigma_3} \cdots e^{\beta H_0 \sigma_N} \, H_0 \, (+ 1 ) \cdot e^{\beta H_0 } \, + \nonumber \\
+& e^{\beta H_0 } \, e^{\beta H_0 \sigma_3} \cdots e^{\beta H_0 \sigma_N } \, H_0 \, \sigma_2 e^{\beta H_0 \sigma_2} \, + \nonumber \\
+& \cdots \, + \nonumber \\
+& e^{\beta H_0  } \,  e^{\beta H_0 \sigma_2} \cdots e^{\beta H_0 \sigma_{N - 1}} \, H_0 \,  \sigma_N e^{\beta H_0 \sigma_N} \, + \nonumber \\
+& e^{\beta H_0 \sigma_2} \, e^{\beta H_0 \sigma_3} \cdots e^{\beta H_0 \sigma_N} \, H_0 \, (- 1 ) \cdot e^{ - \beta H_0 } \, + \nonumber \\
+& e^{ - \beta H_0 } \, e^{\beta H_0 \sigma_3} \cdots e^{\beta H_0 \sigma_N } \, H_0 \, \sigma_2 e^{\beta H_0 \sigma_2} \, + \nonumber  \\
+& \cdots \, + \nonumber \\
+& e^{ - \beta H_0  } \,  e^{\beta H_0 \sigma_2} \cdots e^{\beta H_0 \sigma_{N - 1}} \, H_0 \,  \sigma_N e^{\beta H_0 \sigma_N} \,  \nonumber  \\ 
+ & =  \nonumber \\
+ & e^{\beta H_0 \sigma_2} \, e^{\beta H_0 \sigma_3} \cdots e^{\beta H_0 \sigma_N} \,[ H_0  (   e^{\beta H_0 } - e^{-\beta H_0} ) ]  \, + \nonumber \\
+ & ( e^{\beta H_0 }  + e^{ - \beta H_0 })  \, e^{\beta H_0 \sigma_3} \cdots e^{\beta H_0 \sigma_N } \, H_0 \, \sigma_2 e^{\beta H_0 \sigma_2} \, +  \nonumber \\
+ & \cdots \, + \nonumber \\ 
+ & ( e^{\beta H_0 }  + e^{ - \beta H_0 })  \, e^{\beta H_0 \sigma_2} \cdots e^{\beta H_0 \sigma_{N - 1} } \, H_0 \, \sigma_N e^{\beta H_0 \sigma_N} 
+\end{align}
+Kemudian jika dilakukan penjumlahan untuk $\sigma_2 ( = \pm 1) $ maka akan diperoleh 
+\begin{align}
+& ( e^{\beta H_0 }  + e^{ - \beta H_0 }) \, e^{\beta H_0 \sigma_3} \cdots e^{\beta H_0 \sigma_N} \,[ H_0  (   e^{\beta H_0 } - e^{-\beta H_0} ) ] \, +  \nonumber \\
+ & ( e^{\beta H_0 }  + e^{ - \beta H_0 })  \, e^{\beta H_0 \sigma_3} \cdots e^{\beta H_0 \sigma_N } \,[ H_0  (   e^{\beta H_0 } - e^{-\beta H_0} ) ] \, + \nonumber \\
+ & \cdots \, + \nonumber \\ 
+ & ( e^{\beta H_0 }  + e^{ - \beta H_0 })  \, ( e^{\beta H_0 }  + e^{ - \beta H_0 })  \cdots e^{\beta H_0 \sigma_{N - 1} } \, H_0 \, \sigma_N e^{\beta H_0 \sigma_N} 
+\end{align}
+Sehingga jika dilakukan penjumlahan terhadap seluruh $\sigma_i (\pm 1)$ maka akan diperoleh hasil  untuk masing-masing suku $i$ dalam bentuk:
+\begin{align}
+( e^{\beta H_0 }  + e^{ - \beta H_0 })^{N - 1}  [ H_0  (   e^{\beta H_0 } - e^{-\beta H_0} ) ]  \label{pembilang 1}
+\end{align}
+Sementara itu, uraian pada suku penyebut dalam persamaan  \ref{pers uraian nomor 2} dengan cara yang sama, dengan mudah dapat diperoleh
+\begin{align}
+\sum_{\{s\}} \exp \left[\beta H_0 \sum_i \sigma_i  \right] = (e^{\beta H} + e^{- \beta H_0})^N \label{penyebut 1}
+\end{align}
+Dengan membagi persamaan \ref{pembilang 1} dengan persamaan \ref{penyebut 1} maka akan diperoleh bentuk pernyataan untuk  satu biji $i$ yakni:
+\begin{align}
+\frac{( e^{\beta H_0} + e^{- \beta H_0})^{N - 1}  (e^{\beta H_0} -  e^{- \beta H_0})}{ (e^{\beta H_0} + e^{- \beta H_0})^N} = \frac{ e^{\beta H_0} - e^{- \beta H_0}}{e^{\beta H_0} +  e^{- \beta H_0}} = \tanh \beta H_0 
+\end{align}
+Dengan demikian  suku ketiga dalam tanda kurung pada persamaan \ref{pers uraian nomor 2} akan dapat dituliskan menjadi:
+\begin{align}
+\frac{ \sum_{\{s  \}}H_0 \sum_i \sigma_i \exp  [ \beta H_0 \sum_j \sigma_j]}{\sum_{\{s\}} \exp \left[\beta H_0 \sum_i \sigma_i  \right]} = H_0 \sum_i \tanh \beta H_0  = H_0 \sum_i \langle \sigma_i \rangle_0 
+\end{align}
+Dengan prosedur yang sama, dapat diperoleh suku kedua dan suku pertama dalam tanda kurung persamaan \ref{pers uraian nomor 2}. Dengan demikian secara keseluruhan maka persamaan  \ref{pers uraian nomor 2} akan dapat dituliskan menjadi:
+\begin{align}
+\langle \mathcal{H} - \mathcal{H}_0 \rangle  & = - J \sum_{<ij>} \langle \sigma_i \rangle_0 \langle \sigma_j \rangle_0  - h \sum_i \langle \sigma_i \rangle_0 + H_0 \sum_i \langle \sigma_i \rangle_0  \nonumber  \\
+& = -J \sum_i \langle \sigma \rangle_0^2 - h \sum_i \langle \sigma_i \rangle_0 + H_0 \sum \langle \sigma_i \rangle_0  \nonumber \\
+& = - \frac{J z N}{2} \tanh^2 \beta H_0 - N h \tanh \beta H_0 + N H_0 \tanh \beta H_0 
+\end{align}
+Dengan $\displaystyle \frac{zN }{2}$ merujuk pada anstisipasi double counting pada dua latis bertetangga. 
+
+Jadi 
+\begin{align}
+\Phi &= f_0 + (\mathcal{H} - \mathcal{H}_0 )_0  \nonumber \\
+& = - N kT \ln (2 \cosh \beta H_0 )  - \frac{Jz N}{2} \tanh^2 \beta H_0 + NH_0 \tanh \beta H_0  - \nonumber \\
+& \hspace{1  cm }Nh \tanh \beta H_0 
+\end{align}
+Untuk mencari nilai maksimum maka $\Phi$ mesti diturunkan terhadap $H_0$ yakni:
+\begin{align}
+&\frac{\partial \Phi }{\partial H_0  } = 0 \nonumber \\
+& \Rightarrow  - \frac{NkT (2 \sinh \beta H_0 ) \beta }{2 \cosh \beta H_0 } - \frac{J z N \beta  \tanh \beta H_0 }{\cosh^2 \beta H_0 } + \frac{N H_0 \beta }{\cosh^2 \beta H_0 } + N \tanh \beta H_0 \nonumber \\
+& \hspace{0.8 cm } + \frac{N h \beta }{\cosh^2 \beta H_0 } = 0 \nonumber \\
+& \Rightarrow - N \tanh \beta H_0  - \frac{Jz \beta N \tanh \beta H_0 }{\cosh^2 \beta H_0 } + \frac{N H_0 \beta }{\cosh^2 \beta H_0 } + N \tanh \beta H_0   \nonumber \\
+& \hspace{0.8 cm} +  \frac{N h \beta }{\cosh^2  \beta H_0 } = 0 \nonumber \\
+&\Rightarrow  \frac{- Jz B N \tanh \beta H_0 }{\cosh^2 \beta H_0 } + \frac{N \beta H_0 }{\cosh^ \beta H_0 } - \frac{N h \beta }{\cosh \beta H_0 } = 0 \nonumber  \\
+& \Rightarrow = - J z \tanh \beta H_0  + H_0  - h  = 0 \nonumber \\ 
+& \Rightarrow  \boxed{   H_0 =  Jz \tanh \beta H_0  + h  = Jz \langle s \rangle_0 + h } \label{self consistent 1}
+\end{align}
+Dari defenisi $\langle s \rangle_0  = \tanh \beta H_0 $, maka persamaan \ref{self consistent 1} akan dapat dituliskan menjadi:
+\begin{align}
+\boxed{\langle s \rangle_0  = \tanh \beta (Jz \langle s \rangle_0  + h )}
+\end{align}
+\item Pergunakan \ref{2a} untuk membuktikan susceptibiltas per spinnya sbb:
+\begin{align}
+\chi = \frac{1 - <\sigma>_0^2}{Jq (t + <\sigma>_0^2)}
+\end{align}
+dengan $t$ adalah reduced temperature $1 + t  = T/ T_c$  \newline 
+\textbf{Jawab:} \newline
+\newcommand{\susep}{\langle \sigma \rangle_0} 
+\begin{align}
+\chi = \frac{\partial \susep}{\partial h}
+\end{align}
+sementara 
+\newcommand{\susun}{\frac{\partial \susep}{\partial h}}
+\newcommand{\susur}{\frac{\partial}{\partial h}}
+\newcommand{\sech}{\text{sech}}
+%\newcommand{\kalsum}{\langle}
+\begin{align}
+\susun & = \susur \tanh [ \beta (J q \susep + h )] \nonumber \\ 
+& = \sech^2 \left({\beta (J q \susep + h )} \right) \beta \left( Jq \susun  + \susur h\right) \nonumber \\
+& = \left( 1 - \tanh^2 [\beta (J q \susep  + h )]\right) \beta (J q \susun  + 1 ) \nonumber 
+\end{align}
+maka 
+\begin{align}
+\susun \left(1 - Jq \left( 1 - \tanh^2 [\beta (Jq \susep + h )]\right) \right) = \left( 1 - \tanh^2 [ \beta (Jq \susep + h )]\right) \cdot \beta
+\end{align}
+atau 
+\begin{align}
+\susun &=  \frac{(1 - \tanh^2 [\beta (Jq \susep +h )  ])\cdot\beta}{1 - \beta Jq + \beta Jq \tanh^2 [\beta (Jq \susep + h)]} \nonumber \\
+& = \frac{1 - \tanh^2 [\beta (Jq \susep +h )  ]}{\frac{1}{\beta } - Jq + Jq \tanh^2 [\beta (Jq \susep  + h )]} \nonumber \\
+& = \frac{1 - \susep^2 }{Jq \left( \frac{1}{\beta Jq } - 1 + \tanh^2 [\beta (Jq \susep + h )]\right)} \nonumber \\
+& = \frac{1 - \susep^2 }{Jq \left( \frac{1}{\beta Jq } - 1 + \susep^2 \right)} \nonumber \\
+& =\frac{1 - \susep^2 }{ Jq \left( \frac{kT}{kT_c } - 1 + \susep^2 \right)} \hspace{1 cm} \text{(persamaan 4.12 pada referensi \ref{ref 1} ) }   \nonumber \\
+& = \boxed{\frac{1 - \susep^2}{Jq (t + \susep^2)}}
+\end{align}
+\end{enumerate}
+\item \label{3} Gas real dengan interaksi lemah dapat didekati dengan ekspansi gugus Mayer.  Memakai ensembel kanonik, persamaan parametrik yang terkait dapat dinyatakan sebagai:
+\begin{align}
+\frac{PV}{kT} = \left( \frac{V}{\lambda^3}\right)\sum_{j = 1} b_j z^j \hspace{ 1.5 cm} <N> = \left( \frac{V}{\lambda^3} \right) \sum_{j = 1} j b_j z^j
+\end{align}
+Dengan $\displaystyle b_j  = \frac{1}{j! \lambda^{3j-1 }V} [\text{Jumlah semua gugus }j]$
+\begin{enumerate}
+\item Gambarkan grafik-grafik gugus meyer yang berkonstribusi untuk $b_j$ dengan $j = 1,2,3.$ 
+
+\textbf{Jawab:} \newline
+Anda dapat menggambar sendiri dengan mudah, kebetulan saya lagi mikirin algortimanya untuk menggenerate secara otomatis pake Tikz di \LaTeX 
+\item Turunkan ungkapan deret virial hingga suku ke-empat:
+\begin{align}
+\frac{PV}{NkT}  = a_1 + a_2 \left( \frac{N}{V}\right) + a_3 \left( \frac{N}{V}\right)^2 + a_4 \left( \frac{N}{V}\right)^4 \label{3.1}
+\end{align}
+yaitu dengan menyatakan koefisien $a_j$ dengan memakai $b_j$ 
+
+\textbf{Jawab:} \newline 
+\newcommand{\fjr}{\displaystyle}
+\newcommand{\bbar}{\bar{b}}
+Dari persamaan (\ref{3.1}) maka dapat diperoleh:
+\begin{align}
+\frac{P v}{kT } = \frac{\fjr \sum_{l = 1}^\infty  \bbar z^l }{\fjr \sum_{l = 1}^{\infty } l \bbar_l z^l \bbar} \hspace{1 cm} \text{dengan }v =  \frac{N}{V} \label{39}
+\end{align}
+Sementara ekspansi virial sendiri didefenisikan sebagai:
+\begin{align}
+\frac{Pv}{kT} = \sum_{l = 1}^\infty a_l (T) \left( \frac{\lambda^3}{v}\right)^{l - 1 } \label{40}
+\end{align}
+\hyphenation{ban-tu-an}
+Sehingga dengan membandingkan persamaan (\ref{39}) dan (\ref{40}) dengan bantuan persamaan (\ref{3.1}) akan diperoleh:
+\begin{align}
+\sum_{l = 1}^\infty a_l \left( \sum_{n = 1}^\infty n \bbar  z^n \right)^{l - 1}  =  \frac{\fjr \sum_{l = 1}^\infty  \bbar z^l }{\fjr \sum_{l = 1}^{\infty } l \bbar_l z^l \bbar}
+\end{align}
+atau 
+\begin{align}
+&(\bbar_1 z + 2 \bbar_2 z^2 + 3 \bbar_3 z^3  + \cdots )\left[ a_1 + a_2 \left( \sum_{n=1}^{\infty} n \bbar_n z^n \right) + a_3 \left( \sum_{n=1}^{\infty} n \bbar_n z^n \right)^2 + \cdots \right ] \nonumber \\
+ & \hspace{0.3 cm } = \bbar_1 z + \bbar_2 z^2 + \bbar_3 z^3 +\cdots  \nonumber \\
+ & \Rightarrow (\bbar_1 z + 2 \bbar_2 z^2 + 3 \bbar_3 z^3  + \cdots ) \left[ a_1  + a_2 (\bbar_1 z + 2 \bbar_2 z^2 + 3 \bbar_3 z^3 +  \cdots  ) \right . \nonumber \\ 
+ & \hspace{ 0.2 cm } \left.  + a_3 \left( \bbar_1^2  z^2 + 2 \bbar_1 z\,  2 \bbar_2 z^2 + \cdots  \right) + a_4 (b_1^3 z^3 + \cdots  ) \right ]  = \bbar_1 z + \bbar_2 z^2 + \cdots \nonumber  
+\end{align}
+Jika dilakukan pengumpulan koefisien ruas kiri dan kanan dari pangkat $z$ yang sama maka akan diperoleh \newline 
+untuk $z^1$:
+\begin{align}
+\bbar_1 z \, a_1  = \bbar_1 z \Rightarrow \bbar_1 = a_1 = 1 
+\end{align}
+untuk $z^2$: 
+\begin{align}
+& 2 \bbar_2 z^2 \, a_1 + a_2 \bbar_1 z \, \bbar_1 z  = \bbar z^2 \nonumber \\
+& \Rightarrow 2 \bbar_2 z^2 + a_2 z^2 = \bbar_2 z^2 \nonumber \\
+& \Rightarrow a_2 z^2  = - \bbar_2 z^2  \nonumber \\
+& \Rightarrow a_2 = - \bbar_2 
+\end{align}
+untuk $z^3$:
+\begin{align}
+& 3 \bbar_3 z^3 a_1 + 2 \bbar_2 z^2 a_2 \bbar_1 z + a_2 2 \bbar_2 z^2 \bbar_1 z + a_3 \bbar_1^2 z^2 \bbar_1 z = \bbar_3 z^3  \nonumber \\
+& \Rightarrow a_3 z^3 = (\bbar_3 - 3 \bbar_3 - 2 \bbar_2 a_2 - a_2 2 \bbar_2)z^3  \nonumber \\
+& a_3 = - 2 \bbar_3 + 2 \bbar_2^2 + 2 \bbar_2^2 \nonumber \\
+& \Rightarrow a_3 = - 2 \bbar_3 + 4 \bbar_2^2
+\end{align}
+untuk $z^4$:
+\begin{align}
+& 2 \bbar_2 z^2 a_2 2 \bbar_2 z + 2 \bbar_2 z^2 a_3 \bbar_1^2 z^2 + 4 \bbar_4 z^4 + a_4 \bbar_1^3 z^3 \bbar_1 z  + \bbar_1 z a_2 3 \bbar_3 z^3 \nonumber \\
+& + 2 \bbar_1 z  a_3 \bbar_1 z 2 \bbar_2 z^2  + 3 \bbar_3 z^3 a_2 \bbar_1 z  = b_4v z^4 \nonumber \\
+&\Rightarrow 4 \bbar_2^2 a_2 + 2 \bbar_2 a_3 + 3 a_2 \bbar_3 + 4 a_3 \bbar_2 + 6 \bbar_3 a_2 + 4 \bbar_4 + a_4 = \bbar_4 \nonumber \\
+& \Rightarrow - 3\bbar_4 + 4\bbar_2^4  - 2 \bbar_2 (4 \bbar_2^2 - 2 \bbar_3) + 6 \bbar_3 a_2 + 4(4 \bbar_2^2 - 2 \bbar_3)\bbar_2  = a_4\nonumber \\
+& \Rightarrow a_4 = -3 \bbar_4 + 4 \bbar_2^3 - 8 \bbar_2^3 + 4 \bbar_2 \bbar_3 + 6 \bbar_2 \bbar_3 - 16 \bbar_2^3 + 8 \bbar_2 \bbar_3 \nonumber \\
+& \Rightarrow a_4 = - 3\bbar_4 - 20 \bbar_2^3 + 8\bbar_2 \bbar_3
+\end{align}
+Dengan demikian deret virial dapat dinyatakan menjadi:
+\begin{align}
+\frac{Pv}{kT} & = \frac{PN}{NkT} = a_1 + a_2 \left( \frac{N}{V}\right) + a_3 \left( \frac{N}{V}\right)^2 + a_4 \left( \frac{N}{V}\right)^3 + \cdots \nonumber \\
+& = 1 + (- \bbar_2 )(\frac{N}{V}) + (4 \bbar_2^2 - 2 \bbar_3) \left( \frac{N}{V}\right)^2 \nonumber \\
+& \hspace{1 cm } + (- 20 \bbar_2^3 + 18 \bbar_2 \bbar_3  - 3 \bbar_4) \left( \frac{N}{V}\right)^3 
+\end{align}
+\item Hitung koefisien virial ke-1 dan ke-2 di atas ($a_1$ dan $a_2$) jikalau intraksi antar partikel dinyatakan oleh energi potensial
+\begin{align}
+U(r) = \left\{ 
+\begin{array}{ll}
+0 & r > R \\
+& \\
+\infty & r\le R
+\end{array}
+ \right.
+\end{align}
+
+\textbf{Jawab:} \newline 
+\begin{align}
+b_j = \frac{1}{j! \lambda^{3 (j -1) }V} [\text{jumlah semua gugus }j]
+\end{align}
+untuk $j = 1$ maka:
+\begin{align}
+b_2&= \frac{1}{2 \lambda^3 V} \iint f_{12} d^3r_1 \, d^3 r_2 \nonumber \\
+& \approx \frac{1}{2 \lambda^3} \int f_{12} d^3 r_{12} = \frac{2\pi}{\lambda^3} \int_{0}^{\infty } f(r) r^2 \, dr \nonumber \\
+& = \frac{1}{2 \lambda^3 } \int_{ 0}^{\infty } \left( e^{- U(r)/kT} -1\right) r^2 \, dr  
+\end{align}
+dengan demikian:
+\begin{align}
+a_2 & = - b_2  = \frac{2\pi}{\lambda^3} \int_{0}^{\infty} (1 - e^{- U(r)} - 1)r^2 \, dr \nonumber \\
+& = \frac{2\pi }{\lambda^3} \left[ \int_0^R (1 - e^{- \infty /kT}) r^2 \, dr + \int_{R}^{\infty } (1 - e^{- 0 /kT} )r^2 \, dr  \right]  \nonumber \\
+& = \frac{2 \pi }{\lambda^3} \left [ \int_{0}^{R} r^2 \, dr  + 0 \right ]  \nonumber \\
+& = \left. \frac{2 \pi }{\lambda^3} \left( \frac{r^3}{3}\right)\right |_0^R  = \frac{2 \pi }{\lambda^3} \frac{R^3}{3} = \frac{2 \pi }{3} \left( \frac{R}{\lambda}\right)^3
+ \end{align}
+\end{enumerate}
+\end{enumerate}
+\textbf{Referensi} \newline
+\begin{enumerate}
+\item J.M Yeomans. \textit{Statistical Mechanics of Phase Transition} \label{ref 1}
+\end{enumerate}
+\end{document}

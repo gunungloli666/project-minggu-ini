@@ -1,0 +1,273 @@
+\documentclass[a4paper , 12pt, cc]{article}
+\usepackage{amsmath} 
+%\usepackage{IEEEtran}
+
+\usepackage{fancybox}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{anysize}
+\usepackage{parskip}
+\usepackage{multicol}
+\usepackage{blindtext}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{titlepic}
+
+\title{Penurunan Konduktivitas Ionik berdasarkan Analisis Statistik dan Metode Entropi}
+\author{MOHAMMAD FAJAR\\
+20211019}
+\titlepic{\includegraphics[width=4 cm , height = 3 cm]{itb.png}}
+\onehalfspacing
+\begin{document}
+\setlength \belowdisplayskip{2 pt} 
+\setlength \abovedisplayskip{2 pt}
+%\DeclareGraphicsExtension {.jpg, .png}
+\maketitle
+
+\section{Introduction}
+\begin{figure}
+\centering
+\includegraphics[width=15 cm, height=7 cm]{gambar1.png}
+\end{figure}
+Konduktivitas elektronik $\sigma$ dinyatakan sebagai:
+\begin{align}
+j = \sigma E \label{pers .1}
+\end{align}
+dengan $j$ menyatakan kerapatan arus dan $E$ menyatakan medan listrik. Untuk konduksi ionik, maka $\sigma$ disebut juga konduktivitas ionik. 
+
+Frekuensi lompatan ion dapat dinyatakan:
+\begin{align}
+\nu \exp \left( - \frac{\varepsilon}{k_B T} \right)
+\end{align}
+konstanta difusi dinyatakan sebagai 
+\begin{align}
+D = a^2 \nu  \exp \left( - \frac{\varepsilon}{k_b T}\right)
+\end{align}
+  $\nu$ menyatakan frekuensi vibrasi, $\varepsilon$ lebar potensial rintangan, $a$ konstanta latis, $k_B$ konstanta Boltzmann, dan $T$ temperatur. 
+
+ Konstanta diffusi dinyatakan  oleh hubungan Einstein yakni:
+ \begin{align}
+ \mu = \frac{q}{k_B T} D
+ \end{align}
+ dengan  $\mu$ mobilitas ion,   $q$ muatan ion interstitial. sehingga  konduktivitas ionik menjadi:
+ \begin{align}
+ \sigma  =  n q \mu  =  \frac{n a^2  q^2 }{k_B T}  \nu \exp  \left(  - \frac{\varepsilon}{k_B T}\right) \label{kond. ionik 1}
+ \end{align}
+ Dengan  $n$ menyatakan konsentrasi ion. 
+
+  cara lain adalah menghitung  kecepatan drift dari ion, yakni:
+    \begin{align}
+    v_d&  = a \left[  \nu \exp \left(  - \frac{\varepsilon - Eqa/2}{k_B T}\right)  - \nu  \exp \left( - \frac{\varepsilon +  Eq  a/2 }{k_B T } \right)\right ] \nonumber   \\  
+    & = a \nu \exp \left(  - \frac{\varepsilon}{k_B \, T}\right)  \left\{ \left[ 1+ \frac{Eqa/2}{k_B T}  + \frac{1}{2} \left( \frac{Eq a/2}{k_B T}\right)^2 + \cdots \right] \right.  \nonumber \\
+    &\left.  - \left[ 1 - \frac{E q a/2}{k_B T} + \frac{1}{2} \frac{Eq \, a/2}{k_B T}^2 + \cdots  \right] \right\} \nonumber \\
+    & \approx a \, \nu \exp \left( - \frac{\varepsilon }{k_B \, T}\right ) \left\{ \frac{Eq \, a/2}{k_B T}  + \frac{Eq \, a/2}{k_B T}\right \} 
+     \nonumber \\
+    & =  \nu \exp \left( - \frac{\varepsilon}{k_B T }\right)  \frac{a^2  q}{k_B T} E
+    \end{align}
+
+  sehingga  diperoleh:
+     \begin{align}
+      j =  nq  v_d =   \frac{n a^2  q^2 }{ k_B T} \nu  \exp  \left(  - \frac{ \varepsilon}{k_B T } \right) E
+     \end{align}
+atau
+\begin{align}
+\sigma = \frac{j}{E}  =   \frac{n a^2  q^2 }{k_B T}  \nu \exp  \left(  - \frac{\varepsilon}{k_B T}\right)
+\end{align}
+yang sama dengan persamaan \ref{kond. ionik 1}
+\section{Analisis Statistik}
+Aturan yang digunakan
+ \begin{enumerate}
+ \item $N \gg  1$ : Konduktor akan berukuran cukup besar sehingga akan sangat banyak ion di dalamnya
+ \item $ n \sim 0 $: ion bersifat encer sehingga dapat melompat secara independen. 
+ \item $E \sim  0$: medan listrik eksternal cukup lemah, sehingga arus listrik cukup lemah pula, $I \sim  0 $
+ \end{enumerate}
+ 
+ untuk sistem 1 ion 
+ 
+\begin{tabular}{c| c|c |l }
+\hline
+Konfigurasi & $\uparrow  $ &  $\downarrow$  & $$ \\ 
+\hline
+$\Omega_S$ &  1 & 1 & $$ \\
+$I_V$ & $ aq /\tau $ & $ - aq / \tau$ & $I_V  = \sum_{i= 1}^{N}  q v_i $   \\
+
+$Q$ & $ aq E$ & $ - aq E $ &   $ Q = I_V E_\tau $ \\ 
+$\Delta S_E $  & $\frac{aqE}{T} $& $ - \frac{aqE}{T}$ &  $ \Delta S_E =  \frac{Q}{T}$ \\
+
+$\Omega_E$  & $ \propto \exp \left( \frac{aqE}{k_B T } \right)$  &  $ \propto \exp \left( - \frac{aqE}{k_B T } \right)$ & $ \Sigma_E  \propto \exp  \left( \frac{\Delta S_E}{ k_B } \right)$  
+\\ 
+$P$ & $\propto 1 \times  
+  \exp  \left(  \frac{aqE}{k_B T}\right)$    &  $\propto 1 \times  \exp  \left(  - \frac{aqE}{k_B T}\right)$ & $ P \propto  \Sigma_E \Omega_S $ 
+\end{tabular}
+
+
+Di mana
+\begin{itemize}
+\item $\uparrow$ menyatakan transisi state di mana ion melompat ke atas 
+\item $\downarrow$ menyatakan transisi state ketika ion melompat ke bawah 
+\item $\Omega_S$ menyatakan jumlah  keadaan mikroskopik dari mana transisi terjadi
+\item $I_V = jV =  \sum_{i=1}^{N}  q v_i $, dengan $V$ volume konduktor  dan $v =  \pm a /\tau$ menyatakan kecepatan ion efektif. 
+\item $Q$ menyatakan panas yang dipertukarkan dengan lingkungan.
+\end{itemize}
+
+\begin{itemize}
+\item 	 $\Delta  S_E $  menyatakan perubahan entropi selama $\tau $
+\item $\Omega_E$ menyatakan keadaan mikroskopik lingkungan yang kompatibel dengan transisi. 
+\item $P$ menyatakan probabilitas bagi $I_V$ untuk terjadi, di mana untuk sistem ion $P$ dapat menyatakan distribusi boltzmann.
+ 
+\end{itemize}
+
+untuk sistem dua ion:
+
+\begin{tabular}{c || c | c || c}
+Konfigurasi &  $\uparrow \uparrow $ & $ \uparrow \downarrow \text{ atau }  \downarrow \uparrow$ & $\downarrow \downarrow $ \\ \hline 
+$\Omega_S $ &  1 & 2 &  1 \\ 
+$I_V$  &  $2aq / \tau $ &  0 &  $- 2aq /\tau$  \\
+$Q$ &  $2aqE$ &  0&  $- 2 aqE$ \\ 
+$\Delta S_E$ & $\frac{2 aqE}{T}$ & $ 0$ & $ - \frac{2aqE}{k_B T}$  \\
+$\Omega_E$ &  $\propto  \exp \left( \frac{2aqE}{k_B T}\right)$ & $	\propto 1$ & $\propto \exp \left(  - \frac{2aqE}{k_B T}\right)$ \\
+$P$ &  $\propto 1 \times \exp \left( \frac{2aqE}{k_B T}\right)$  & $\propto 2 \times 1$ & $\propto 1 \times \exp \left( -\frac{2aqE}{k_B T}\right)$
+\end{tabular}
+
+\pagebreak
+Untuk sistem $N$ ion: 
+
+\begin{tabular}{c || c c  c c c}
+$\Omega_S $ & 1 & $\cdots$ 	& $C_N^k$ & $\cdots$ & $1$ 
+\\
+$I_V$ &  $	Naq / \tau $ & $\cdots $ & $(2k - N) aq /\tau $ & $\cdots $ & $- Naq / \tau $   
+\\
+$Q$ & $NaqE$ &  $\cdots $ & $(2k - N) aq E$ & $\cdots $ & $- Naq E$ \\ 
+$\Delta S_E$ & $\frac{NaqE}{T}$ & $\cdots$ & $\frac{(2 k - N) aqE}{T}$ & $\cdots$ & $ - \frac{NaqE}{T}$ \\
+$\Omega_E $ & $\propto \exp \left( \frac{NaqE}{k_B T}\right)$ & $\cdots $ & $\propto \exp \left( \frac{(2k _N) aqE}{k_B T}\right) $ & $\cdots $ & $\propto \exp \left( - \frac{NaqE}{k_B T}\right)$  \\
+$P$ & $\propto 1 \times \exp \left( \frac{Naq E}{k_B T}\right)  $& $\cdots $ & $\propto C_N^k  \times \exp \left( \frac{(2k -N)aqE}{k_B T }\right)$ & $\cdots$ & $\propto 1 \times \exp  \left(  - \frac{NaqE}{k_B T}\right)$ \label{tabel 3}
+\end{tabular}
+
+dengan $k$ menyatakan jumlah ion yang melompat ke atas. 
+
+Nilai $k$ yang paling mungkin (most probable) dapat diperoleh melalui:
+\begin{align}
+\frac{\delta P}{\delta k} =  0 
+\end{align}
+Jika dinyatakan dalam bentuk logaritma, maka
+\begin{eqnarray}
+ \frac{\delta \ln P}{\delta k} = 0  \label{nilai k 11 } \nonumber \\
+ \Rightarrow \frac{\delta \ln C_N^k }{\delta k } + \frac{2aqE}{k_B T}  = 0  \label{most probable 1}
+\end{eqnarray}
+Untuk $E\sim 0$ maka 
+\begin{align}
+& \frac{\delta \ln C_N^k }{\delta k} = 0 \nonumber \\
+& \Rightarrow \frac{\delta}{\delta k} \ln \left( \frac{N !}{k ! (N- k )!}\right) = 0 \nonumber \\
+&  \Rightarrow  \frac{\delta }{\delta k}\left( N \ln N - N - k \ln k + k - (N - k ) \ln (N - k) \right.  \nonumber \\
+& \hspace{1 cm}\left. + (N- k)  \right) = 0 \label{identitas 0}   \\
+&\Rightarrow \left( \frac{\delta}{\delta k} ( - k \ln k )   - \frac{\delta}{\delta k} N \ln (N - k) + \frac{\delta }{\delta k} k \ln (N-k)  \right) = 0 \nonumber \\
+& \Rightarrow - \ln k  - 1 + \frac{N}{N - k} + \ln (N - k) - \frac{k}{N- k } = 0 \nonumber\\
+&\Rightarrow - \ln  k  - 2 + \ln (N - k) = 0 \nonumber \\
+&\Rightarrow \ln (N - k ) - \ln k = 0 \hspace{1 cm } \text{karena } 2 \ne 0 \label{identitas 1} \\
+&\Rightarrow \ln \left( \frac{N- k}{k}\right) = 0 \nonumber \\
+&\Rightarrow \frac{N - k}{k} = 1 \nonumber \\
+& \Rightarrow N = 2 k 
+\end{align}
+atau $k \sim N/2 $
+
+sehingga diperoleh: 
+\begin{align}
+\boxed{\ln C_N^k  \approx  \ln C_N^{\frac{N}{2}}  - \frac{2 (k - \frac{N}{2})^2}{N}  } \label{aprrox stirling	}
+\end{align}
+
+jadi nilai $k$ yang paling mungkin adalah :
+\begin{align}
+ \frac{\partial}{\partial k} \ln C_N^k & \approx \frac{\partial }{\partial k } \left( \ln C_N^{\frac{N}{2}}  - \frac{2 (k - \frac{N}{2})^2}{N} \right)  \\
+& = - \frac{4}{N} \left( k - \frac{N}{2}\right)
+\end{align}
+sehingga dengan memasukkannya pada persamaan \ref{most probable 1} diperoleh:
+\begin{eqnarray}
+\frac{4}{N} \left( k - \frac{N}{2}\right)  = \frac{2 a q E}{k_B T}  \nonumber \\
+k - \frac{N}{2} = \frac{N aq E}{2 k_B T} \nonumber \\
+k =  \frac{N aq E}{2 k_B T} + \frac{N}{2}
+\end{eqnarray} 
+
+dan nilai $I_V$ yang paling mungkin
+\begin{align}
+I_V  &= ( 2k -N ) aq /\tau \nonumber \\ 
+& =\left[ 2 \left( \frac{NaqE}{2 k_B T} + \frac{N}{2} \right)   - N \right] \cdot \frac{aq}{\tau} \nonumber \\ 
+&= \frac{Na^2 q^2 E}{k_B  T \tau} 
+\end{align}
+yang juga menyatakan nilai $I_V$ stasioner. dengan demikian kerapatan arus  menjadi:
+\begin{align}
+ j = \frac{I_V}{V}  = \frac{n a^2  q^2 }{k_B  T\tau } E
+ \end{align}
+ dan konduktivitas ionik kemudian diperoleh yakni:
+ \begin{align}
+\boxed{ \sigma  =  \frac{n a^2  q^2 }{k_B  T \tau}}
+ \end{align}
+ dengan 
+ \begin{align}
+ \tau  = \frac{1}{2 \nu  \exp \left(  - \frac{\varepsilon}{k_B \, T}\right)} \nonumber
+ \end{align}
+
+\section{Metode Entropi}
+Entropi sendiri terdiri dari dua bagian, yakni entropi sistem dan entropi lingkungan. Entropi lingkungan dinyatakan oleh:
+\begin{align}
+S_E  =  S_{E0 }  + \Delta S_E   = S_{E0}  + \frac{(2 k -N) aqE}{T}
+\end{align}
+dengan $S_{E0} $  menyatakan nilai awal dari entropi lingkungan  ketika ion belum siap untuk melompat. Dari  persamaan \ref{aprrox stirling	} makan entropi sistem akan dapat dinyatakan sebagai:
+\begin{align}
+S_S  =  k_B \ln  \Omega_S =  k_B \ln C_N^k  \approx  S_{S0}  - \frac{2 k_B ( k - \frac{N}{2})^2}{N}  \label{entropi sistem}
+\end{align}
+dengan $S_{S0}$ menyatakan enstropi sistem dalam keadaan kesetimbangan.  Dengan demikian total entropi menjadi:
+\begin{align}
+S = S_E + S_S 
+\end{align}
+sehingga dapat diperoleh nilai $k$ yang paling mungkin:
+\begin{align}
+\frac{\delta S}{\delta k} = 0 
+\end{align}
+yang setara dengan persamaan \ref{most probable 1}. 
+
+kemudian nilai arus listrik yang paling mungkin dinyatakan oleh:
+\begin{align}
+\frac{\delta S}{\delta I} =  0 
+\end{align}
+untuk memecahkannya, maka $S$ dapat dinyatakan sebagai fungsi dari $I$ yakni:
+\begin{align}
+	I = j A =  \frac{I_V}{V} A = \frac{I_V}{h}  = \frac{(2k - N) aq}{h \tau }
+\end{align}
+kemudian:
+\begin{align}
+(2 k - N)^2  = \frac{h^2 \, \tau^2 \, I^2 }{a^2\, q^2}  \nonumber \\
+2^2 \left( k - \frac{N}{2}\right)^2 = \frac{h^2 \, \tau^2 \, I^2 }{a^2\, q^2}  \nonumber \\
+2 \left( k - \frac{N}{2}\right)^2 = \frac{1}{2} \frac{h^2 \, \tau^2 \, I^2 }{a^2\, q^2}
+\end{align}
+
+Dengan memasukkan hasil ini ke persamaan \ref{entropi sistem} dapat diperoleh pernyataan entropi sistem dapat dinyatakan  sebagai:
+\begin{align}
+S_S = S_{S0}  - \frac{1}{2} \frac{k_B  h^2  \tau^2 }{Na^2  q^2 } I^2 
+\end{align}
+
+Dengan cara yang sama entropi lingkungan diperoleh yakni:
+\begin{align}
+S_E = S_{E0} +  \frac{Eh \tau }{T} I 
+\end{align}
+Jadi dengan memaksimalkan nilai entropi dapat diperoleh:
+\begin{align}
+\frac{\partial S}{\partial I} = 0  \nonumber \\
+\frac{\partial }{\partial I} \left[ \frac{Eh \tau}{T} I - \frac{1}{2} \frac{k_B h^2 \tau^2  }{N a^2 q^2 } I^2 \right] = 0 \nonumber \\
+ \frac{Eh\tau }{T} - \frac{k_B h^2 \tau^2 I}{N a^2 q^2}  = 0 \nonumber 
+\end{align}
+atau 
+\begin{align}
+ I = \frac{Eh \tau }{T} \cdot \frac{Na^2 q^2 }{k_B h^2 \tau^2 }  = \frac{N a^2 q^2 }{h k_B  T \tau } E
+\end{align}
+
+
+nilai kerapatan arus tunak  kemudian dapat diperoleh:
+\begin{align}
+j = \frac{I}{A} = \frac{na^2  q^2 }{k_B T \tau } E
+\end{align}
+
+dan konduktivitas ionik: $\boxed{\sigma = j/E = (n a^2 q^2)/ (k_B T \tau )}$
+
+
+\end{document}
